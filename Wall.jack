@@ -1,0 +1,19 @@
+class Wall
+{
+    field int px,py;
+    constructor Wall new(int _px,int _py)
+    {
+        var int i;
+        let px=_px;
+        let py=_py;
+        return this;
+    }
+    method void draw()
+    {
+        var int memAddress;
+        let  memAddress = 16384+Math.multiply(32,px)+Math.divide(py,16);
+        
+        return;
+    }
+
+}

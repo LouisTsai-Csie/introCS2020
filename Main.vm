@@ -1,0 +1,10 @@
+function Main.main 0
+push constant 100
+push constant 100
+call Player.new 2
+pop static 0
+push static 0
+call Player.draw 1
+pop temp 0
+push constant 0
+return

@@ -1,0 +1,10 @@
+class Main 
+{
+	static Player player;
+	function void main() 
+	{
+		let player=Player.new(100,100);
+		do player.draw();
+		return;
+	}
+}
