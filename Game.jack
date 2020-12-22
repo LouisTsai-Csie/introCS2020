@@ -1,0 +1,62 @@
+class Game
+{
+    field Player player;
+    field Map map;
+    static int refresh_time;
+    static int key_lag;
+    constructor Game new()
+    {
+        let player=Player.new(16,32);
+        let map=Map.new();
+        let refresh_time=100;
+        let key_lag=20;
+        
+        return this;    
+    }
+    method Map _map()
+    {
+        return map;
+    }
+    method Player _player()
+    {
+        return player;
+    }
+    method void draw()
+    {
+        do Screen.clearScreen();
+        do player.draw();
+        return;
+    }
+    method void play()
+    {
+        var char inp;
+        while(true)
+        {
+            let inp=Keyboard.keyPressed();
+            do draw();
+            //L,U,R,D = 130~133
+            if(inp=130)
+            {
+                do player.move(0,-1);
+                do Sys.wait(key_lag);  
+            }
+            if(inp=131)
+            {
+                do player.move(-1,0);
+                do Sys.wait(key_lag);
+            }
+            if(inp=132)
+            {
+                do player.move(0,1); 
+                do Sys.wait(key_lag);
+            }
+            if(inp=133)
+            {
+                do player.move(1,0);
+                do Sys.wait(key_lag);
+            }
+            do Sys.wait(refresh_time);           
+        }
+        return ;
+    }
+}

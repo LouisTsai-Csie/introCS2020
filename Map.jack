@@ -1,21 +1,56 @@
 class Map
 {
-    field int px,py;
-    field Array img
-    constructor Wall new(int _px,int _py,int sizex,int sizey)
+    field int sizex,sizey;
+    field Array img;
+    field Array wall;
+    constructor Map new()
     {
         var int i;
-        let px=_px;
-        let py=_py;
+        var Array tmparr;
+        let sizex=3;
+        let sizey=3;
+        //initialize img
+        let img=Array.new(sizex);
         
+        let i=0;
+        while(i<sizex)
+        {
+            let img[i]=Array.new(sizey);
+            let i=i+1;
+        }
+        let tmparr=img[0];let tmparr[0]=1;
+        let tmparr=img[0];let tmparr[1]=1;
+        let tmparr=img[0];let tmparr[2]=1;
+        let tmparr=img[1];let tmparr[0]=1;
+        let tmparr=img[1];let tmparr[1]=0;
+        let tmparr=img[1];let tmparr[2]=1;
+        let tmparr=img[2];let tmparr[0]=1;
+        let tmparr=img[2];let tmparr[1]=1;
+        let tmparr=img[2];let tmparr[2]=1;
+        /*
+        let tmparr=wall[i];
+        tmparr[j].draw
+        */
         return this;
+    }
+    method boolean get_map(int x,int y)
+    {
+        //var Array tmp=
+        return 1;
     }
     method void draw()
     {
+        /*
         var int memAddress;
         let  memAddress = 16384+Math.multiply(32,px)+Math.divide(py,16);
-        
+        */
         return;
     }
-
+    method boolean valid(int x,int y)
+    {
+        /*
+        
+        */
+        return 0; 
+    }
 }
