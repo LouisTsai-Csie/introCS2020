@@ -9,7 +9,7 @@ class Game
         let player=Player.new(16,32);
         let map=Map.new();
         let refresh_time=100;
-        let key_lag=20;
+        let key_lag=100;
         
         return this;    
     }
@@ -33,29 +33,32 @@ class Game
         while(true)
         {
             let inp=Keyboard.keyPressed();
-            do draw();
             //L,U,R,D = 130~133
             if(inp=130)
             {
                 do player.move(0,-1);
-                do Sys.wait(key_lag);  
+                do draw();
+                do Sys.wait(key_lag);
             }
             if(inp=131)
             {
                 do player.move(-1,0);
+                do draw();
                 do Sys.wait(key_lag);
             }
             if(inp=132)
             {
-                do player.move(0,1); 
+                do player.move(0,1);
+                do draw(); 
                 do Sys.wait(key_lag);
             }
             if(inp=133)
             {
                 do player.move(1,0);
-                do Sys.wait(key_lag);
+                do draw();
+                do Sys.wait(key_lag);   
             }
-            do Sys.wait(refresh_time);           
+                
         }
         return ;
     }

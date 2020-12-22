@@ -10,7 +10,7 @@ call Map.new 0
 pop this 1
 push constant 100
 pop static 0
-push constant 20
+push constant 100
 pop static 1
 push pointer 0
 return
@@ -44,9 +44,6 @@ not
 if-goto WHILE_END0
 call Keyboard.keyPressed 0
 pop local 0
-push pointer 0
-call Game.draw 1
-pop temp 0
 push local 0
 push constant 130
 eq
@@ -58,6 +55,9 @@ push constant 0
 push constant 1
 neg
 call Player.move 3
+pop temp 0
+push pointer 0
+call Game.draw 1
 pop temp 0
 push static 1
 call Sys.wait 1
@@ -75,6 +75,9 @@ neg
 push constant 0
 call Player.move 3
 pop temp 0
+push pointer 0
+call Game.draw 1
+pop temp 0
 push static 1
 call Sys.wait 1
 pop temp 0
@@ -89,6 +92,9 @@ push this 0
 push constant 0
 push constant 1
 call Player.move 3
+pop temp 0
+push pointer 0
+call Game.draw 1
 pop temp 0
 push static 1
 call Sys.wait 1
@@ -105,13 +111,13 @@ push constant 1
 push constant 0
 call Player.move 3
 pop temp 0
+push pointer 0
+call Game.draw 1
+pop temp 0
 push static 1
 call Sys.wait 1
 pop temp 0
 label IF_FALSE3
-push static 0
-call Sys.wait 1
-pop temp 0
 goto WHILE_EXP0
 label WHILE_END0
 push constant 0
