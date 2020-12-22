@@ -9,6 +9,9 @@ pop this 1
 push this 0
 call Array.new 1
 pop this 2
+push this 0
+call Array.new 1
+pop this 3
 push constant 0
 pop local 0
 label WHILE_EXP0
@@ -19,6 +22,15 @@ not
 if-goto WHILE_END0
 push local 0
 push this 2
+add
+push this 1
+call Array.new 1
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push local 0
+push this 3
 add
 push this 1
 call Array.new 1
@@ -163,14 +175,9 @@ return
 function Map.get_map 0
 push argument 0
 pop pointer 0
-push constant 1
-return
-function Map.draw 0
-push argument 0
-pop pointer 0
 push constant 0
 return
-function Map.valid 0
+function Map.draw 0
 push argument 0
 pop pointer 0
 push constant 0

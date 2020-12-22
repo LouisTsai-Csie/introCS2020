@@ -146,8 +146,9 @@ pop local 2
 push local 2
 push argument 1
 push argument 2
-call Map.valid 3
-not
+call Map.get_map 3
+push constant 1
+eq
 if-goto IF_TRUE0
 goto IF_FALSE0
 label IF_TRUE0

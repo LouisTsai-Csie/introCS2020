@@ -11,11 +11,12 @@ class Map
         let sizey=3;
         //initialize img
         let img=Array.new(sizex);
-        
+        let wall=Array.new(sizex);
         let i=0;
         while(i<sizex)
         {
             let img[i]=Array.new(sizey);
+            let wall[i]=Array.new(sizey);
             let i=i+1;
         }
         let tmparr=img[0];let tmparr[0]=1;
@@ -28,29 +29,25 @@ class Map
         let tmparr=img[2];let tmparr[1]=1;
         let tmparr=img[2];let tmparr[2]=1;
         /*
-        let tmparr=wall[i];
-        tmparr[j].draw
+        for i in range(sizex)
+            for j in range(sizey)
+                wall[i][j]=Wall.new(i*16,j*16);
         */
         return this;
     }
     method boolean get_map(int x,int y)
     {
-        //var Array tmp=
-        return 1;
+        //return img[x][y]
+        return 0;
     }
     method void draw()
     {
         /*
-        var int memAddress;
-        let  memAddress = 16384+Math.multiply(32,px)+Math.divide(py,16);
-        */
+        for i in range(sizex)
+            for j in range(sizey)
+                if(getmap(i,j))
+                    wall[i][j].draw()
+        */       
         return;
-    }
-    method boolean valid(int x,int y)
-    {
-        /*
-        
-        */
-        return 0; 
     }
 }

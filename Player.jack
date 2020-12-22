@@ -5,20 +5,6 @@ class Player
     {
         let px=_px;
         let py=_py;
-        /*
-        ps: 2d array template
-        
-        initialize:
-        let img=Array.new(size);
-        let i=0;
-        while(i<size)
-        {
-            let img[i]=Array.new(size);
-            let i=i+1;
-        }
-        access(i,j):
-        let tmp=img[i];let tmp[j]=1;
-        */
         return this;
     }
     method void draw()
@@ -45,22 +31,17 @@ class Player
     }
     method boolean valid(int x,int y)
     {
+        //if(~Main.game.map.valid(x,y))
         var Game tmpG;
         var Player tmpP;
         var Map tmpM;
         let tmpG=Main._game();
         let tmpM=tmpG._map();
-        if(~tmpM.valid(x,y))
+        if(tmpM.get_map(x,y)=1)
         {
             return false;
         }
-        //let tmp=Main.game;
-        /*
-        if(~Main.game.map.valid(x,y))
-        {
-            return false;
-        } 
-        */ 
+
         return true;
     }
     method void move(int dx,int dy)
