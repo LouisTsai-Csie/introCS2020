@@ -9,23 +9,34 @@
 //#define endl '\n'
 using namespace std;
 typedef pair<int,int> pii;
-int a[3][3]
+string a[15]
 {
-	{1,1,1},
-	{1,0,1},
-	{1,1,1}
+	"111111111111111",
+	"111111111111111",
+	"111000000000011",
+	"111000000000011",
+	"111000000000011",
+	"111000000000011",
+	"111000000000011",
+	"111000000000011",
+	"111000000000011",
+	"111000000000011",
+	"111000000000011",
+	"111000000000011",
+	"111000000000011",
+	"111000000000011",
+	"111111111111111"
 };
 signed main()
 {
-	ios::sync_with_stdio(0);
-	cin.tie(0);
-	int n=3,m=3;
+	int n=15,m=15;
 	for(int i=0;i<n;i++)
 	{
 		for(int j=0;j<m;j++)
 		{
-			printf("let tmparr=img[%lld];let tmparr[%lld]=%lld;\n",i,j,a[i][j]);
+			printf("let tmpArray=img[%lld];let tmpArray[%lld]=%lld;",i,j,(int)(a[i][j]-'0'));
 		}
+		printf("\n");
 	}
 	return 0;
 }

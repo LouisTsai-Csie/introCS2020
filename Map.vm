@@ -254,20 +254,6 @@ pop temp 0
 pop pointer 1
 push temp 0
 pop that 0
-push constant 0
-push this 2
-add
-pop pointer 1
-push that 0
-pop local 2
-push constant 15
-push local 2
-add
-push constant 1
-pop temp 0
-pop pointer 1
-push temp 0
-pop that 0
 push constant 1
 push this 2
 add
@@ -478,20 +464,6 @@ pop temp 0
 pop pointer 1
 push temp 0
 pop that 0
-push constant 1
-push this 2
-add
-pop pointer 1
-push that 0
-pop local 2
-push constant 15
-push local 2
-add
-push constant 1
-pop temp 0
-pop pointer 1
-push temp 0
-pop that 0
 push constant 2
 push this 2
 add
@@ -543,7 +515,7 @@ pop local 2
 push constant 3
 push local 2
 add
-push constant 1
+push constant 0
 pop temp 0
 pop pointer 1
 push temp 0
@@ -683,7 +655,7 @@ pop local 2
 push constant 13
 push local 2
 add
-push constant 0
+push constant 1
 pop temp 0
 pop pointer 1
 push temp 0
@@ -702,20 +674,6 @@ pop temp 0
 pop pointer 1
 push temp 0
 pop that 0
-push constant 2
-push this 2
-add
-pop pointer 1
-push that 0
-pop local 2
-push constant 15
-push local 2
-add
-push constant 1
-pop temp 0
-pop pointer 1
-push temp 0
-pop that 0
 push constant 3
 push this 2
 add
@@ -767,7 +725,7 @@ pop local 2
 push constant 3
 push local 2
 add
-push constant 1
+push constant 0
 pop temp 0
 pop pointer 1
 push temp 0
@@ -907,20 +865,6 @@ pop local 2
 push constant 13
 push local 2
 add
-push constant 0
-pop temp 0
-pop pointer 1
-push temp 0
-pop that 0
-push constant 3
-push this 2
-add
-pop pointer 1
-push that 0
-pop local 2
-push constant 14
-push local 2
-add
 push constant 1
 pop temp 0
 pop pointer 1
@@ -932,7 +876,7 @@ add
 pop pointer 1
 push that 0
 pop local 2
-push constant 15
+push constant 14
 push local 2
 add
 push constant 1
@@ -991,7 +935,7 @@ pop local 2
 push constant 3
 push local 2
 add
-push constant 1
+push constant 0
 pop temp 0
 pop pointer 1
 push temp 0
@@ -1131,20 +1075,6 @@ pop local 2
 push constant 13
 push local 2
 add
-push constant 0
-pop temp 0
-pop pointer 1
-push temp 0
-pop that 0
-push constant 4
-push this 2
-add
-pop pointer 1
-push that 0
-pop local 2
-push constant 14
-push local 2
-add
 push constant 1
 pop temp 0
 pop pointer 1
@@ -1156,7 +1086,7 @@ add
 pop pointer 1
 push that 0
 pop local 2
-push constant 15
+push constant 14
 push local 2
 add
 push constant 1
@@ -1215,7 +1145,7 @@ pop local 2
 push constant 3
 push local 2
 add
-push constant 1
+push constant 0
 pop temp 0
 pop pointer 1
 push temp 0
@@ -1355,20 +1285,6 @@ pop local 2
 push constant 13
 push local 2
 add
-push constant 0
-pop temp 0
-pop pointer 1
-push temp 0
-pop that 0
-push constant 5
-push this 2
-add
-pop pointer 1
-push that 0
-pop local 2
-push constant 14
-push local 2
-add
 push constant 1
 pop temp 0
 pop pointer 1
@@ -1380,7 +1296,7 @@ add
 pop pointer 1
 push that 0
 pop local 2
-push constant 15
+push constant 14
 push local 2
 add
 push constant 1
@@ -1439,7 +1355,7 @@ pop local 2
 push constant 3
 push local 2
 add
-push constant 1
+push constant 0
 pop temp 0
 pop pointer 1
 push temp 0
@@ -1453,7 +1369,7 @@ pop local 2
 push constant 4
 push local 2
 add
-push constant 1
+push constant 0
 pop temp 0
 pop pointer 1
 push temp 0
@@ -1467,7 +1383,7 @@ pop local 2
 push constant 5
 push local 2
 add
-push constant 1
+push constant 0
 pop temp 0
 pop pointer 1
 push temp 0
@@ -1565,7 +1481,7 @@ pop local 2
 push constant 12
 push local 2
 add
-push constant 1
+push constant 0
 pop temp 0
 pop pointer 1
 push temp 0
@@ -1598,20 +1514,6 @@ pop temp 0
 pop pointer 1
 push temp 0
 pop that 0
-push constant 6
-push this 2
-add
-pop pointer 1
-push that 0
-pop local 2
-push constant 15
-push local 2
-add
-push constant 1
-pop temp 0
-pop pointer 1
-push temp 0
-pop that 0
 push constant 7
 push this 2
 add
@@ -1663,7 +1565,7 @@ pop local 2
 push constant 3
 push local 2
 add
-push constant 1
+push constant 0
 pop temp 0
 pop pointer 1
 push temp 0
@@ -1677,7 +1579,7 @@ pop local 2
 push constant 4
 push local 2
 add
-push constant 1
+push constant 0
 pop temp 0
 pop pointer 1
 push temp 0
@@ -1691,7 +1593,7 @@ pop local 2
 push constant 5
 push local 2
 add
-push constant 1
+push constant 0
 pop temp 0
 pop pointer 1
 push temp 0
@@ -1789,7 +1691,7 @@ pop local 2
 push constant 12
 push local 2
 add
-push constant 1
+push constant 0
 pop temp 0
 pop pointer 1
 push temp 0
@@ -1815,20 +1717,6 @@ pop pointer 1
 push that 0
 pop local 2
 push constant 14
-push local 2
-add
-push constant 1
-pop temp 0
-pop pointer 1
-push temp 0
-pop that 0
-push constant 7
-push this 2
-add
-pop pointer 1
-push that 0
-pop local 2
-push constant 15
 push local 2
 add
 push constant 1
@@ -1887,7 +1775,7 @@ pop local 2
 push constant 3
 push local 2
 add
-push constant 1
+push constant 0
 pop temp 0
 pop pointer 1
 push temp 0
@@ -2027,20 +1915,6 @@ pop local 2
 push constant 13
 push local 2
 add
-push constant 0
-pop temp 0
-pop pointer 1
-push temp 0
-pop that 0
-push constant 8
-push this 2
-add
-pop pointer 1
-push that 0
-pop local 2
-push constant 14
-push local 2
-add
 push constant 1
 pop temp 0
 pop pointer 1
@@ -2052,7 +1926,7 @@ add
 pop pointer 1
 push that 0
 pop local 2
-push constant 15
+push constant 14
 push local 2
 add
 push constant 1
@@ -2111,7 +1985,7 @@ pop local 2
 push constant 3
 push local 2
 add
-push constant 1
+push constant 0
 pop temp 0
 pop pointer 1
 push temp 0
@@ -2251,20 +2125,6 @@ pop local 2
 push constant 13
 push local 2
 add
-push constant 0
-pop temp 0
-pop pointer 1
-push temp 0
-pop that 0
-push constant 9
-push this 2
-add
-pop pointer 1
-push that 0
-pop local 2
-push constant 14
-push local 2
-add
 push constant 1
 pop temp 0
 pop pointer 1
@@ -2276,7 +2136,7 @@ add
 pop pointer 1
 push that 0
 pop local 2
-push constant 15
+push constant 14
 push local 2
 add
 push constant 1
@@ -2335,7 +2195,7 @@ pop local 2
 push constant 3
 push local 2
 add
-push constant 1
+push constant 0
 pop temp 0
 pop pointer 1
 push temp 0
@@ -2349,7 +2209,7 @@ pop local 2
 push constant 4
 push local 2
 add
-push constant 1
+push constant 0
 pop temp 0
 pop pointer 1
 push temp 0
@@ -2363,7 +2223,7 @@ pop local 2
 push constant 5
 push local 2
 add
-push constant 1
+push constant 0
 pop temp 0
 pop pointer 1
 push temp 0
@@ -2475,20 +2335,6 @@ pop local 2
 push constant 13
 push local 2
 add
-push constant 0
-pop temp 0
-pop pointer 1
-push temp 0
-pop that 0
-push constant 10
-push this 2
-add
-pop pointer 1
-push that 0
-pop local 2
-push constant 14
-push local 2
-add
 push constant 1
 pop temp 0
 pop pointer 1
@@ -2500,7 +2346,7 @@ add
 pop pointer 1
 push that 0
 pop local 2
-push constant 15
+push constant 14
 push local 2
 add
 push constant 1
@@ -2559,7 +2405,7 @@ pop local 2
 push constant 3
 push local 2
 add
-push constant 1
+push constant 0
 pop temp 0
 pop pointer 1
 push temp 0
@@ -2573,7 +2419,7 @@ pop local 2
 push constant 4
 push local 2
 add
-push constant 1
+push constant 0
 pop temp 0
 pop pointer 1
 push temp 0
@@ -2587,7 +2433,7 @@ pop local 2
 push constant 5
 push local 2
 add
-push constant 1
+push constant 0
 pop temp 0
 pop pointer 1
 push temp 0
@@ -2699,20 +2545,6 @@ pop local 2
 push constant 13
 push local 2
 add
-push constant 0
-pop temp 0
-pop pointer 1
-push temp 0
-pop that 0
-push constant 11
-push this 2
-add
-pop pointer 1
-push that 0
-pop local 2
-push constant 14
-push local 2
-add
 push constant 1
 pop temp 0
 pop pointer 1
@@ -2724,7 +2556,7 @@ add
 pop pointer 1
 push that 0
 pop local 2
-push constant 15
+push constant 14
 push local 2
 add
 push constant 1
@@ -2783,7 +2615,7 @@ pop local 2
 push constant 3
 push local 2
 add
-push constant 1
+push constant 0
 pop temp 0
 pop pointer 1
 push temp 0
@@ -2797,7 +2629,7 @@ pop local 2
 push constant 4
 push local 2
 add
-push constant 1
+push constant 0
 pop temp 0
 pop pointer 1
 push temp 0
@@ -2811,7 +2643,7 @@ pop local 2
 push constant 5
 push local 2
 add
-push constant 1
+push constant 0
 pop temp 0
 pop pointer 1
 push temp 0
@@ -2825,7 +2657,7 @@ pop local 2
 push constant 6
 push local 2
 add
-push constant 1
+push constant 0
 pop temp 0
 pop pointer 1
 push temp 0
@@ -2839,7 +2671,7 @@ pop local 2
 push constant 7
 push local 2
 add
-push constant 1
+push constant 0
 pop temp 0
 pop pointer 1
 push temp 0
@@ -2853,7 +2685,7 @@ pop local 2
 push constant 8
 push local 2
 add
-push constant 1
+push constant 0
 pop temp 0
 pop pointer 1
 push temp 0
@@ -2867,7 +2699,7 @@ pop local 2
 push constant 9
 push local 2
 add
-push constant 1
+push constant 0
 pop temp 0
 pop pointer 1
 push temp 0
@@ -2881,7 +2713,7 @@ pop local 2
 push constant 10
 push local 2
 add
-push constant 1
+push constant 0
 pop temp 0
 pop pointer 1
 push temp 0
@@ -2895,7 +2727,7 @@ pop local 2
 push constant 11
 push local 2
 add
-push constant 1
+push constant 0
 pop temp 0
 pop pointer 1
 push temp 0
@@ -2909,7 +2741,7 @@ pop local 2
 push constant 12
 push local 2
 add
-push constant 1
+push constant 0
 pop temp 0
 pop pointer 1
 push temp 0
@@ -2935,20 +2767,6 @@ pop pointer 1
 push that 0
 pop local 2
 push constant 14
-push local 2
-add
-push constant 1
-pop temp 0
-pop pointer 1
-push temp 0
-pop that 0
-push constant 12
-push this 2
-add
-pop pointer 1
-push that 0
-pop local 2
-push constant 15
 push local 2
 add
 push constant 1
@@ -3007,7 +2825,7 @@ pop local 2
 push constant 3
 push local 2
 add
-push constant 1
+push constant 0
 pop temp 0
 pop pointer 1
 push temp 0
@@ -3021,7 +2839,7 @@ pop local 2
 push constant 4
 push local 2
 add
-push constant 1
+push constant 0
 pop temp 0
 pop pointer 1
 push temp 0
@@ -3035,7 +2853,7 @@ pop local 2
 push constant 5
 push local 2
 add
-push constant 1
+push constant 0
 pop temp 0
 pop pointer 1
 push temp 0
@@ -3049,7 +2867,7 @@ pop local 2
 push constant 6
 push local 2
 add
-push constant 1
+push constant 0
 pop temp 0
 pop pointer 1
 push temp 0
@@ -3063,7 +2881,7 @@ pop local 2
 push constant 7
 push local 2
 add
-push constant 1
+push constant 0
 pop temp 0
 pop pointer 1
 push temp 0
@@ -3077,7 +2895,7 @@ pop local 2
 push constant 8
 push local 2
 add
-push constant 1
+push constant 0
 pop temp 0
 pop pointer 1
 push temp 0
@@ -3091,7 +2909,7 @@ pop local 2
 push constant 9
 push local 2
 add
-push constant 1
+push constant 0
 pop temp 0
 pop pointer 1
 push temp 0
@@ -3105,7 +2923,7 @@ pop local 2
 push constant 10
 push local 2
 add
-push constant 1
+push constant 0
 pop temp 0
 pop pointer 1
 push temp 0
@@ -3119,7 +2937,7 @@ pop local 2
 push constant 11
 push local 2
 add
-push constant 1
+push constant 0
 pop temp 0
 pop pointer 1
 push temp 0
@@ -3133,7 +2951,7 @@ pop local 2
 push constant 12
 push local 2
 add
-push constant 1
+push constant 0
 pop temp 0
 pop pointer 1
 push temp 0
@@ -3159,20 +2977,6 @@ pop pointer 1
 push that 0
 pop local 2
 push constant 14
-push local 2
-add
-push constant 1
-pop temp 0
-pop pointer 1
-push temp 0
-pop that 0
-push constant 13
-push this 2
-add
-pop pointer 1
-push that 0
-pop local 2
-push constant 15
 push local 2
 add
 push constant 1
@@ -3383,244 +3187,6 @@ pop pointer 1
 push that 0
 pop local 2
 push constant 14
-push local 2
-add
-push constant 1
-pop temp 0
-pop pointer 1
-push temp 0
-pop that 0
-push constant 14
-push this 2
-add
-pop pointer 1
-push that 0
-pop local 2
-push constant 15
-push local 2
-add
-push constant 1
-pop temp 0
-pop pointer 1
-push temp 0
-pop that 0
-push constant 15
-push this 2
-add
-pop pointer 1
-push that 0
-pop local 2
-push constant 0
-push local 2
-add
-push constant 1
-pop temp 0
-pop pointer 1
-push temp 0
-pop that 0
-push constant 15
-push this 2
-add
-pop pointer 1
-push that 0
-pop local 2
-push constant 1
-push local 2
-add
-push constant 1
-pop temp 0
-pop pointer 1
-push temp 0
-pop that 0
-push constant 15
-push this 2
-add
-pop pointer 1
-push that 0
-pop local 2
-push constant 2
-push local 2
-add
-push constant 1
-pop temp 0
-pop pointer 1
-push temp 0
-pop that 0
-push constant 15
-push this 2
-add
-pop pointer 1
-push that 0
-pop local 2
-push constant 3
-push local 2
-add
-push constant 1
-pop temp 0
-pop pointer 1
-push temp 0
-pop that 0
-push constant 15
-push this 2
-add
-pop pointer 1
-push that 0
-pop local 2
-push constant 4
-push local 2
-add
-push constant 1
-pop temp 0
-pop pointer 1
-push temp 0
-pop that 0
-push constant 15
-push this 2
-add
-pop pointer 1
-push that 0
-pop local 2
-push constant 5
-push local 2
-add
-push constant 1
-pop temp 0
-pop pointer 1
-push temp 0
-pop that 0
-push constant 15
-push this 2
-add
-pop pointer 1
-push that 0
-pop local 2
-push constant 6
-push local 2
-add
-push constant 1
-pop temp 0
-pop pointer 1
-push temp 0
-pop that 0
-push constant 15
-push this 2
-add
-pop pointer 1
-push that 0
-pop local 2
-push constant 7
-push local 2
-add
-push constant 1
-pop temp 0
-pop pointer 1
-push temp 0
-pop that 0
-push constant 15
-push this 2
-add
-pop pointer 1
-push that 0
-pop local 2
-push constant 8
-push local 2
-add
-push constant 1
-pop temp 0
-pop pointer 1
-push temp 0
-pop that 0
-push constant 15
-push this 2
-add
-pop pointer 1
-push that 0
-pop local 2
-push constant 9
-push local 2
-add
-push constant 1
-pop temp 0
-pop pointer 1
-push temp 0
-pop that 0
-push constant 15
-push this 2
-add
-pop pointer 1
-push that 0
-pop local 2
-push constant 10
-push local 2
-add
-push constant 1
-pop temp 0
-pop pointer 1
-push temp 0
-pop that 0
-push constant 15
-push this 2
-add
-pop pointer 1
-push that 0
-pop local 2
-push constant 11
-push local 2
-add
-push constant 1
-pop temp 0
-pop pointer 1
-push temp 0
-pop that 0
-push constant 15
-push this 2
-add
-pop pointer 1
-push that 0
-pop local 2
-push constant 12
-push local 2
-add
-push constant 1
-pop temp 0
-pop pointer 1
-push temp 0
-pop that 0
-push constant 15
-push this 2
-add
-pop pointer 1
-push that 0
-pop local 2
-push constant 13
-push local 2
-add
-push constant 1
-pop temp 0
-pop pointer 1
-push temp 0
-pop that 0
-push constant 15
-push this 2
-add
-pop pointer 1
-push that 0
-pop local 2
-push constant 14
-push local 2
-add
-push constant 1
-pop temp 0
-pop pointer 1
-push temp 0
-pop that 0
-push constant 15
-push this 2
-add
-pop pointer 1
-push that 0
-pop local 2
-push constant 15
 push local 2
 add
 push constant 1
