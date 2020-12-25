@@ -1,0 +1,339 @@
+class Map
+{
+    field int sizex,sizey;
+    field Array img;
+    field Array wall;
+    constructor Map new()
+    {
+        var int i;
+        var int j;
+        var Array tmparr;
+        var Array tmpwall;
+        let sizex=16;
+        let sizey=16;
+        //initialize img
+        let img=Array.new(sizex);
+        let wall=Array.new(sizex);
+        let i=0;
+        while(i<sizex)
+        {
+            let img[i]=Array.new(sizey);
+            let wall[i]=Array.new(sizey);
+            let i=i+1;
+        }
+        let tmparr=img[0];let tmparr[0]=1;
+        
+        let tmparr=img[ 0 ];let tmparr[ 0 ]=1;
+        let tmparr=img[ 0 ];let tmparr[ 1 ]=1;
+        let tmparr=img[ 0 ];let tmparr[ 2 ]=1;
+        let tmparr=img[ 0 ];let tmparr[ 3 ]=1;
+        let tmparr=img[ 0 ];let tmparr[ 4 ]=1;
+        let tmparr=img[ 0 ];let tmparr[ 5 ]=1;
+        let tmparr=img[ 0 ];let tmparr[ 6 ]=1;
+        let tmparr=img[ 0 ];let tmparr[ 7 ]=1;
+        let tmparr=img[ 0 ];let tmparr[ 8 ]=1;
+        let tmparr=img[ 0 ];let tmparr[ 9 ]=1;
+        let tmparr=img[ 0 ];let tmparr[ 10 ]=1;
+        let tmparr=img[ 0 ];let tmparr[ 11 ]=1;
+        let tmparr=img[ 0 ];let tmparr[ 12 ]=1;
+        let tmparr=img[ 0 ];let tmparr[ 13 ]=1;
+        let tmparr=img[ 0 ];let tmparr[ 14 ]=1;
+        let tmparr=img[ 0 ];let tmparr[ 15 ]=1;
+        let tmparr=img[ 1 ];let tmparr[ 0 ]=1;
+        let tmparr=img[ 1 ];let tmparr[ 1 ]=1;
+        let tmparr=img[ 1 ];let tmparr[ 2 ]=1;
+        let tmparr=img[ 1 ];let tmparr[ 3 ]=1;
+        let tmparr=img[ 1 ];let tmparr[ 4 ]=1;
+        let tmparr=img[ 1 ];let tmparr[ 5 ]=1;
+        let tmparr=img[ 1 ];let tmparr[ 6 ]=1;
+        let tmparr=img[ 1 ];let tmparr[ 7 ]=1;
+        let tmparr=img[ 1 ];let tmparr[ 8 ]=1;
+        let tmparr=img[ 1 ];let tmparr[ 9 ]=1;
+        let tmparr=img[ 1 ];let tmparr[ 10 ]=1;
+        let tmparr=img[ 1 ];let tmparr[ 11 ]=1;
+        let tmparr=img[ 1 ];let tmparr[ 12 ]=1;
+        let tmparr=img[ 1 ];let tmparr[ 13 ]=1;
+        let tmparr=img[ 1 ];let tmparr[ 14 ]=1;
+        let tmparr=img[ 1 ];let tmparr[ 15 ]=1;
+        let tmparr=img[ 2 ];let tmparr[ 0 ]=1;
+        let tmparr=img[ 2 ];let tmparr[ 1 ]=1;
+        let tmparr=img[ 2 ];let tmparr[ 2 ]=1;
+        let tmparr=img[ 2 ];let tmparr[ 3 ]=1;
+        let tmparr=img[ 2 ];let tmparr[ 4 ]=0;
+        let tmparr=img[ 2 ];let tmparr[ 5 ]=0;
+        let tmparr=img[ 2 ];let tmparr[ 6 ]=0;
+        let tmparr=img[ 2 ];let tmparr[ 7 ]=0;
+        let tmparr=img[ 2 ];let tmparr[ 8 ]=0;
+        let tmparr=img[ 2 ];let tmparr[ 9 ]=0;
+        let tmparr=img[ 2 ];let tmparr[ 10 ]=0;
+        let tmparr=img[ 2 ];let tmparr[ 11 ]=0;
+        let tmparr=img[ 2 ];let tmparr[ 12 ]=0;
+        let tmparr=img[ 2 ];let tmparr[ 13 ]=0;
+        let tmparr=img[ 2 ];let tmparr[ 14 ]=1;
+        let tmparr=img[ 2 ];let tmparr[ 15 ]=1;
+        let tmparr=img[ 3 ];let tmparr[ 0 ]=1;
+        let tmparr=img[ 3 ];let tmparr[ 1 ]=1;
+        let tmparr=img[ 3 ];let tmparr[ 2 ]=1;
+        let tmparr=img[ 3 ];let tmparr[ 3 ]=1;
+        let tmparr=img[ 3 ];let tmparr[ 4 ]=0;
+        let tmparr=img[ 3 ];let tmparr[ 5 ]=0;
+        let tmparr=img[ 3 ];let tmparr[ 6 ]=0;
+        let tmparr=img[ 3 ];let tmparr[ 7 ]=0;
+        let tmparr=img[ 3 ];let tmparr[ 8 ]=0;
+        let tmparr=img[ 3 ];let tmparr[ 9 ]=0;
+        let tmparr=img[ 3 ];let tmparr[ 10 ]=0;
+        let tmparr=img[ 3 ];let tmparr[ 11 ]=0;
+        let tmparr=img[ 3 ];let tmparr[ 12 ]=0;
+        let tmparr=img[ 3 ];let tmparr[ 13 ]=0;
+        let tmparr=img[ 3 ];let tmparr[ 14 ]=1;
+        let tmparr=img[ 3 ];let tmparr[ 15 ]=1;
+        let tmparr=img[ 4 ];let tmparr[ 0 ]=1;
+        let tmparr=img[ 4 ];let tmparr[ 1 ]=1;
+        let tmparr=img[ 4 ];let tmparr[ 2 ]=1;
+        let tmparr=img[ 4 ];let tmparr[ 3 ]=1;
+        let tmparr=img[ 4 ];let tmparr[ 4 ]=0;
+        let tmparr=img[ 4 ];let tmparr[ 5 ]=0;
+        let tmparr=img[ 4 ];let tmparr[ 6 ]=0;
+        let tmparr=img[ 4 ];let tmparr[ 7 ]=0;
+        let tmparr=img[ 4 ];let tmparr[ 8 ]=0;
+        let tmparr=img[ 4 ];let tmparr[ 9 ]=0;
+        let tmparr=img[ 4 ];let tmparr[ 10 ]=0;
+        let tmparr=img[ 4 ];let tmparr[ 11 ]=0;
+        let tmparr=img[ 4 ];let tmparr[ 12 ]=0;
+        let tmparr=img[ 4 ];let tmparr[ 13 ]=0;
+        let tmparr=img[ 4 ];let tmparr[ 14 ]=1;
+        let tmparr=img[ 4 ];let tmparr[ 15 ]=1;
+        let tmparr=img[ 5 ];let tmparr[ 0 ]=1;
+        let tmparr=img[ 5 ];let tmparr[ 1 ]=1;
+        let tmparr=img[ 5 ];let tmparr[ 2 ]=1;
+        let tmparr=img[ 5 ];let tmparr[ 3 ]=1;
+        let tmparr=img[ 5 ];let tmparr[ 4 ]=0;
+        let tmparr=img[ 5 ];let tmparr[ 5 ]=0;
+        let tmparr=img[ 5 ];let tmparr[ 6 ]=0;
+        let tmparr=img[ 5 ];let tmparr[ 7 ]=0;
+        let tmparr=img[ 5 ];let tmparr[ 8 ]=0;
+        let tmparr=img[ 5 ];let tmparr[ 9 ]=0;
+        let tmparr=img[ 5 ];let tmparr[ 10 ]=0;
+        let tmparr=img[ 5 ];let tmparr[ 11 ]=0;
+        let tmparr=img[ 5 ];let tmparr[ 12 ]=0;
+        let tmparr=img[ 5 ];let tmparr[ 13 ]=0;
+        let tmparr=img[ 5 ];let tmparr[ 14 ]=1;
+        let tmparr=img[ 5 ];let tmparr[ 15 ]=1;
+        let tmparr=img[ 6 ];let tmparr[ 0 ]=1;
+        let tmparr=img[ 6 ];let tmparr[ 1 ]=1;
+        let tmparr=img[ 6 ];let tmparr[ 2 ]=1;
+        let tmparr=img[ 6 ];let tmparr[ 3 ]=1;
+        let tmparr=img[ 6 ];let tmparr[ 4 ]=1;
+        let tmparr=img[ 6 ];let tmparr[ 5 ]=1;
+        let tmparr=img[ 6 ];let tmparr[ 6 ]=0;
+        let tmparr=img[ 6 ];let tmparr[ 7 ]=0;
+        let tmparr=img[ 6 ];let tmparr[ 8 ]=0;
+        let tmparr=img[ 6 ];let tmparr[ 9 ]=0;
+        let tmparr=img[ 6 ];let tmparr[ 10 ]=0;
+        let tmparr=img[ 6 ];let tmparr[ 11 ]=0;
+        let tmparr=img[ 6 ];let tmparr[ 12 ]=1;
+        let tmparr=img[ 6 ];let tmparr[ 13 ]=1;
+        let tmparr=img[ 6 ];let tmparr[ 14 ]=1;
+        let tmparr=img[ 6 ];let tmparr[ 15 ]=1;
+        let tmparr=img[ 7 ];let tmparr[ 0 ]=1;
+        let tmparr=img[ 7 ];let tmparr[ 1 ]=1;
+        let tmparr=img[ 7 ];let tmparr[ 2 ]=1;
+        let tmparr=img[ 7 ];let tmparr[ 3 ]=1;
+        let tmparr=img[ 7 ];let tmparr[ 4 ]=1;
+        let tmparr=img[ 7 ];let tmparr[ 5 ]=1;
+        let tmparr=img[ 7 ];let tmparr[ 6 ]=0;
+        let tmparr=img[ 7 ];let tmparr[ 7 ]=0;
+        let tmparr=img[ 7 ];let tmparr[ 8 ]=0;
+        let tmparr=img[ 7 ];let tmparr[ 9 ]=0;
+        let tmparr=img[ 7 ];let tmparr[ 10 ]=0;
+        let tmparr=img[ 7 ];let tmparr[ 11 ]=0;
+        let tmparr=img[ 7 ];let tmparr[ 12 ]=1;
+        let tmparr=img[ 7 ];let tmparr[ 13 ]=1;
+        let tmparr=img[ 7 ];let tmparr[ 14 ]=1;
+        let tmparr=img[ 7 ];let tmparr[ 15 ]=1;
+        let tmparr=img[ 8 ];let tmparr[ 0 ]=1;
+        let tmparr=img[ 8 ];let tmparr[ 1 ]=1;
+        let tmparr=img[ 8 ];let tmparr[ 2 ]=1;
+        let tmparr=img[ 8 ];let tmparr[ 3 ]=1;
+        let tmparr=img[ 8 ];let tmparr[ 4 ]=0;
+        let tmparr=img[ 8 ];let tmparr[ 5 ]=0;
+        let tmparr=img[ 8 ];let tmparr[ 6 ]=0;
+        let tmparr=img[ 8 ];let tmparr[ 7 ]=0;
+        let tmparr=img[ 8 ];let tmparr[ 8 ]=0;
+        let tmparr=img[ 8 ];let tmparr[ 9 ]=0;
+        let tmparr=img[ 8 ];let tmparr[ 10 ]=0;
+        let tmparr=img[ 8 ];let tmparr[ 11 ]=0;
+        let tmparr=img[ 8 ];let tmparr[ 12 ]=0;
+        let tmparr=img[ 8 ];let tmparr[ 13 ]=0;
+        let tmparr=img[ 8 ];let tmparr[ 14 ]=1;
+        let tmparr=img[ 8 ];let tmparr[ 15 ]=1;
+        let tmparr=img[ 9 ];let tmparr[ 0 ]=1;
+        let tmparr=img[ 9 ];let tmparr[ 1 ]=1;
+        let tmparr=img[ 9 ];let tmparr[ 2 ]=1;
+        let tmparr=img[ 9 ];let tmparr[ 3 ]=1;
+        let tmparr=img[ 9 ];let tmparr[ 4 ]=0;
+        let tmparr=img[ 9 ];let tmparr[ 5 ]=0;
+        let tmparr=img[ 9 ];let tmparr[ 6 ]=0;
+        let tmparr=img[ 9 ];let tmparr[ 7 ]=0;
+        let tmparr=img[ 9 ];let tmparr[ 8 ]=0;
+        let tmparr=img[ 9 ];let tmparr[ 9 ]=0;
+        let tmparr=img[ 9 ];let tmparr[ 10 ]=0;
+        let tmparr=img[ 9 ];let tmparr[ 11 ]=0;
+        let tmparr=img[ 9 ];let tmparr[ 12 ]=0;
+        let tmparr=img[ 9 ];let tmparr[ 13 ]=0;
+        let tmparr=img[ 9 ];let tmparr[ 14 ]=1;
+        let tmparr=img[ 9 ];let tmparr[ 15 ]=1;
+        let tmparr=img[ 10 ];let tmparr[ 0 ]=1;
+        let tmparr=img[ 10 ];let tmparr[ 1 ]=1;
+        let tmparr=img[ 10 ];let tmparr[ 2 ]=1;
+        let tmparr=img[ 10 ];let tmparr[ 3 ]=1;
+        let tmparr=img[ 10 ];let tmparr[ 4 ]=1;
+        let tmparr=img[ 10 ];let tmparr[ 5 ]=1;
+        let tmparr=img[ 10 ];let tmparr[ 6 ]=0;
+        let tmparr=img[ 10 ];let tmparr[ 7 ]=0;
+        let tmparr=img[ 10 ];let tmparr[ 8 ]=0;
+        let tmparr=img[ 10 ];let tmparr[ 9 ]=0;
+        let tmparr=img[ 10 ];let tmparr[ 10 ]=0;
+        let tmparr=img[ 10 ];let tmparr[ 11 ]=0;
+        let tmparr=img[ 10 ];let tmparr[ 12 ]=0;
+        let tmparr=img[ 10 ];let tmparr[ 13 ]=0;
+        let tmparr=img[ 10 ];let tmparr[ 14 ]=1;
+        let tmparr=img[ 10 ];let tmparr[ 15 ]=1;
+        let tmparr=img[ 11 ];let tmparr[ 0 ]=1;
+        let tmparr=img[ 11 ];let tmparr[ 1 ]=1;
+        let tmparr=img[ 11 ];let tmparr[ 2 ]=1;
+        let tmparr=img[ 11 ];let tmparr[ 3 ]=1;
+        let tmparr=img[ 11 ];let tmparr[ 4 ]=1;
+        let tmparr=img[ 11 ];let tmparr[ 5 ]=1;
+        let tmparr=img[ 11 ];let tmparr[ 6 ]=0;
+        let tmparr=img[ 11 ];let tmparr[ 7 ]=0;
+        let tmparr=img[ 11 ];let tmparr[ 8 ]=0;
+        let tmparr=img[ 11 ];let tmparr[ 9 ]=0;
+        let tmparr=img[ 11 ];let tmparr[ 10 ]=0;
+        let tmparr=img[ 11 ];let tmparr[ 11 ]=0;
+        let tmparr=img[ 11 ];let tmparr[ 12 ]=0;
+        let tmparr=img[ 11 ];let tmparr[ 13 ]=0;
+        let tmparr=img[ 11 ];let tmparr[ 14 ]=1;
+        let tmparr=img[ 11 ];let tmparr[ 15 ]=1;
+        let tmparr=img[ 12 ];let tmparr[ 0 ]=1;
+        let tmparr=img[ 12 ];let tmparr[ 1 ]=1;
+        let tmparr=img[ 12 ];let tmparr[ 2 ]=1;
+        let tmparr=img[ 12 ];let tmparr[ 3 ]=1;
+        let tmparr=img[ 12 ];let tmparr[ 4 ]=1;
+        let tmparr=img[ 12 ];let tmparr[ 5 ]=1;
+        let tmparr=img[ 12 ];let tmparr[ 6 ]=1;
+        let tmparr=img[ 12 ];let tmparr[ 7 ]=1;
+        let tmparr=img[ 12 ];let tmparr[ 8 ]=1;
+        let tmparr=img[ 12 ];let tmparr[ 9 ]=1;
+        let tmparr=img[ 12 ];let tmparr[ 10 ]=1;
+        let tmparr=img[ 12 ];let tmparr[ 11 ]=1;
+        let tmparr=img[ 12 ];let tmparr[ 12 ]=1;
+        let tmparr=img[ 12 ];let tmparr[ 13 ]=1;
+        let tmparr=img[ 12 ];let tmparr[ 14 ]=1;
+        let tmparr=img[ 12 ];let tmparr[ 15 ]=1;
+        let tmparr=img[ 13 ];let tmparr[ 0 ]=1;
+        let tmparr=img[ 13 ];let tmparr[ 1 ]=1;
+        let tmparr=img[ 13 ];let tmparr[ 2 ]=1;
+        let tmparr=img[ 13 ];let tmparr[ 3 ]=1;
+        let tmparr=img[ 13 ];let tmparr[ 4 ]=1;
+        let tmparr=img[ 13 ];let tmparr[ 5 ]=1;
+        let tmparr=img[ 13 ];let tmparr[ 6 ]=1;
+        let tmparr=img[ 13 ];let tmparr[ 7 ]=1;
+        let tmparr=img[ 13 ];let tmparr[ 8 ]=1;
+        let tmparr=img[ 13 ];let tmparr[ 9 ]=1;
+        let tmparr=img[ 13 ];let tmparr[ 10 ]=1;
+        let tmparr=img[ 13 ];let tmparr[ 11 ]=1;
+        let tmparr=img[ 13 ];let tmparr[ 12 ]=1;
+        let tmparr=img[ 13 ];let tmparr[ 13 ]=1;
+        let tmparr=img[ 13 ];let tmparr[ 14 ]=1;
+        let tmparr=img[ 13 ];let tmparr[ 15 ]=1;
+        let tmparr=img[ 14 ];let tmparr[ 0 ]=1;
+        let tmparr=img[ 14 ];let tmparr[ 1 ]=1;
+        let tmparr=img[ 14 ];let tmparr[ 2 ]=1;
+        let tmparr=img[ 14 ];let tmparr[ 3 ]=1;
+        let tmparr=img[ 14 ];let tmparr[ 4 ]=1;
+        let tmparr=img[ 14 ];let tmparr[ 5 ]=1;
+        let tmparr=img[ 14 ];let tmparr[ 6 ]=1;
+        let tmparr=img[ 14 ];let tmparr[ 7 ]=1;
+        let tmparr=img[ 14 ];let tmparr[ 8 ]=1;
+        let tmparr=img[ 14 ];let tmparr[ 9 ]=1;
+        let tmparr=img[ 14 ];let tmparr[ 10 ]=1;
+        let tmparr=img[ 14 ];let tmparr[ 11 ]=1;
+        let tmparr=img[ 14 ];let tmparr[ 12 ]=1;
+        let tmparr=img[ 14 ];let tmparr[ 13 ]=1;
+        let tmparr=img[ 14 ];let tmparr[ 14 ]=1;
+        let tmparr=img[ 14 ];let tmparr[ 15 ]=1;
+        let tmparr=img[ 15 ];let tmparr[ 0 ]=1;
+        let tmparr=img[ 15 ];let tmparr[ 1 ]=1;
+        let tmparr=img[ 15 ];let tmparr[ 2 ]=1;
+        let tmparr=img[ 15 ];let tmparr[ 3 ]=1;
+        let tmparr=img[ 15 ];let tmparr[ 4 ]=1;
+        let tmparr=img[ 15 ];let tmparr[ 5 ]=1;
+        let tmparr=img[ 15 ];let tmparr[ 6 ]=1;
+        let tmparr=img[ 15 ];let tmparr[ 7 ]=1;
+        let tmparr=img[ 15 ];let tmparr[ 8 ]=1;
+        let tmparr=img[ 15 ];let tmparr[ 9 ]=1;
+        let tmparr=img[ 15 ];let tmparr[ 10 ]=1;
+        let tmparr=img[ 15 ];let tmparr[ 11 ]=1;
+        let tmparr=img[ 15 ];let tmparr[ 12 ]=1;
+        let tmparr=img[ 15 ];let tmparr[ 13 ]=1;
+        let tmparr=img[ 15 ];let tmparr[ 14 ]=1;
+        let tmparr=img[ 15 ];let tmparr[ 15 ]=1;
+        /*
+        for i in range(sizex)
+            for j in range(sizey)
+                wall[i][j]=Wall.new(i*16,j*16);
+        */
+        let i=0;
+        while(i<sizex)
+        {
+            let tmpwall=wall[i];
+            let j=0;
+            while(j<sizey)
+            {
+                let tmpwall[j]=Wall.new(Math.multiply(i,16),Math.multiply(j,16));
+                let j=j+1;
+            }
+            let i=i+1;
+        }
+        return this;
+    }
+    method boolean get_map(int x,int y)
+    {
+        //return img[x][y]
+        var Array mid;
+        let mid = img[x];
+        if(mid[y]){return true;}
+        else{return false;}
+    }
+    method void draw()
+    {
+        /*
+        for i in range(sizex)
+            for j in range(sizey)
+                if(getmap(i,j))
+                    wall[i][j].draw()
+        */       
+        var int i;
+        var int j;
+        var Array temp;
+        var Wall tmpW;
+        let i =0;
+        while(i<sizex)
+        {
+            let j=0;
+            let temp=wall[i];
+            while(j<sizey)
+            {
+                if(get_map(i,j))
+                {
+                    let tmpW=temp[j];
+                    do tmpW.draw();
+                }
+                let j=j+1;
+            }
+            let i=i+1;
+        }
+        return;
+    }
+}

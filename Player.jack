@@ -1,0 +1,58 @@
+class Player
+{
+    field int px,py;
+    constructor Player new(int _px,int _py)
+    {
+        let px=_px;
+        let py=_py;
+        return this;
+    }
+    method void draw()
+    {
+        var int memAddress;
+        let  memAddress = 16384+Math.multiply(32,px)+Math.divide(py,16);
+        do Memory.poke(memAddress+0, -1);
+        do Memory.poke(memAddress+32, -32767);
+        do Memory.poke(memAddress+64, -28855);
+        do Memory.poke(memAddress+96, -32439);
+        do Memory.poke(memAddress+128, -28807);
+        do Memory.poke(memAddress+160, -32439);
+        do Memory.poke(memAddress+192, -28855);
+        do Memory.poke(memAddress+224, -32767);
+        do Memory.poke(memAddress+256, -28919);
+        do Memory.poke(memAddress+288, -30455);
+        do Memory.poke(memAddress+320, -28919);
+        do Memory.poke(memAddress+352, -32503);
+        do Memory.poke(memAddress+384, -32391);
+        do Memory.poke(memAddress+416, -32767);
+        do Memory.poke(memAddress+448, -32767);
+        do Memory.poke(memAddress+480, -1);
+        return;
+    }
+    method boolean valid(int x,int y)
+    {
+        //if(~Main.game.map.valid(x,y))
+        var Game tmpG;
+        var Player tmpP;
+        var Map tmpM;
+        let tmpG=Main._game();
+        let tmpM=tmpG._map();
+        if(tmpM.get_map(x,y)=1)
+        {
+            return false;
+        }
+
+        return true;
+    }
+    method void move(int dx,int dy)
+    {
+        let dx=Math.multiply(16,dx);
+        let dy=Math.multiply(16,dy);
+        if(valid(px+dx,py+dy))
+        {
+            let px=px+dx;
+            let py=py+dy;
+        }
+        return;
+    }
+}
