@@ -1,11 +1,19 @@
-class Player
+class Block
 {
     field int px,py;
-    constructor Player new(int _px,int _py)
+    constructor Block new(int _px,int _py)
     {
         let px=_px;
         let py=_py;
         return this;
+    }
+    method int _px()
+    {
+        return px;
+    }
+    method int _py()
+    {
+        return py;
     }
     method void draw()
     {
@@ -21,39 +29,28 @@ class Player
         do Memory.poke(memAddress+224, -32767);
         do Memory.poke(memAddress+256, -28919);
         do Memory.poke(memAddress+288, -30455);
-        do Memory.poke(memAddress+320, -28919);
-        do Memory.poke(memAddress+352, -32503);
-        do Memory.poke(memAddress+384, -32391);
-        do Memory.poke(memAddress+416, -32767);
-        do Memory.poke(memAddress+448, -32767);
+        do Memory.poke(memAddress+320, -1);
+        do Memory.poke(memAddress+352, -1);
+        do Memory.poke(memAddress+384, -1);
+        do Memory.poke(memAddress+416, -1);
+        do Memory.poke(memAddress+448, -1);
         do Memory.poke(memAddress+480, -1);
         return;
     }
-    method boolean valid(int x,int y,int dx,int dy)
+    method boolean valid(int x,int y)
     {
         //if(~Main.game.map.valid(x,y))
         var Game tmpG;
         var Map tmpM;
-        var Block tmpB;
-        var Array tmpA;
-        var int tmp;
         let tmpG=Main._game();
         let tmpM=tmpG._map();
         if(tmpM.get_map(x,y)=1)
         {
             return false;
         }
-        let tmp=tmpM.find_block(x,y);
-        if(~tmp)//!=-1
+        if(~tmpM.find_block(x,y))//!=-1
         {
-            let tmpA=tmpM._block();
-            let tmpB=tmpA[tmp];
-            do tmpB.move(Math.divide(dx,16),Math.divide(dy,16));
-        }
-        let tmp=tmpM.find_block(x,y);
-        if(~tmp)//!=-1
-        {
-            return 0;
+            return false;
         }
         return true;
     }
@@ -61,12 +58,11 @@ class Player
     {
         let dx=Math.multiply(Game._move_dist(),dx);
         let dy=Math.multiply(Game._move_dist(),dy);
-        if(valid(px+dx,py+dy,dx,dy))
+        if(valid(px+dx,py+dy))
         {
             let px=px+dx;
             let py=py+dy;
         }
         return;
-        
     }
 }

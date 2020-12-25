@@ -4,14 +4,19 @@ class Game
     field Map map;
     static int refresh_time;
     static int key_lag;
+    static int move_dist;
     constructor Game new()
     {
         let player=Player.new(16,32);
         let map=Map.new();
         let refresh_time=100;
         let key_lag=100;
-        
+        let move_dist=16;
         return this;    
+    }
+    function int _move_dist()
+    {
+        return move_dist;
     }
     method Map _map()
     {
@@ -25,6 +30,7 @@ class Game
     {
         do Screen.clearScreen();
         do player.draw();
+        do map.draw();
         return;
     }
     method void play()

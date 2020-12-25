@@ -12,7 +12,12 @@ push constant 100
 pop static 0
 push constant 100
 pop static 1
+push constant 16
+pop static 2
 push pointer 0
+return
+function Game._move_dist 0
+push static 2
 return
 function Game._map 0
 push argument 0
@@ -31,6 +36,9 @@ call Screen.clearScreen 0
 pop temp 0
 push this 0
 call Player.draw 1
+pop temp 0
+push this 1
+call Map.draw 1
 pop temp 0
 push constant 0
 return

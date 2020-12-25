@@ -1,4 +1,4 @@
-function Player.new 0
+function Block.new 0
 push constant 2
 call Memory.alloc 1
 pop pointer 0
@@ -8,7 +8,17 @@ push argument 1
 pop this 1
 push pointer 0
 return
-function Player.draw 1
+function Block._px 0
+push argument 0
+pop pointer 0
+push this 0
+return
+function Block._py 0
+push argument 0
+pop pointer 0
+push this 1
+return
+function Block.draw 1
 push argument 0
 pop pointer 0
 push constant 16384
@@ -94,35 +104,35 @@ pop temp 0
 push local 0
 push constant 320
 add
-push constant 28919
+push constant 1
 neg
 call Memory.poke 2
 pop temp 0
 push local 0
 push constant 352
 add
-push constant 32503
+push constant 1
 neg
 call Memory.poke 2
 pop temp 0
 push local 0
 push constant 384
 add
-push constant 32391
+push constant 1
 neg
 call Memory.poke 2
 pop temp 0
 push local 0
 push constant 416
 add
-push constant 32767
+push constant 1
 neg
 call Memory.poke 2
 pop temp 0
 push local 0
 push constant 448
 add
-push constant 32767
+push constant 1
 neg
 call Memory.poke 2
 pop temp 0
@@ -135,7 +145,7 @@ call Memory.poke 2
 pop temp 0
 push constant 0
 return
-function Player.valid 5
+function Block.valid 2
 push argument 0
 pop pointer 0
 call Main._game 0
@@ -159,48 +169,17 @@ push local 1
 push argument 1
 push argument 2
 call Map.find_block 3
-pop local 4
-push local 4
 not
 if-goto IF_TRUE1
 goto IF_FALSE1
 label IF_TRUE1
-push local 1
-call Map._block 1
-pop local 3
-push local 4
-push local 3
-add
-pop pointer 1
-push that 0
-pop local 2
-push local 2
-push argument 3
-push constant 16
-call Math.divide 2
-push argument 4
-push constant 16
-call Math.divide 2
-call Block.move 3
-pop temp 0
+push constant 0
+return
 label IF_FALSE1
-push local 1
-push argument 1
-push argument 2
-call Map.find_block 3
-pop local 4
-push local 4
-not
-if-goto IF_TRUE2
-goto IF_FALSE2
-label IF_TRUE2
-push constant 0
-return
-label IF_FALSE2
 push constant 0
 not
 return
-function Player.move 0
+function Block.move 0
 push argument 0
 pop pointer 0
 call Game._move_dist 0
@@ -218,9 +197,7 @@ add
 push this 1
 push argument 2
 add
-push argument 1
-push argument 2
-call Player.valid 5
+call Block.valid 3
 if-goto IF_TRUE0
 goto IF_FALSE0
 label IF_TRUE0

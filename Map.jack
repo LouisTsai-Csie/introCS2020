@@ -1,8 +1,9 @@
 class Map
 {
-    field int sizex,sizey;
+    field int sizex,sizey,block_num;
     field Array img;
     field Array wall;
+    field Array block;
     constructor Map new()
     {
         var int i;
@@ -12,6 +13,8 @@ class Map
         //initialize img
         let img=Array.new(sizex);
         let wall=Array.new(sizex);
+        let block_num=2;
+        let block=Array.new(block_num);
         let i=0;
         while(i<sizex)
         {
@@ -33,15 +36,42 @@ class Map
             for j in range(sizey)
                 wall[i][j]=Wall.new(i*16,j*16);
         */
+        let block[0]=Block.new(48,48);
+        let block[1]=Block.new(64,48);
         return this;
+    }
+    method Array _block()
+    {
+        return block;
     }
     method boolean get_map(int x,int y)
     {
         //return img[x][y]
         return 0;
     }
+    method int find_block(int x,int y)
+    {
+        var int i;
+        var Block tmpB;
+        let i=0;
+        while(i<block_num)
+        {
+            let tmpB=block[i];
+            if((tmpB._px()=x)&(tmpB._py()=y))
+            {
+                return i;
+            }
+            let i=i+1;
+        }
+        return -1;
+    }
     method void draw()
     {
+        var Block tmpB;
+        let tmpB=block[0];
+        do tmpB.draw();
+        let tmpB=block[1];
+        do tmpB.draw();
         /*
         for i in range(sizex)
             for j in range(sizey)
