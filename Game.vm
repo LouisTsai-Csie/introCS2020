@@ -1,13 +1,15 @@
 function Game.new 0
-push constant 2
+push constant 3
 call Memory.alloc 1
 pop pointer 0
-push constant 16
-push constant 32
+push constant 5
+push constant 5
 call Player.new 2
 pop this 0
 call Map.new 0
 pop this 1
+call Blocks.new 0
+pop this 2
 push constant 100
 pop static 0
 push constant 100
@@ -19,6 +21,11 @@ return
 function Game._move_dist 0
 push static 2
 return
+function Game._blocks 0
+push argument 0
+pop pointer 0
+push this 2
+return
 function Game._map 0
 push argument 0
 pop pointer 0
@@ -29,22 +36,34 @@ push argument 0
 pop pointer 0
 push this 0
 return
+function Game.clear_scrn 0
+push argument 0
+pop pointer 0
+push this 0
+call Player.clear_scrn 1
+pop temp 0
+push this 2
+call Blocks.clear_scrn 1
+pop temp 0
+push constant 0
+return
 function Game.draw 0
 push argument 0
 pop pointer 0
-call Screen.clearScreen 0
+push this 2
+call Blocks.draw 1
 pop temp 0
 push this 0
 call Player.draw 1
-pop temp 0
-push this 1
-call Map.draw 1
 pop temp 0
 push constant 0
 return
 function Game.play 1
 push argument 0
 pop pointer 0
+push this 1
+call Map.draw 1
+pop temp 0
 label WHILE_EXP0
 push constant 0
 not
@@ -58,6 +77,9 @@ eq
 if-goto IF_TRUE0
 goto IF_FALSE0
 label IF_TRUE0
+push pointer 0
+call Game.clear_scrn 1
+pop temp 0
 push this 0
 push constant 0
 push constant 1
@@ -77,6 +99,9 @@ eq
 if-goto IF_TRUE1
 goto IF_FALSE1
 label IF_TRUE1
+push pointer 0
+call Game.clear_scrn 1
+pop temp 0
 push this 0
 push constant 1
 neg
@@ -96,6 +121,9 @@ eq
 if-goto IF_TRUE2
 goto IF_FALSE2
 label IF_TRUE2
+push pointer 0
+call Game.clear_scrn 1
+pop temp 0
 push this 0
 push constant 0
 push constant 1
@@ -114,6 +142,9 @@ eq
 if-goto IF_TRUE3
 goto IF_FALSE3
 label IF_TRUE3
+push pointer 0
+call Game.clear_scrn 1
+pop temp 0
 push this 0
 push constant 1
 push constant 0

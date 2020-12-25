@@ -2,13 +2,15 @@ class Game
 {
     field Player player;
     field Map map;
+    field Blocks blocks;
     static int refresh_time;
     static int key_lag;
     static int move_dist;
     constructor Game new()
     {
-        let player=Player.new(16,32);
+        let player=Player.new(5,5);
         let map=Map.new();
+        let blocks=Blocks.new();
         let refresh_time=100;
         let key_lag=100;
         let move_dist=16;
@@ -18,6 +20,10 @@ class Game
     {
         return move_dist;
     }
+    method Blocks _blocks()
+    {
+        return blocks;
+    }
     method Map _map()
     {
         return map;
@@ -26,40 +32,50 @@ class Game
     {
         return player;
     }
+    method void clear_scrn()
+    {
+        do player.clear_scrn();
+        do blocks.clear_scrn();
+        return;
+    }
     method void draw()
     {
-        do Screen.clearScreen();
+        do blocks.draw();
         do player.draw();
-        do map.draw();
         return;
     }
     method void play()
     {
         var char inp;
+        do map.draw();
         while(true)
         {
             let inp=Keyboard.keyPressed();
             //L,U,R,D = 130~133
             if(inp=130)
             {
+                do clear_scrn();
                 do player.move(0,-1);
                 do draw();
                 do Sys.wait(key_lag);
             }
             if(inp=131)
             {
+                do clear_scrn();
                 do player.move(-1,0);
                 do draw();
                 do Sys.wait(key_lag);
             }
             if(inp=132)
             {
+                do clear_scrn();
                 do player.move(0,1);
                 do draw(); 
                 do Sys.wait(key_lag);
             }
             if(inp=133)
             {
+                do clear_scrn();
                 do player.move(1,0);
                 do draw();
                 do Sys.wait(key_lag);   

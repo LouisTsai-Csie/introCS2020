@@ -10,7 +10,7 @@ class Player
     method void draw()
     {
         var int memAddress;
-        let  memAddress = 16384+Math.multiply(32,px)+Math.divide(py,16);
+        let  memAddress = 16384+(px*16*32)+py;
         do Memory.poke(memAddress+0, -1);
         do Memory.poke(memAddress+32, -32767);
         do Memory.poke(memAddress+64, -28855);
@@ -29,29 +29,54 @@ class Player
         do Memory.poke(memAddress+480, -1);
         return;
     }
+    method void clear_scrn()
+    {
+        var int memAddress;
+        let  memAddress = 16384+(px*16*32)+py;
+        do Memory.poke(memAddress+0, 0);
+        do Memory.poke(memAddress+32, 0);
+        do Memory.poke(memAddress+64, 0);
+        do Memory.poke(memAddress+96, 0);
+        do Memory.poke(memAddress+128, 0);
+        do Memory.poke(memAddress+160, 0);
+        do Memory.poke(memAddress+192, 0);
+        do Memory.poke(memAddress+224, 0);
+        do Memory.poke(memAddress+256, 0);
+        do Memory.poke(memAddress+288, 0);
+        do Memory.poke(memAddress+320, 0);
+        do Memory.poke(memAddress+352, 0);
+        do Memory.poke(memAddress+384, 0);
+        do Memory.poke(memAddress+416, 0);
+        do Memory.poke(memAddress+448, 0);
+        do Memory.poke(memAddress+480, 0);
+        return ;
+    }
     method boolean valid(int x,int y,int dx,int dy)
     {
         //if(~Main.game.map.valid(x,y))
-        var Game tmpG;
-        var Map tmpM;
-        var Block tmpB;
-        var Array tmpA;
-        var int tmp;
-        let tmpG=Main._game();
-        let tmpM=tmpG._map();
-        if(tmpM.get_map(x,y)=1)
+        var Game tmpGame;
+        var Map tmpMap;
+        var Blocks tmpBlocks;
+        var Block tmpBlock;
+        var Array tmpArray;
+        var int tmpInt;
+        let tmpGame=Main._game();
+        let tmpMap=tmpGame._map();
+        let tmpBlocks=tmpGame._blocks();
+        if(tmpMap.get_map(x,y)=1)
         {
             return false;
         }
-        let tmp=tmpM.find_block(x,y);
-        if(~tmp)//!=-1
+        let tmpInt=tmpBlocks.find_block(x,y);
+        if(~tmpInt)//!=-1
         {
-            let tmpA=tmpM._block();
-            let tmpB=tmpA[tmp];
-            do tmpB.move(Math.divide(dx,16),Math.divide(dy,16));
+            let tmpBlocks=tmpGame._blocks();
+            let tmpArray=tmpBlocks._blocks();
+            let tmpBlock=tmpArray[tmpInt];
+            do tmpBlock.move(dx,dy);
         }
-        let tmp=tmpM.find_block(x,y);
-        if(~tmp)//!=-1
+        let tmpInt=tmpBlocks.find_block(x,y);
+        if(~tmpInt)//!=-1
         {
             return 0;
         }
@@ -59,14 +84,11 @@ class Player
     }
     method void move(int dx,int dy)
     {
-        let dx=Math.multiply(Game._move_dist(),dx);
-        let dy=Math.multiply(Game._move_dist(),dy);
         if(valid(px+dx,py+dy,dx,dy))
         {
             let px=px+dx;
             let py=py+dy;
         }
         return;
-        
     }
 }

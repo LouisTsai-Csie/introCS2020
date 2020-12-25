@@ -3,7 +3,6 @@ class Wall
     field int px,py;
     constructor Wall new(int _px,int _py)
     {
-        var int i;
         let px=_px;
         let py=_py;
         return this;
@@ -11,24 +10,23 @@ class Wall
     method void draw()
     {
         var int memAddress;
-        let  memAddress = 16384+Math.multiply(32,px)+Math.divide(py,16);
+        let  memAddress = 16384+(px*16*32)+py;
         do Memory.poke(memAddress+0, -1);
-        do Memory.poke(memAddress+32, -1);
-        do Memory.poke(memAddress+64, -1);
-        do Memory.poke(memAddress+96, -1);
-        do Memory.poke(memAddress+128, -1);
-        do Memory.poke(memAddress+160, -1);
-        do Memory.poke(memAddress+192, -1);
-        do Memory.poke(memAddress+224, -1);
-        do Memory.poke(memAddress+256, -1);
-        do Memory.poke(memAddress+288, -1);
-        do Memory.poke(memAddress+320, -1);
-        do Memory.poke(memAddress+352, -32503);
-        do Memory.poke(memAddress+384, -32391);
-        do Memory.poke(memAddress+416, -32767);
-        do Memory.poke(memAddress+448, -32767);
+        do Memory.poke(memAddress+32, -10923);
+        do Memory.poke(memAddress+64, -21845);
+        do Memory.poke(memAddress+96, -10923);
+        do Memory.poke(memAddress+128, -21845);
+        do Memory.poke(memAddress+160, -10923);
+        do Memory.poke(memAddress+192, -21845);
+        do Memory.poke(memAddress+224, -10923);
+        do Memory.poke(memAddress+256, -21845);
+        do Memory.poke(memAddress+288, -10923);
+        do Memory.poke(memAddress+320, -21845);
+        do Memory.poke(memAddress+352, -10923);
+        do Memory.poke(memAddress+384, -21845);
+        do Memory.poke(memAddress+416, -10923);
+        do Memory.poke(memAddress+448, -21845);
         do Memory.poke(memAddress+480, -1);
         return;
     }
-
 }
