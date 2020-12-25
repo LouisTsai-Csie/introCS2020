@@ -12,14 +12,7 @@ call Blocks.new 0
 pop this 2
 push constant 100
 pop static 0
-push constant 100
-pop static 1
-push constant 16
-pop static 2
 push pointer 0
-return
-function Game._move_dist 0
-push static 2
 return
 function Game._blocks 0
 push argument 0
@@ -89,7 +82,7 @@ pop temp 0
 push pointer 0
 call Game.draw 1
 pop temp 0
-push static 1
+push static 0
 call Sys.wait 1
 pop temp 0
 label IF_FALSE0
@@ -111,7 +104,7 @@ pop temp 0
 push pointer 0
 call Game.draw 1
 pop temp 0
-push static 1
+push static 0
 call Sys.wait 1
 pop temp 0
 label IF_FALSE1
@@ -132,7 +125,7 @@ pop temp 0
 push pointer 0
 call Game.draw 1
 pop temp 0
-push static 1
+push static 0
 call Sys.wait 1
 pop temp 0
 label IF_FALSE2
@@ -153,7 +146,7 @@ pop temp 0
 push pointer 0
 call Game.draw 1
 pop temp 0
-push static 1
+push static 0
 call Sys.wait 1
 pop temp 0
 label IF_FALSE3

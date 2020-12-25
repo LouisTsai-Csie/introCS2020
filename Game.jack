@@ -3,22 +3,14 @@ class Game
     field Player player;
     field Map map;
     field Blocks blocks;
-    static int refresh_time;
     static int key_lag;
-    static int move_dist;
     constructor Game new()
     {
         let player=Player.new(5,5);
         let map=Map.new();
         let blocks=Blocks.new();
-        let refresh_time=100;
         let key_lag=100;
-        let move_dist=16;
         return this;    
-    }
-    function int _move_dist()
-    {
-        return move_dist;
     }
     method Blocks _blocks()
     {
@@ -80,7 +72,6 @@ class Game
                 do draw();
                 do Sys.wait(key_lag);   
             }
-                
         }
         return ;
     }
