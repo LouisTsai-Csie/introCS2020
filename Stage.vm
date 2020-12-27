@@ -1,5 +1,5 @@
 function Stage.new 0
-push constant 4
+push constant 5
 call Memory.alloc 1
 pop pointer 0
 push argument 0
@@ -10,6 +10,8 @@ push argument 2
 pop this 2
 push argument 3
 pop this 3
+push argument 4
+pop this 4
 push pointer 0
 return
 function Stage._player_x 0
@@ -32,9 +34,8 @@ push argument 0
 pop pointer 0
 push this 3
 return
-function Stage._map_img 6
+function Stage._map_img 0
 push argument 0
 pop pointer 0
-push constant 1
-call Map_data._map_img 1
+push this 4
 return

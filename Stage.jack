@@ -1,14 +1,15 @@
 class Stage
 {
     field int player_x,player_y,block_num;
-    field Array blocks;
+    field Array blocks,map_img;
     //field Array map_img;
-    constructor Stage new(int _player_x,int _player_y,int _block_num,Array _blocks)
+    constructor Stage new(int _player_x,int _player_y,int _block_num,Array _blocks,Array _map_img)
     {
         let player_x=_player_x;
         let player_y=_player_y;
         let block_num=_block_num;
         let blocks=_blocks;
+        let map_img=_map_img;
         return this;
     }
     method int _player_x()
@@ -29,9 +30,6 @@ class Stage
     }
     method Array _map_img()
     {
-        var int i,j,sizex,sizey;
-        var Array tmpArray;
-        var Array img;
-        return Map_data._map_img(1);
+        return map_img;
     }
 }
