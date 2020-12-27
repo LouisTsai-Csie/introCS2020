@@ -4,11 +4,11 @@ class Game
     field Map map;
     field Blocks blocks;
     static int key_lag;
-    constructor Game new()
+    constructor Game new(Stage stage)
     {
-        let player=Player.new(5,5);
-        let map=Map.new();
-        let blocks=Blocks.new();
+        let player=Player.new(stage._player_x(),stage._player_y());
+        let map=Map.new(stage._map_img());
+        let blocks=Blocks.new(stage._block_num(),stage._blocks());
         let key_lag=100;
         return this;    
     }
@@ -32,8 +32,11 @@ class Game
     }
     method void draw()
     {
+        //var Target tar;
         do blocks.draw();
         do player.draw();
+        //let tar=Target.new(6,6);
+        //do tar.draw();
         return;
     }
     method void play()

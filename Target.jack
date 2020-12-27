@@ -1,0 +1,16 @@
+class Target
+{
+    field int px,py,r;
+    constructor Target new(int _px,int _py)
+    {
+        let px=_px;
+        let py=_py;
+        let r=5;
+        return this;
+    }  
+    method void draw()
+    {
+        do Screen.drawRectangle(px+4,py+4,px+8,py+8);
+        return;
+    }
+}

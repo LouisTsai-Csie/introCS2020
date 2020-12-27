@@ -1,0 +1,5 @@
+class Targets
+{
+    field int target_num;
+    field Array targets;
+}

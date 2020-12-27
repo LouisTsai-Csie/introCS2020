@@ -1,5 +1,9 @@
 function Main.main 0
-call Game.new 0
+push constant 2
+call Stages.stage 1
+pop static 2
+push static 2
+call Game.new 1
 pop static 1
 push static 1
 call Game.play 1

@@ -1,0 +1,72 @@
+function Stages.stage 2
+push argument 0
+push constant 1
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 2
+pop local 1
+push local 1
+call Array.new 1
+pop local 0
+push constant 0
+push local 0
+add
+push constant 6
+push constant 6
+call Block.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 1
+push local 0
+add
+push constant 7
+push constant 7
+call Block.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 5
+push constant 5
+push constant 2
+push local 0
+call Stage.new 4
+return
+goto IF_END0
+label IF_FALSE0
+push constant 2
+pop local 1
+push local 1
+call Array.new 1
+pop local 0
+push constant 0
+push local 0
+add
+push constant 6
+push constant 6
+call Block.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 1
+push local 0
+add
+push constant 8
+push constant 8
+call Block.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 5
+push constant 5
+push constant 2
+push local 0
+call Stage.new 4
+return
+label IF_END0

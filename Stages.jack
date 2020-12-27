@@ -1,0 +1,26 @@
+class Stages
+{
+    function Stage stage(int stage_num)
+    {
+        var Array blocks;
+        var int block_num; 
+        if(stage_num=1)
+        {
+            let block_num=2;
+            let blocks=Array.new(block_num);
+            let blocks[0]=Block.new(6,6);
+            let blocks[1]=Block.new(7,7);
+            //int _player_x,int _player_y,int _block_num,Array _blocks
+            return Stage.new(5,5,2,blocks);       
+        }
+        else 
+        {
+            let block_num=2;
+            let blocks=Array.new(block_num);
+            let blocks[0]=Block.new(6,6);
+            let blocks[1]=Block.new(8,8);
+            //int _player_x,int _player_y,int _block_num,Array _blocks
+            return Stage.new(5,5,2,blocks);    
+        }
+    }
+}

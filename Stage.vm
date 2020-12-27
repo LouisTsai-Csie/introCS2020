@@ -1,0 +1,40 @@
+function Stage.new 0
+push constant 4
+call Memory.alloc 1
+pop pointer 0
+push argument 0
+pop this 0
+push argument 1
+pop this 1
+push argument 2
+pop this 2
+push argument 3
+pop this 3
+push pointer 0
+return
+function Stage._player_x 0
+push argument 0
+pop pointer 0
+push this 0
+return
+function Stage._player_y 0
+push argument 0
+pop pointer 0
+push this 1
+return
+function Stage._block_num 0
+push argument 0
+pop pointer 0
+push this 2
+return
+function Stage._blocks 0
+push argument 0
+pop pointer 0
+push this 3
+return
+function Stage._map_img 6
+push argument 0
+pop pointer 0
+push constant 1
+call Map_data._map_img 1
+return

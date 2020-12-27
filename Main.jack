@@ -2,9 +2,11 @@ class Main
 {
 	static Player player;
 	static Game game;
+	static Stage stage;
 	function void main() 
 	{
-		let game=Game.new();
+		let stage=Stages.stage(2);
+		let game=Game.new(stage);
 		do game.play();
 		return;
 	}

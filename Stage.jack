@@ -1,0 +1,37 @@
+class Stage
+{
+    field int player_x,player_y,block_num;
+    field Array blocks;
+    //field Array map_img;
+    constructor Stage new(int _player_x,int _player_y,int _block_num,Array _blocks)
+    {
+        let player_x=_player_x;
+        let player_y=_player_y;
+        let block_num=_block_num;
+        let blocks=_blocks;
+        return this;
+    }
+    method int _player_x()
+    {
+        return player_x;
+    }
+    method int _player_y()
+    {
+        return player_y;
+    }
+    method int _block_num()
+    {
+        return block_num;
+    }
+    method Array _blocks()
+    {
+        return blocks;
+    }
+    method Array _map_img()
+    {
+        var int i,j,sizex,sizey;
+        var Array tmpArray;
+        var Array img;
+        return Map_data._map_img(1);
+    }
+}
