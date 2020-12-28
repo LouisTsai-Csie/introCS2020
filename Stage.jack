@@ -1,34 +1,97 @@
 class Stage
 {
-    field int player_x,player_y,block_num;
-    field Array blocks,map_img;
-    //field Array map_img;
-    constructor Stage new(int _player_x,int _player_y,int _block_num,Array _blocks,Array _map_img)
+    static int player_x,player_y,block_num;
+    static Array blocks,map_img;
+    function void init(int stage_num)
     {
-        let player_x=_player_x;
-        let player_y=_player_y;
-        let block_num=_block_num;
-        let blocks=_blocks;
-        let map_img=_map_img;
-        return this;
+        var int i,j,sizex,sizey;
+        var Array tmpArray,img;
+        let sizex=16;
+        let sizey=16;
+        //initialize img
+        let img=Array.new(sizex);
+        let map_img=img;
+        let i=0;
+        while(i<sizex)
+        {
+            let img[i]=Array.new(sizey);
+            let i=i+1;
+        }
+
+        if(stage_num=1)
+        {
+            let player_x=5;
+            let player_y=5;
+
+            let block_num=2;
+            let blocks=Array.new(block_num);
+            let blocks[0]=Block.new(6,6);
+            let blocks[1]=Block.new(7,7);
+
+            let tmpArray=img[0];let tmpArray[0]=1;let tmpArray=img[0];let tmpArray[1]=1;let tmpArray=img[0];let tmpArray[2]=1;let tmpArray=img[0];let tmpArray[3]=1;let tmpArray=img[0];let tmpArray[4]=1;let tmpArray=img[0];let tmpArray[5]=1;let tmpArray=img[0];let tmpArray[6]=1;let tmpArray=img[0];let tmpArray[7]=1;let tmpArray=img[0];let tmpArray[8]=1;let tmpArray=img[0];let tmpArray[9]=1;let tmpArray=img[0];let tmpArray[10]=1;let tmpArray=img[0];let tmpArray[11]=1;let tmpArray=img[0];let tmpArray[12]=1;let tmpArray=img[0];let tmpArray[13]=1;let tmpArray=img[0];let tmpArray[14]=1;
+            let tmpArray=img[1];let tmpArray[0]=1;let tmpArray=img[1];let tmpArray[1]=1;let tmpArray=img[1];let tmpArray[2]=1;let tmpArray=img[1];let tmpArray[3]=1;let tmpArray=img[1];let tmpArray[4]=1;let tmpArray=img[1];let tmpArray[5]=1;let tmpArray=img[1];let tmpArray[6]=1;let tmpArray=img[1];let tmpArray[7]=1;let tmpArray=img[1];let tmpArray[8]=1;let tmpArray=img[1];let tmpArray[9]=1;let tmpArray=img[1];let tmpArray[10]=1;let tmpArray=img[1];let tmpArray[11]=1;let tmpArray=img[1];let tmpArray[12]=1;let tmpArray=img[1];let tmpArray[13]=1;let tmpArray=img[1];let tmpArray[14]=1;
+            let tmpArray=img[2];let tmpArray[0]=1;let tmpArray=img[2];let tmpArray[1]=1;let tmpArray=img[2];let tmpArray[2]=1;let tmpArray=img[2];let tmpArray[3]=0;let tmpArray=img[2];let tmpArray[4]=0;let tmpArray=img[2];let tmpArray[5]=0;let tmpArray=img[2];let tmpArray[6]=0;let tmpArray=img[2];let tmpArray[7]=0;let tmpArray=img[2];let tmpArray[8]=0;let tmpArray=img[2];let tmpArray[9]=0;let tmpArray=img[2];let tmpArray[10]=0;let tmpArray=img[2];let tmpArray[11]=0;let tmpArray=img[2];let tmpArray[12]=0;let tmpArray=img[2];let tmpArray[13]=1;let tmpArray=img[2];let tmpArray[14]=1;
+            let tmpArray=img[3];let tmpArray[0]=1;let tmpArray=img[3];let tmpArray[1]=1;let tmpArray=img[3];let tmpArray[2]=1;let tmpArray=img[3];let tmpArray[3]=0;let tmpArray=img[3];let tmpArray[4]=0;let tmpArray=img[3];let tmpArray[5]=0;let tmpArray=img[3];let tmpArray[6]=0;let tmpArray=img[3];let tmpArray[7]=0;let tmpArray=img[3];let tmpArray[8]=0;let tmpArray=img[3];let tmpArray[9]=0;let tmpArray=img[3];let tmpArray[10]=0;let tmpArray=img[3];let tmpArray[11]=0;let tmpArray=img[3];let tmpArray[12]=0;let tmpArray=img[3];let tmpArray[13]=1;let tmpArray=img[3];let tmpArray[14]=1;
+            let tmpArray=img[4];let tmpArray[0]=1;let tmpArray=img[4];let tmpArray[1]=1;let tmpArray=img[4];let tmpArray[2]=1;let tmpArray=img[4];let tmpArray[3]=0;let tmpArray=img[4];let tmpArray[4]=0;let tmpArray=img[4];let tmpArray[5]=0;let tmpArray=img[4];let tmpArray[6]=0;let tmpArray=img[4];let tmpArray[7]=0;let tmpArray=img[4];let tmpArray[8]=0;let tmpArray=img[4];let tmpArray[9]=0;let tmpArray=img[4];let tmpArray[10]=0;let tmpArray=img[4];let tmpArray[11]=0;let tmpArray=img[4];let tmpArray[12]=0;let tmpArray=img[4];let tmpArray[13]=1;let tmpArray=img[4];let tmpArray[14]=1;
+            let tmpArray=img[5];let tmpArray[0]=1;let tmpArray=img[5];let tmpArray[1]=1;let tmpArray=img[5];let tmpArray[2]=1;let tmpArray=img[5];let tmpArray[3]=0;let tmpArray=img[5];let tmpArray[4]=0;let tmpArray=img[5];let tmpArray[5]=0;let tmpArray=img[5];let tmpArray[6]=0;let tmpArray=img[5];let tmpArray[7]=0;let tmpArray=img[5];let tmpArray[8]=0;let tmpArray=img[5];let tmpArray[9]=0;let tmpArray=img[5];let tmpArray[10]=0;let tmpArray=img[5];let tmpArray[11]=0;let tmpArray=img[5];let tmpArray[12]=0;let tmpArray=img[5];let tmpArray[13]=1;let tmpArray=img[5];let tmpArray[14]=1;
+            let tmpArray=img[6];let tmpArray[0]=1;let tmpArray=img[6];let tmpArray[1]=1;let tmpArray=img[6];let tmpArray[2]=1;let tmpArray=img[6];let tmpArray[3]=0;let tmpArray=img[6];let tmpArray[4]=0;let tmpArray=img[6];let tmpArray[5]=0;let tmpArray=img[6];let tmpArray[6]=0;let tmpArray=img[6];let tmpArray[7]=0;let tmpArray=img[6];let tmpArray[8]=0;let tmpArray=img[6];let tmpArray[9]=0;let tmpArray=img[6];let tmpArray[10]=0;let tmpArray=img[6];let tmpArray[11]=0;let tmpArray=img[6];let tmpArray[12]=0;let tmpArray=img[6];let tmpArray[13]=1;let tmpArray=img[6];let tmpArray[14]=1;
+            let tmpArray=img[7];let tmpArray[0]=1;let tmpArray=img[7];let tmpArray[1]=1;let tmpArray=img[7];let tmpArray[2]=1;let tmpArray=img[7];let tmpArray[3]=0;let tmpArray=img[7];let tmpArray[4]=0;let tmpArray=img[7];let tmpArray[5]=0;let tmpArray=img[7];let tmpArray[6]=0;let tmpArray=img[7];let tmpArray[7]=0;let tmpArray=img[7];let tmpArray[8]=0;let tmpArray=img[7];let tmpArray[9]=0;let tmpArray=img[7];let tmpArray[10]=0;let tmpArray=img[7];let tmpArray[11]=0;let tmpArray=img[7];let tmpArray[12]=0;let tmpArray=img[7];let tmpArray[13]=1;let tmpArray=img[7];let tmpArray[14]=1;
+            let tmpArray=img[8];let tmpArray[0]=1;let tmpArray=img[8];let tmpArray[1]=1;let tmpArray=img[8];let tmpArray[2]=1;let tmpArray=img[8];let tmpArray[3]=0;let tmpArray=img[8];let tmpArray[4]=0;let tmpArray=img[8];let tmpArray[5]=0;let tmpArray=img[8];let tmpArray[6]=0;let tmpArray=img[8];let tmpArray[7]=0;let tmpArray=img[8];let tmpArray[8]=0;let tmpArray=img[8];let tmpArray[9]=0;let tmpArray=img[8];let tmpArray[10]=0;let tmpArray=img[8];let tmpArray[11]=0;let tmpArray=img[8];let tmpArray[12]=0;let tmpArray=img[8];let tmpArray[13]=1;let tmpArray=img[8];let tmpArray[14]=1;
+            let tmpArray=img[9];let tmpArray[0]=1;let tmpArray=img[9];let tmpArray[1]=1;let tmpArray=img[9];let tmpArray[2]=1;let tmpArray=img[9];let tmpArray[3]=0;let tmpArray=img[9];let tmpArray[4]=0;let tmpArray=img[9];let tmpArray[5]=0;let tmpArray=img[9];let tmpArray[6]=0;let tmpArray=img[9];let tmpArray[7]=0;let tmpArray=img[9];let tmpArray[8]=0;let tmpArray=img[9];let tmpArray[9]=0;let tmpArray=img[9];let tmpArray[10]=0;let tmpArray=img[9];let tmpArray[11]=0;let tmpArray=img[9];let tmpArray[12]=0;let tmpArray=img[9];let tmpArray[13]=1;let tmpArray=img[9];let tmpArray[14]=1;
+            let tmpArray=img[10];let tmpArray[0]=1;let tmpArray=img[10];let tmpArray[1]=1;let tmpArray=img[10];let tmpArray[2]=1;let tmpArray=img[10];let tmpArray[3]=0;let tmpArray=img[10];let tmpArray[4]=0;let tmpArray=img[10];let tmpArray[5]=0;let tmpArray=img[10];let tmpArray[6]=0;let tmpArray=img[10];let tmpArray[7]=0;let tmpArray=img[10];let tmpArray[8]=0;let tmpArray=img[10];let tmpArray[9]=0;let tmpArray=img[10];let tmpArray[10]=0;let tmpArray=img[10];let tmpArray[11]=0;let tmpArray=img[10];let tmpArray[12]=0;let tmpArray=img[10];let tmpArray[13]=1;let tmpArray=img[10];let tmpArray[14]=1;
+            let tmpArray=img[11];let tmpArray[0]=1;let tmpArray=img[11];let tmpArray[1]=1;let tmpArray=img[11];let tmpArray[2]=1;let tmpArray=img[11];let tmpArray[3]=0;let tmpArray=img[11];let tmpArray[4]=0;let tmpArray=img[11];let tmpArray[5]=0;let tmpArray=img[11];let tmpArray[6]=0;let tmpArray=img[11];let tmpArray[7]=0;let tmpArray=img[11];let tmpArray[8]=0;let tmpArray=img[11];let tmpArray[9]=0;let tmpArray=img[11];let tmpArray[10]=0;let tmpArray=img[11];let tmpArray[11]=0;let tmpArray=img[11];let tmpArray[12]=0;let tmpArray=img[11];let tmpArray[13]=1;let tmpArray=img[11];let tmpArray[14]=1;
+            let tmpArray=img[12];let tmpArray[0]=1;let tmpArray=img[12];let tmpArray[1]=1;let tmpArray=img[12];let tmpArray[2]=1;let tmpArray=img[12];let tmpArray[3]=0;let tmpArray=img[12];let tmpArray[4]=0;let tmpArray=img[12];let tmpArray[5]=0;let tmpArray=img[12];let tmpArray[6]=0;let tmpArray=img[12];let tmpArray[7]=0;let tmpArray=img[12];let tmpArray[8]=0;let tmpArray=img[12];let tmpArray[9]=0;let tmpArray=img[12];let tmpArray[10]=0;let tmpArray=img[12];let tmpArray[11]=0;let tmpArray=img[12];let tmpArray[12]=0;let tmpArray=img[12];let tmpArray[13]=1;let tmpArray=img[12];let tmpArray[14]=1;
+            let tmpArray=img[13];let tmpArray[0]=1;let tmpArray=img[13];let tmpArray[1]=1;let tmpArray=img[13];let tmpArray[2]=1;let tmpArray=img[13];let tmpArray[3]=0;let tmpArray=img[13];let tmpArray[4]=0;let tmpArray=img[13];let tmpArray[5]=0;let tmpArray=img[13];let tmpArray[6]=0;let tmpArray=img[13];let tmpArray[7]=0;let tmpArray=img[13];let tmpArray[8]=0;let tmpArray=img[13];let tmpArray[9]=0;let tmpArray=img[13];let tmpArray[10]=0;let tmpArray=img[13];let tmpArray[11]=0;let tmpArray=img[13];let tmpArray[12]=0;let tmpArray=img[13];let tmpArray[13]=1;let tmpArray=img[13];let tmpArray[14]=1;
+            let tmpArray=img[14];let tmpArray[0]=1;let tmpArray=img[14];let tmpArray[1]=1;let tmpArray=img[14];let tmpArray[2]=1;let tmpArray=img[14];let tmpArray[3]=1;let tmpArray=img[14];let tmpArray[4]=1;let tmpArray=img[14];let tmpArray[5]=1;let tmpArray=img[14];let tmpArray[6]=1;let tmpArray=img[14];let tmpArray[7]=1;let tmpArray=img[14];let tmpArray[8]=1;let tmpArray=img[14];let tmpArray[9]=1;let tmpArray=img[14];let tmpArray[10]=1;let tmpArray=img[14];let tmpArray[11]=1;let tmpArray=img[14];let tmpArray[12]=1;let tmpArray=img[14];let tmpArray[13]=1;let tmpArray=img[14];let tmpArray[14]=1;
+            
+            return;     
+        }
+        else 
+        {
+            let player_x=5;
+            let player_y=5;
+
+            let block_num=2;
+            let blocks=Array.new(block_num);
+            let blocks[0]=Block.new(6,6);
+            let blocks[1]=Block.new(7,7);
+
+            let tmpArray=img[0];let tmpArray[0]=1;let tmpArray=img[0];let tmpArray[1]=1;let tmpArray=img[0];let tmpArray[2]=1;let tmpArray=img[0];let tmpArray[3]=1;let tmpArray=img[0];let tmpArray[4]=1;let tmpArray=img[0];let tmpArray[5]=1;let tmpArray=img[0];let tmpArray[6]=1;let tmpArray=img[0];let tmpArray[7]=1;let tmpArray=img[0];let tmpArray[8]=1;let tmpArray=img[0];let tmpArray[9]=1;let tmpArray=img[0];let tmpArray[10]=1;let tmpArray=img[0];let tmpArray[11]=1;let tmpArray=img[0];let tmpArray[12]=1;let tmpArray=img[0];let tmpArray[13]=1;let tmpArray=img[0];let tmpArray[14]=1;
+            let tmpArray=img[1];let tmpArray[0]=1;let tmpArray=img[1];let tmpArray[1]=1;let tmpArray=img[1];let tmpArray[2]=1;let tmpArray=img[1];let tmpArray[3]=1;let tmpArray=img[1];let tmpArray[4]=1;let tmpArray=img[1];let tmpArray[5]=1;let tmpArray=img[1];let tmpArray[6]=1;let tmpArray=img[1];let tmpArray[7]=1;let tmpArray=img[1];let tmpArray[8]=1;let tmpArray=img[1];let tmpArray[9]=1;let tmpArray=img[1];let tmpArray[10]=1;let tmpArray=img[1];let tmpArray[11]=1;let tmpArray=img[1];let tmpArray[12]=1;let tmpArray=img[1];let tmpArray[13]=1;let tmpArray=img[1];let tmpArray[14]=1;
+            let tmpArray=img[2];let tmpArray[0]=1;let tmpArray=img[2];let tmpArray[1]=1;let tmpArray=img[2];let tmpArray[2]=1;let tmpArray=img[2];let tmpArray[3]=0;let tmpArray=img[2];let tmpArray[4]=0;let tmpArray=img[2];let tmpArray[5]=0;let tmpArray=img[2];let tmpArray[6]=0;let tmpArray=img[2];let tmpArray[7]=0;let tmpArray=img[2];let tmpArray[8]=0;let tmpArray=img[2];let tmpArray[9]=0;let tmpArray=img[2];let tmpArray[10]=0;let tmpArray=img[2];let tmpArray[11]=0;let tmpArray=img[2];let tmpArray[12]=0;let tmpArray=img[2];let tmpArray[13]=1;let tmpArray=img[2];let tmpArray[14]=1;
+            let tmpArray=img[3];let tmpArray[0]=1;let tmpArray=img[3];let tmpArray[1]=1;let tmpArray=img[3];let tmpArray[2]=1;let tmpArray=img[3];let tmpArray[3]=0;let tmpArray=img[3];let tmpArray[4]=0;let tmpArray=img[3];let tmpArray[5]=0;let tmpArray=img[3];let tmpArray[6]=0;let tmpArray=img[3];let tmpArray[7]=0;let tmpArray=img[3];let tmpArray[8]=0;let tmpArray=img[3];let tmpArray[9]=0;let tmpArray=img[3];let tmpArray[10]=0;let tmpArray=img[3];let tmpArray[11]=0;let tmpArray=img[3];let tmpArray[12]=0;let tmpArray=img[3];let tmpArray[13]=1;let tmpArray=img[3];let tmpArray[14]=1;
+            let tmpArray=img[4];let tmpArray[0]=1;let tmpArray=img[4];let tmpArray[1]=1;let tmpArray=img[4];let tmpArray[2]=1;let tmpArray=img[4];let tmpArray[3]=0;let tmpArray=img[4];let tmpArray[4]=0;let tmpArray=img[4];let tmpArray[5]=0;let tmpArray=img[4];let tmpArray[6]=0;let tmpArray=img[4];let tmpArray[7]=0;let tmpArray=img[4];let tmpArray[8]=0;let tmpArray=img[4];let tmpArray[9]=0;let tmpArray=img[4];let tmpArray[10]=0;let tmpArray=img[4];let tmpArray[11]=0;let tmpArray=img[4];let tmpArray[12]=0;let tmpArray=img[4];let tmpArray[13]=1;let tmpArray=img[4];let tmpArray[14]=1;
+            let tmpArray=img[5];let tmpArray[0]=1;let tmpArray=img[5];let tmpArray[1]=1;let tmpArray=img[5];let tmpArray[2]=1;let tmpArray=img[5];let tmpArray[3]=0;let tmpArray=img[5];let tmpArray[4]=0;let tmpArray=img[5];let tmpArray[5]=0;let tmpArray=img[5];let tmpArray[6]=0;let tmpArray=img[5];let tmpArray[7]=0;let tmpArray=img[5];let tmpArray[8]=0;let tmpArray=img[5];let tmpArray[9]=0;let tmpArray=img[5];let tmpArray[10]=0;let tmpArray=img[5];let tmpArray[11]=0;let tmpArray=img[5];let tmpArray[12]=0;let tmpArray=img[5];let tmpArray[13]=1;let tmpArray=img[5];let tmpArray[14]=1;
+            let tmpArray=img[6];let tmpArray[0]=1;let tmpArray=img[6];let tmpArray[1]=1;let tmpArray=img[6];let tmpArray[2]=1;let tmpArray=img[6];let tmpArray[3]=0;let tmpArray=img[6];let tmpArray[4]=0;let tmpArray=img[6];let tmpArray[5]=0;let tmpArray=img[6];let tmpArray[6]=0;let tmpArray=img[6];let tmpArray[7]=0;let tmpArray=img[6];let tmpArray[8]=0;let tmpArray=img[6];let tmpArray[9]=0;let tmpArray=img[6];let tmpArray[10]=0;let tmpArray=img[6];let tmpArray[11]=0;let tmpArray=img[6];let tmpArray[12]=0;let tmpArray=img[6];let tmpArray[13]=1;let tmpArray=img[6];let tmpArray[14]=1;
+            let tmpArray=img[7];let tmpArray[0]=1;let tmpArray=img[7];let tmpArray[1]=1;let tmpArray=img[7];let tmpArray[2]=1;let tmpArray=img[7];let tmpArray[3]=0;let tmpArray=img[7];let tmpArray[4]=0;let tmpArray=img[7];let tmpArray[5]=0;let tmpArray=img[7];let tmpArray[6]=0;let tmpArray=img[7];let tmpArray[7]=0;let tmpArray=img[7];let tmpArray[8]=0;let tmpArray=img[7];let tmpArray[9]=0;let tmpArray=img[7];let tmpArray[10]=0;let tmpArray=img[7];let tmpArray[11]=0;let tmpArray=img[7];let tmpArray[12]=0;let tmpArray=img[7];let tmpArray[13]=1;let tmpArray=img[7];let tmpArray[14]=1;
+            let tmpArray=img[8];let tmpArray[0]=1;let tmpArray=img[8];let tmpArray[1]=1;let tmpArray=img[8];let tmpArray[2]=1;let tmpArray=img[8];let tmpArray[3]=0;let tmpArray=img[8];let tmpArray[4]=0;let tmpArray=img[8];let tmpArray[5]=0;let tmpArray=img[8];let tmpArray[6]=0;let tmpArray=img[8];let tmpArray[7]=0;let tmpArray=img[8];let tmpArray[8]=0;let tmpArray=img[8];let tmpArray[9]=0;let tmpArray=img[8];let tmpArray[10]=0;let tmpArray=img[8];let tmpArray[11]=0;let tmpArray=img[8];let tmpArray[12]=0;let tmpArray=img[8];let tmpArray[13]=1;let tmpArray=img[8];let tmpArray[14]=1;
+            let tmpArray=img[9];let tmpArray[0]=1;let tmpArray=img[9];let tmpArray[1]=1;let tmpArray=img[9];let tmpArray[2]=1;let tmpArray=img[9];let tmpArray[3]=0;let tmpArray=img[9];let tmpArray[4]=0;let tmpArray=img[9];let tmpArray[5]=0;let tmpArray=img[9];let tmpArray[6]=0;let tmpArray=img[9];let tmpArray[7]=0;let tmpArray=img[9];let tmpArray[8]=0;let tmpArray=img[9];let tmpArray[9]=0;let tmpArray=img[9];let tmpArray[10]=0;let tmpArray=img[9];let tmpArray[11]=0;let tmpArray=img[9];let tmpArray[12]=0;let tmpArray=img[9];let tmpArray[13]=1;let tmpArray=img[9];let tmpArray[14]=1;
+            let tmpArray=img[10];let tmpArray[0]=1;let tmpArray=img[10];let tmpArray[1]=1;let tmpArray=img[10];let tmpArray[2]=1;let tmpArray=img[10];let tmpArray[3]=0;let tmpArray=img[10];let tmpArray[4]=0;let tmpArray=img[10];let tmpArray[5]=0;let tmpArray=img[10];let tmpArray[6]=0;let tmpArray=img[10];let tmpArray[7]=0;let tmpArray=img[10];let tmpArray[8]=0;let tmpArray=img[10];let tmpArray[9]=0;let tmpArray=img[10];let tmpArray[10]=0;let tmpArray=img[10];let tmpArray[11]=0;let tmpArray=img[10];let tmpArray[12]=0;let tmpArray=img[10];let tmpArray[13]=1;let tmpArray=img[10];let tmpArray[14]=1;
+            let tmpArray=img[11];let tmpArray[0]=1;let tmpArray=img[11];let tmpArray[1]=1;let tmpArray=img[11];let tmpArray[2]=1;let tmpArray=img[11];let tmpArray[3]=0;let tmpArray=img[11];let tmpArray[4]=0;let tmpArray=img[11];let tmpArray[5]=0;let tmpArray=img[11];let tmpArray[6]=0;let tmpArray=img[11];let tmpArray[7]=0;let tmpArray=img[11];let tmpArray[8]=0;let tmpArray=img[11];let tmpArray[9]=0;let tmpArray=img[11];let tmpArray[10]=0;let tmpArray=img[11];let tmpArray[11]=0;let tmpArray=img[11];let tmpArray[12]=0;let tmpArray=img[11];let tmpArray[13]=1;let tmpArray=img[11];let tmpArray[14]=1;
+            let tmpArray=img[12];let tmpArray[0]=1;let tmpArray=img[12];let tmpArray[1]=1;let tmpArray=img[12];let tmpArray[2]=1;let tmpArray=img[12];let tmpArray[3]=0;let tmpArray=img[12];let tmpArray[4]=0;let tmpArray=img[12];let tmpArray[5]=0;let tmpArray=img[12];let tmpArray[6]=0;let tmpArray=img[12];let tmpArray[7]=0;let tmpArray=img[12];let tmpArray[8]=0;let tmpArray=img[12];let tmpArray[9]=0;let tmpArray=img[12];let tmpArray[10]=0;let tmpArray=img[12];let tmpArray[11]=0;let tmpArray=img[12];let tmpArray[12]=0;let tmpArray=img[12];let tmpArray[13]=1;let tmpArray=img[12];let tmpArray[14]=1;
+            let tmpArray=img[13];let tmpArray[0]=1;let tmpArray=img[13];let tmpArray[1]=1;let tmpArray=img[13];let tmpArray[2]=1;let tmpArray=img[13];let tmpArray[3]=0;let tmpArray=img[13];let tmpArray[4]=0;let tmpArray=img[13];let tmpArray[5]=0;let tmpArray=img[13];let tmpArray[6]=0;let tmpArray=img[13];let tmpArray[7]=0;let tmpArray=img[13];let tmpArray[8]=0;let tmpArray=img[13];let tmpArray[9]=0;let tmpArray=img[13];let tmpArray[10]=0;let tmpArray=img[13];let tmpArray[11]=0;let tmpArray=img[13];let tmpArray[12]=0;let tmpArray=img[13];let tmpArray[13]=1;let tmpArray=img[13];let tmpArray[14]=1;
+            let tmpArray=img[14];let tmpArray[0]=1;let tmpArray=img[14];let tmpArray[1]=1;let tmpArray=img[14];let tmpArray[2]=1;let tmpArray=img[14];let tmpArray[3]=1;let tmpArray=img[14];let tmpArray[4]=1;let tmpArray=img[14];let tmpArray[5]=1;let tmpArray=img[14];let tmpArray[6]=1;let tmpArray=img[14];let tmpArray[7]=1;let tmpArray=img[14];let tmpArray[8]=1;let tmpArray=img[14];let tmpArray[9]=1;let tmpArray=img[14];let tmpArray[10]=1;let tmpArray=img[14];let tmpArray[11]=1;let tmpArray=img[14];let tmpArray[12]=1;let tmpArray=img[14];let tmpArray[13]=1;let tmpArray=img[14];let tmpArray[14]=1;
+            
+            return;     
+        }
     }
-    method int _player_x()
+    function int _player_x()
     {
         return player_x;
     }
-    method int _player_y()
+    function int _player_y()
     {
         return player_y;
     }
-    method int _block_num()
+    function int _block_num()
     {
         return block_num;
     }
-    method Array _blocks()
+    function Array _blocks()
     {
         return blocks;
     }
-    method Array _map_img()
+    function Array _map_img()
     {
         return map_img;
     }

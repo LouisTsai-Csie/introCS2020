@@ -5,8 +5,8 @@ class Main
 	static Stage stage;
 	function void main() 
 	{
-		let stage=Stages.stage(2);
-		let game=Game.new(stage);
+		//let stage=Stages.stage(2);
+		let game=Game.new(1);
 		do game.play();
 		return;
 	}
