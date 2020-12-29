@@ -24,113 +24,97 @@ pop local 0
 push local 0
 push constant 0
 add
-push constant 1
-neg
+push constant 8640
 call Memory.poke 2
 pop temp 0
 push local 0
 push constant 32
 add
-push constant 32767
-neg
+push constant 12736
 call Memory.poke 2
 pop temp 0
 push local 0
 push constant 64
 add
-push constant 28855
-neg
+push constant 6592
 call Memory.poke 2
 pop temp 0
 push local 0
 push constant 96
 add
-push constant 32439
-neg
+push constant 4064
 call Memory.poke 2
 pop temp 0
 push local 0
 push constant 128
 add
-push constant 28807
-neg
+push constant 2032
 call Memory.poke 2
 pop temp 0
 push local 0
 push constant 160
 add
-push constant 32439
-neg
+push constant 3960
 call Memory.poke 2
 pop temp 0
 push local 0
 push constant 192
 add
-push constant 28855
-neg
+push constant 8188
 call Memory.poke 2
 pop temp 0
 push local 0
 push constant 224
 add
-push constant 32767
-neg
+push constant 7148
 call Memory.poke 2
 pop temp 0
 push local 0
 push constant 256
 add
-push constant 28919
-neg
+push constant 31740
 call Memory.poke 2
 pop temp 0
 push local 0
 push constant 288
 add
-push constant 30455
-neg
+push constant 13308
 call Memory.poke 2
 pop temp 0
 push local 0
 push constant 320
 add
-push constant 28919
-neg
+push constant 13292
 call Memory.poke 2
 pop temp 0
 push local 0
 push constant 352
 add
-push constant 32503
-neg
+push constant 12742
 call Memory.poke 2
 pop temp 0
 push local 0
 push constant 384
 add
-push constant 32391
-neg
+push constant 9059
 call Memory.poke 2
 pop temp 0
 push local 0
 push constant 416
 add
-push constant 32767
-neg
+push constant 864
 call Memory.poke 2
 pop temp 0
 push local 0
 push constant 448
 add
-push constant 32767
-neg
+push constant 1904
 call Memory.poke 2
 pop temp 0
 push local 0
 push constant 480
 add
-push constant 1
-neg
+push constant 3960
 call Memory.poke 2
 pop temp 0
 push constant 0

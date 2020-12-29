@@ -11,22 +11,22 @@ class Player
     {
         var int memAddress;
         let  memAddress = 16384+(px*16*32)+py;
-        do Memory.poke(memAddress+0, -1);
-        do Memory.poke(memAddress+32, -32767);
-        do Memory.poke(memAddress+64, -28855);
-        do Memory.poke(memAddress+96, -32439);
-        do Memory.poke(memAddress+128, -28807);
-        do Memory.poke(memAddress+160, -32439);
-        do Memory.poke(memAddress+192, -28855);
-        do Memory.poke(memAddress+224, -32767);
-        do Memory.poke(memAddress+256, -28919);
-        do Memory.poke(memAddress+288, -30455);
-        do Memory.poke(memAddress+320, -28919);
-        do Memory.poke(memAddress+352, -32503);
-        do Memory.poke(memAddress+384, -32391);
-        do Memory.poke(memAddress+416, -32767);
-        do Memory.poke(memAddress+448, -32767);
-        do Memory.poke(memAddress+480, -1);
+        do Memory.poke(memAddress+0, 8640);
+        do Memory.poke(memAddress+32, 12736);
+        do Memory.poke(memAddress+64, 6592);
+        do Memory.poke(memAddress+96, 4064);
+        do Memory.poke(memAddress+128, 2032);
+        do Memory.poke(memAddress+160, 3960);
+        do Memory.poke(memAddress+192, 8188);
+        do Memory.poke(memAddress+224, 7148);
+        do Memory.poke(memAddress+256, 31740);
+        do Memory.poke(memAddress+288, 13308);
+        do Memory.poke(memAddress+320, 13292);
+        do Memory.poke(memAddress+352, 12742);
+        do Memory.poke(memAddress+384, 9059);
+        do Memory.poke(memAddress+416, 864);
+        do Memory.poke(memAddress+448, 1904);
+        do Memory.poke(memAddress+480, 3960);
         return;
     }
     method void clear_scrn()
