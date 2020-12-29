@@ -65,9 +65,7 @@ class Block
         var Game tmpG;
         var Map tmpM;
         var Blocks tmpB;
-        let tmpG=Main._game();
-        let tmpM=tmpG._map();
-        if(tmpM.get_map(x,y)=1)
+        if(Map.get_map(x,y)=1)
         {
             return false;
         }

@@ -8,6 +8,14 @@ class Target
         let r=5;
         return this;
     }
+    method int _px()
+    {
+        return px;
+    }
+    method int _py()
+    {
+        return py;
+    }
     method void draw()
     {
         do Screen.drawRectangle(px*16+4,py*16+4,px*16+8,py*16+8);

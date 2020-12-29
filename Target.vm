@@ -10,6 +10,16 @@ push constant 5
 pop this 2
 push pointer 0
 return
+function Target._px 0
+push argument 0
+pop pointer 0
+push this 0
+return
+function Target._py 0
+push argument 0
+pop pointer 0
+push this 1
+return
 function Target.draw 0
 push argument 0
 pop pointer 0

@@ -259,15 +259,9 @@ return
 function Block.valid 3
 push argument 0
 pop pointer 0
-call Main._game 0
-pop local 0
-push local 0
-call Game._map 1
-pop local 1
-push local 1
 push argument 1
 push argument 2
-call Map.get_map 3
+call Map.get_map 2
 push constant 1
 eq
 if-goto IF_TRUE0

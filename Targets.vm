@@ -31,9 +31,9 @@ goto WHILE_EXP0
 label WHILE_END0
 push constant 0
 return
-function Targets.remain 1
-push constant 0
-return
+function Targets.remain 3
+push static 0
+pop local 1
 push constant 0
 pop local 0
 label WHILE_EXP0
@@ -42,5 +42,31 @@ push static 0
 lt
 not
 if-goto WHILE_END0
+push local 0
+push static 1
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+call Target._px 1
+push local 2
+call Target._py 1
+call Blocks.find_block 2
+not
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push local 1
+push constant 1
+sub
+pop local 1
+label IF_FALSE0
+push local 0
+push constant 1
+add
+pop local 0
 goto WHILE_EXP0
 label WHILE_END0
+push local 1
+return

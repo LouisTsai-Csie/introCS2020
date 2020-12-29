@@ -1,21 +1,16 @@
 class Game
 {
     field Player player;
-    field Map map;
     static int key_lag;
     constructor Game new(int stage_num)
     {
         do Stage.init(stage_num);
         do Targets.init();
         do Blocks.init();
+        do Map.init();
         let player=Player.new(Stage._player_x(),Stage._player_y());
-        let map=Map.new(Stage._map_img());
         let key_lag=100;
         return this;    
-    }
-    method Map _map()
-    {
-        return map;
     }
     method Player _player()
     {
@@ -32,13 +27,13 @@ class Game
         do Blocks.draw();
         do player.draw();
         do Targets.draw();
+        
         return;
     }
     method void play()
     {
         var char inp;
-        do map.draw();
-        do Blocks.draw();
+        do Map.draw();
         while(true)
         {
             let inp=Keyboard.keyPressed();
@@ -48,6 +43,11 @@ class Game
                 do clear_scrn();
                 do player.move(0,-1);
                 do draw();
+                if(Targets.remain()=0)
+                {
+                    do Screen.clearScreen();
+                    do Output.printString("you win");
+                }
                 do Sys.wait(key_lag);
             }
             if(inp=131)
@@ -55,6 +55,11 @@ class Game
                 do clear_scrn();
                 do player.move(-1,0);
                 do draw();
+                if(Targets.remain()=0)
+                {
+                    do Screen.clearScreen();
+                    do Output.printString("you win");
+                }
                 do Sys.wait(key_lag);
             }
             if(inp=132)
@@ -62,6 +67,11 @@ class Game
                 do clear_scrn();
                 do player.move(0,1);
                 do draw(); 
+                if(Targets.remain()=0)
+                {
+                    do Screen.clearScreen();
+                    do Output.printString("you win");
+                }
                 do Sys.wait(key_lag);
             }
             if(inp=133)
@@ -69,6 +79,11 @@ class Game
                 do clear_scrn();
                 do player.move(1,0);
                 do draw();
+                if(Targets.remain()=0)
+                {
+                    do Screen.clearScreen();
+                    do Output.printString("you win");
+                }
                 do Sys.wait(key_lag);   
             }
         }

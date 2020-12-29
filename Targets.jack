@@ -23,12 +23,19 @@ class Targets
     }
     function int remain() 
     {
-        var int i;
-        return 0;
+        var int i,ans;
+        var Target tmpTarget;
+        let ans=target_num;
         let i=0;
         while(i<target_num)
         {
-
+            let tmpTarget=targets[i];
+            if(~Blocks.find_block(tmpTarget._px(),tmpTarget._py()))
+            {
+                let ans=ans-1;
+            }
+            let i=i+1;
         }
+        return ans;
     }
 }

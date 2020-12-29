@@ -55,15 +55,11 @@ class Player
     {
         
         //if(~Main.game.map.valid(x,y))
-        var Game tmpGame;
-        var Map tmpMap;
-        var Blocks tmpBlocks;
         var Block tmpBlock;
         var Array tmpArray;
         var int tmpInt;
-        let tmpGame=Main._game();
-        let tmpMap=tmpGame._map();
-        if(tmpMap.get_map(x,y)=1)
+        
+        if(Map.get_map(x,y)=1)
         {
             return false;
         }

@@ -1,15 +1,15 @@
 class Map
 {
-    field int sizex,sizey;
-    field Array img;
-    field Array wall;
-    constructor Map new(Array map_img)
+    static int sizex,sizey;
+    static Array img;
+    static Array wall;
+    function void init()
     {
         var int i,j;
         var Wall tmpwall;
         let sizex=16;
         let sizey=16;
-        let img=map_img;
+        let img=Stage._map_img();
         let wall=Array.new(sizex);
         let i=0;
         while(i<sizex)
@@ -29,16 +29,15 @@ class Map
             }
             let i=i+1;
         }
-        return this;
+        return;
     }
-    
-    method boolean get_map(int x,int y)
+    function boolean get_map(int x,int y)
     {
         var Array tmpArray;
         let tmpArray = img[x];
         return tmpArray[y];
     }
-    method void draw()
+    function void draw()
     {
         var int i;
         var int j;
@@ -51,7 +50,7 @@ class Map
             let temp=wall[i];
             while(j<sizey)
             {
-                if(get_map(i,j))
+                if(Map.get_map(i,j))
                 {
                     let tmpW=temp[j];
                     do tmpW.draw();

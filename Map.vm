@@ -1,28 +1,25 @@
-function Map.new 3
-push constant 4
-call Memory.alloc 1
-pop pointer 0
+function Map.init 3
 push constant 16
-pop this 0
+pop static 0
 push constant 16
-pop this 1
-push argument 0
-pop this 2
-push this 0
+pop static 1
+call Stage._map_img 0
+pop static 2
+push static 0
 call Array.new 1
-pop this 3
+pop static 3
 push constant 0
 pop local 0
 label WHILE_EXP0
 push local 0
-push this 0
+push static 0
 lt
 not
 if-goto WHILE_END0
 push local 0
-push this 3
+push static 3
 add
-push this 1
+push static 1
 call Array.new 1
 pop temp 0
 pop pointer 1
@@ -38,12 +35,12 @@ push constant 0
 pop local 0
 label WHILE_EXP1
 push local 0
-push this 0
+push static 0
 lt
 not
 if-goto WHILE_END1
 push local 0
-push this 3
+push static 3
 add
 pop pointer 1
 push that 0
@@ -52,7 +49,7 @@ push constant 0
 pop local 1
 label WHILE_EXP2
 push local 1
-push this 1
+push static 1
 lt
 not
 if-goto WHILE_END2
@@ -78,52 +75,47 @@ add
 pop local 0
 goto WHILE_EXP1
 label WHILE_END1
-push pointer 0
+push constant 0
 return
 function Map.get_map 1
 push argument 0
-pop pointer 0
-push argument 1
-push this 2
+push static 2
 add
 pop pointer 1
 push that 0
 pop local 0
-push argument 2
+push argument 1
 push local 0
 add
 pop pointer 1
 push that 0
 return
 function Map.draw 4
-push argument 0
-pop pointer 0
 push constant 0
 pop local 0
 label WHILE_EXP0
 push local 0
-push this 0
+push static 0
 lt
 not
 if-goto WHILE_END0
 push constant 0
 pop local 1
 push local 0
-push this 3
+push static 3
 add
 pop pointer 1
 push that 0
 pop local 2
 label WHILE_EXP1
 push local 1
-push this 1
+push static 1
 lt
 not
 if-goto WHILE_END1
-push pointer 0
 push local 0
 push local 1
-call Map.get_map 3
+call Map.get_map 2
 if-goto IF_TRUE0
 goto IF_FALSE0
 label IF_TRUE0
