@@ -1,18 +1,19 @@
 class Blocks
 {
-    field Array blocks;
-    field int block_num;
-    constructor Blocks new(int _block_num,Array _blocks)
+    static Array blocks;
+    static int block_num;
+
+    function void init()
     {
-        let block_num=_block_num;
-        let blocks=_blocks;
-        return this;
+        let blocks=Stage._blocks();
+        let block_num=Stage._block_num();
+        return;
     }
-    method Array _blocks()
+    function Array _blocks()
     {
         return blocks;
     }
-    method void draw()
+    function void draw()
     {
         var Block tmpB;
         var int i;
@@ -25,7 +26,7 @@ class Blocks
         }
         return;
     }
-    method void clear_scrn()
+    function void clear_scrn()
     {
         var Block tmpB;
         var int i;
@@ -38,7 +39,7 @@ class Blocks
         }
         return;
     }
-    method int find_block(int x,int y)
+    function int find_block(int x,int y)
     {
         var int i;
         var Block tmpB;

@@ -7,10 +7,10 @@ class Target
         let py=_py;
         let r=5;
         return this;
-    }  
+    }
     method void draw()
     {
-        do Screen.drawRectangle(px+4,py+4,px+8,py+8);
+        do Screen.drawRectangle(px*16+4,py*16+4,px*16+8,py*16+8);
         return;
     }
 }

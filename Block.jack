@@ -67,12 +67,11 @@ class Block
         var Blocks tmpB;
         let tmpG=Main._game();
         let tmpM=tmpG._map();
-        let tmpB=tmpG._blocks();
         if(tmpM.get_map(x,y)=1)
         {
             return false;
         }
-        if(~tmpB.find_block(x,y))//!=-1
+        if(~Blocks.find_block(x,y))//!=-1
         {
             return false;
         }

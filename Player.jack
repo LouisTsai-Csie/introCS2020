@@ -53,6 +53,7 @@ class Player
     }
     method boolean valid(int x,int y,int dx,int dy)
     {
+        
         //if(~Main.game.map.valid(x,y))
         var Game tmpGame;
         var Map tmpMap;
@@ -62,23 +63,21 @@ class Player
         var int tmpInt;
         let tmpGame=Main._game();
         let tmpMap=tmpGame._map();
-        let tmpBlocks=tmpGame._blocks();
         if(tmpMap.get_map(x,y)=1)
         {
             return false;
         }
-        let tmpInt=tmpBlocks.find_block(x,y);
+        let tmpInt=Blocks.find_block(x,y);
         if(~tmpInt)//!=-1
         {
-            let tmpBlocks=tmpGame._blocks();
-            let tmpArray=tmpBlocks._blocks();
+            let tmpArray=Blocks._blocks();
             let tmpBlock=tmpArray[tmpInt];
             do tmpBlock.move(dx,dy);
         }
-        let tmpInt=tmpBlocks.find_block(x,y);
+        let tmpInt=Blocks.find_block(x,y);
         if(~tmpInt)//!=-1
         {
-            return 0;
+            return false;
         }
         return true;
     }

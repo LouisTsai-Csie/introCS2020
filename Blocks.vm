@@ -1,31 +1,24 @@
-function Blocks.new 0
-push constant 2
-call Memory.alloc 1
-pop pointer 0
-push argument 0
-pop this 1
-push argument 1
-pop this 0
-push pointer 0
+function Blocks.init 0
+call Stage._blocks 0
+pop static 0
+call Stage._block_num 0
+pop static 1
+push constant 0
 return
 function Blocks._blocks 0
-push argument 0
-pop pointer 0
-push this 0
+push static 0
 return
 function Blocks.draw 2
-push argument 0
-pop pointer 0
 push constant 0
 pop local 1
 label WHILE_EXP0
 push local 1
-push this 1
+push static 1
 lt
 not
 if-goto WHILE_END0
 push local 1
-push this 0
+push static 0
 add
 pop pointer 1
 push that 0
@@ -42,18 +35,16 @@ label WHILE_END0
 push constant 0
 return
 function Blocks.clear_scrn 2
-push argument 0
-pop pointer 0
 push constant 0
 pop local 1
 label WHILE_EXP0
 push local 1
-push this 1
+push static 1
 lt
 not
 if-goto WHILE_END0
 push local 1
-push this 0
+push static 0
 add
 pop pointer 1
 push that 0
@@ -70,29 +61,27 @@ label WHILE_END0
 push constant 0
 return
 function Blocks.find_block 2
-push argument 0
-pop pointer 0
 push constant 0
 pop local 0
 label WHILE_EXP0
 push local 0
-push this 1
+push static 1
 lt
 not
 if-goto WHILE_END0
 push local 0
-push this 0
+push static 0
 add
 pop pointer 1
 push that 0
 pop local 1
 push local 1
 call Block._px 1
-push argument 1
+push argument 0
 eq
 push local 1
 call Block._py 1
-push argument 2
+push argument 1
 eq
 and
 if-goto IF_TRUE0

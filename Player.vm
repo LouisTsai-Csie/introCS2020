@@ -254,9 +254,6 @@ pop local 0
 push local 0
 call Game._map 1
 pop local 1
-push local 0
-call Game._blocks 1
-pop local 2
 push local 1
 push argument 1
 push argument 2
@@ -269,21 +266,16 @@ label IF_TRUE0
 push constant 0
 return
 label IF_FALSE0
-push local 2
 push argument 1
 push argument 2
-call Blocks.find_block 3
+call Blocks.find_block 2
 pop local 5
 push local 5
 not
 if-goto IF_TRUE1
 goto IF_FALSE1
 label IF_TRUE1
-push local 0
-call Game._blocks 1
-pop local 2
-push local 2
-call Blocks._blocks 1
+call Blocks._blocks 0
 pop local 4
 push local 5
 push local 4
@@ -297,10 +289,9 @@ push argument 4
 call Block.move 3
 pop temp 0
 label IF_FALSE1
-push local 2
 push argument 1
 push argument 2
-call Blocks.find_block 3
+call Blocks.find_block 2
 pop local 5
 push local 5
 not

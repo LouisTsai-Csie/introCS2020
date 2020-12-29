@@ -7,7 +7,7 @@ push local 2
 call Array.new 1
 pop local 5
 push local 5
-pop static 4
+pop static 5
 push constant 0
 pop local 0
 label WHILE_EXP0
@@ -45,9 +45,9 @@ push constant 2
 pop static 2
 push static 2
 call Array.new 1
-pop static 3
+pop static 4
 push constant 0
-push static 3
+push static 4
 add
 push constant 6
 push constant 6
@@ -57,11 +57,36 @@ pop pointer 1
 push temp 0
 pop that 0
 push constant 1
-push static 3
+push static 4
 add
-push constant 7
-push constant 7
+push constant 8
+push constant 8
 call Block.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 2
+pop static 3
+push static 3
+call Array.new 1
+pop static 6
+push constant 0
+push static 6
+add
+push constant 8
+push constant 6
+call Target.new 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 1
+push static 6
+add
+push constant 6
+push constant 8
+call Target.new 2
 pop temp 0
 pop pointer 1
 push temp 0
@@ -3228,9 +3253,9 @@ push constant 2
 pop static 2
 push static 2
 call Array.new 1
-pop static 3
+pop static 4
 push constant 0
-push static 3
+push static 4
 add
 push constant 6
 push constant 6
@@ -3240,7 +3265,7 @@ pop pointer 1
 push temp 0
 pop that 0
 push constant 1
-push static 3
+push static 4
 add
 push constant 7
 push constant 7
@@ -6408,12 +6433,18 @@ return
 function Stage._player_y 0
 push static 1
 return
+function Stage._target_num 0
+push static 3
+return
 function Stage._block_num 0
 push static 2
 return
+function Stage._targets 0
+push static 6
+return
 function Stage._blocks 0
-push static 3
+push static 4
 return
 function Stage._map_img 0
-push static 4
+push static 5
 return

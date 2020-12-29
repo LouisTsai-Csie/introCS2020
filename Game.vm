@@ -1,9 +1,13 @@
 function Game.new 0
-push constant 3
+push constant 2
 call Memory.alloc 1
 pop pointer 0
 push argument 0
 call Stage.init 1
+pop temp 0
+call Targets.init 0
+pop temp 0
+call Blocks.init 0
 pop temp 0
 call Stage._player_x 0
 call Stage._player_y 0
@@ -12,18 +16,9 @@ pop this 0
 call Stage._map_img 0
 call Map.new 1
 pop this 1
-call Stage._block_num 0
-call Stage._blocks 0
-call Blocks.new 2
-pop this 2
 push constant 100
 pop static 0
 push pointer 0
-return
-function Game._blocks 0
-push argument 0
-pop pointer 0
-push this 2
 return
 function Game._map 0
 push argument 0
@@ -41,19 +36,19 @@ pop pointer 0
 push this 0
 call Player.clear_scrn 1
 pop temp 0
-push this 2
-call Blocks.clear_scrn 1
+call Blocks.clear_scrn 0
 pop temp 0
 push constant 0
 return
 function Game.draw 0
 push argument 0
 pop pointer 0
-push this 2
-call Blocks.draw 1
+call Blocks.draw 0
 pop temp 0
 push this 0
 call Player.draw 1
+pop temp 0
+call Targets.draw 0
 pop temp 0
 push constant 0
 return
@@ -62,6 +57,8 @@ push argument 0
 pop pointer 0
 push this 1
 call Map.draw 1
+pop temp 0
+call Blocks.draw 0
 pop temp 0
 label WHILE_EXP0
 push constant 0

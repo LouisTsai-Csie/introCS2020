@@ -1,7 +1,7 @@
 class Stage
 {
-    static int player_x,player_y,block_num;
-    static Array blocks,map_img;
+    static int player_x,player_y,block_num,target_num;
+    static Array blocks,map_img,targets;
     function void init(int stage_num)
     {
         var int i,j,sizex,sizey;
@@ -26,7 +26,12 @@ class Stage
             let block_num=2;
             let blocks=Array.new(block_num);
             let blocks[0]=Block.new(6,6);
-            let blocks[1]=Block.new(7,7);
+            let blocks[1]=Block.new(8,8);
+
+            let target_num=2;
+            let targets=Array.new(target_num);
+            let targets[0]=Target.new(8,6);
+            let targets[1]=Target.new(6,8);
 
             let tmpArray=img[0];let tmpArray[0]=1;let tmpArray=img[0];let tmpArray[1]=1;let tmpArray=img[0];let tmpArray[2]=1;let tmpArray=img[0];let tmpArray[3]=1;let tmpArray=img[0];let tmpArray[4]=1;let tmpArray=img[0];let tmpArray[5]=1;let tmpArray=img[0];let tmpArray[6]=1;let tmpArray=img[0];let tmpArray[7]=1;let tmpArray=img[0];let tmpArray[8]=1;let tmpArray=img[0];let tmpArray[9]=1;let tmpArray=img[0];let tmpArray[10]=1;let tmpArray=img[0];let tmpArray[11]=1;let tmpArray=img[0];let tmpArray[12]=1;let tmpArray=img[0];let tmpArray[13]=1;let tmpArray=img[0];let tmpArray[14]=1;
             let tmpArray=img[1];let tmpArray[0]=1;let tmpArray=img[1];let tmpArray[1]=1;let tmpArray=img[1];let tmpArray[2]=1;let tmpArray=img[1];let tmpArray[3]=1;let tmpArray=img[1];let tmpArray[4]=1;let tmpArray=img[1];let tmpArray[5]=1;let tmpArray=img[1];let tmpArray[6]=1;let tmpArray=img[1];let tmpArray[7]=1;let tmpArray=img[1];let tmpArray[8]=1;let tmpArray=img[1];let tmpArray[9]=1;let tmpArray=img[1];let tmpArray[10]=1;let tmpArray=img[1];let tmpArray[11]=1;let tmpArray=img[1];let tmpArray[12]=1;let tmpArray=img[1];let tmpArray[13]=1;let tmpArray=img[1];let tmpArray[14]=1;
@@ -83,9 +88,17 @@ class Stage
     {
         return player_y;
     }
+    function int _target_num()
+    {
+        return target_num;
+    }
     function int _block_num()
     {
         return block_num;
+    }
+    function Array _targets()
+    {
+        return targets;
     }
     function Array _blocks()
     {

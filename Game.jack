@@ -2,20 +2,16 @@ class Game
 {
     field Player player;
     field Map map;
-    field Blocks blocks;
     static int key_lag;
     constructor Game new(int stage_num)
     {
         do Stage.init(stage_num);
+        do Targets.init();
+        do Blocks.init();
         let player=Player.new(Stage._player_x(),Stage._player_y());
         let map=Map.new(Stage._map_img());
-        let blocks=Blocks.new(Stage._block_num(),Stage._blocks());
         let key_lag=100;
         return this;    
-    }
-    method Blocks _blocks()
-    {
-        return blocks;
     }
     method Map _map()
     {
@@ -28,22 +24,21 @@ class Game
     method void clear_scrn()
     {
         do player.clear_scrn();
-        do blocks.clear_scrn();
+        do Blocks.clear_scrn();
         return;
     }
     method void draw()
     {
-        //var Target tar;
-        do blocks.draw();
+        do Blocks.draw();
         do player.draw();
-        //let tar=Target.new(6,6);
-        //do tar.draw();
+        do Targets.draw();
         return;
     }
     method void play()
     {
         var char inp;
         do map.draw();
+        do Blocks.draw();
         while(true)
         {
             let inp=Keyboard.keyPressed();

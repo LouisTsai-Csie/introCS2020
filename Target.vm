@@ -14,15 +14,23 @@ function Target.draw 0
 push argument 0
 pop pointer 0
 push this 0
+push constant 16
+call Math.multiply 2
 push constant 4
 add
 push this 1
+push constant 16
+call Math.multiply 2
 push constant 4
 add
 push this 0
+push constant 16
+call Math.multiply 2
 push constant 8
 add
 push this 1
+push constant 16
+call Math.multiply 2
 push constant 8
 add
 call Screen.drawRectangle 4

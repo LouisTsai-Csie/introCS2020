@@ -1,4 +1,3 @@
-
 class Map
 {
     field int sizex,sizey;
@@ -41,7 +40,7 @@ class Map
     }
     method void draw()
     {
-       var int i;
+        var int i;
         var int j;
         var Array temp;
         var Wall tmpW;

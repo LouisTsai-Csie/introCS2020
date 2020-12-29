@@ -3,6 +3,7 @@ class Main
 	static Player player;
 	static Game game;
 	static Stage stage;
+	static Array array;
 	function void main() 
 	{
 		//let stage=Stages.stage(2);

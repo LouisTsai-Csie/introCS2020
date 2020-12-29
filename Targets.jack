@@ -1,5 +1,34 @@
 class Targets
 {
-    field int target_num;
-    field Array targets;
+    static int target_num;
+    static Array targets;
+    function void init()
+    {
+        let target_num=Stage._target_num();
+        let targets=Stage._targets();
+        return;
+    }
+    function void draw()
+    {
+        var int i;
+        var Target tmpTarget;
+        let i=0;
+        while(i<target_num)
+        {
+            let tmpTarget=targets[i];
+            do tmpTarget.draw();
+            let i=i+1;
+        }
+        return;
+    }
+    function int remain() 
+    {
+        var int i;
+        return 0;
+        let i=0;
+        while(i<target_num)
+        {
+
+        }
+    }
 }
