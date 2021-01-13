@@ -1,9 +1,13 @@
 class Game
 {
     field Player player;
+    field Array player_log;
     static int key_lag;
+    static int log_num;
     constructor Game new(int stage_num)
     {
+        var int i;
+
         do Stage.init(stage_num);
         do Targets.init();
         do Blocks.init();
@@ -48,6 +52,7 @@ class Game
                     do Screen.clearScreen();
                     do Output.printString("you win");
                 }
+                
                 do Sys.wait(key_lag);
             }
             if(inp=131)

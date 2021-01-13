@@ -1,0 +1,45 @@
+class Player_log
+{
+    field int player_x,player_y;
+    field Array blocks;
+    static int block_num;
+    /*
+        let log_num=10;
+        let player_log=Array.new(log_num);
+        let i=0;
+        while(i<log_num)
+        {
+            let player_log[i]=Player_log.new();
+            let i=i+1;
+        }
+    */
+    constructor Player_log new()
+    {
+        let block_num=Stage._block_num();
+        let blocks=Array.new(block_num);
+        return this;
+    }
+    method void save_game()
+    {
+        var int i;
+        var Block tmpBlock;
+        var Array tmpArray;
+        var Game tmpG;
+        var Player tmpP;
+        //storing blocks
+        let i=0;
+        while(i<block_num)
+        {
+            let tmpArray=Blocks._blocks();
+            let tmpBlock=tmpArray[i];
+            let blocks[i]=tmpBlock[i];
+            let i=i+1;
+        }
+        //storing player
+        let tmpG=Main._game();
+        let tmpP=tmpG._player();
+        let player_x=tmpP._px();
+        let player_y=tmpP._py();
+        return;
+    }
+}

@@ -77,8 +77,17 @@ class Player
         }
         return true;
     }
+    method int _px()
+    {
+        return px;
+    }
+    method int _py()
+    {
+        return py;
+    }
     method void move(int dx,int dy)
     {
+        var Player_log tmpPL;
         if(valid(px+dx,py+dy,dx,dy))
         {
             let px=px+dx;
