@@ -59,12 +59,15 @@ class Block
         do Memory.poke(memAddress+480, 0);
         return ;
     }
+    method void init(int x,int y)
+    {
+        let px=x;
+        let py=y;
+        return;
+    }
     method boolean valid(int x,int y)
     {
         //if(~Main.game.map.valid(x,y))
-        var Game tmpG;
-        var Map tmpM;
-        var Blocks tmpB;
         if(Map.get_map(x,y)=1)
         {
             return false;

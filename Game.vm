@@ -1,7 +1,4 @@
-function Game.new 1
-push constant 2
-call Memory.alloc 1
-pop pointer 0
+function Game.init 0
 push argument 0
 call Stage.init 1
 pop temp 0
@@ -11,23 +8,21 @@ call Blocks.init 0
 pop temp 0
 call Map.init 0
 pop temp 0
+call Player_log.init 0
+pop temp 0
 call Stage._player_x 0
 call Stage._player_y 0
 call Player.new 2
-pop this 0
-push constant 100
 pop static 0
-push pointer 0
+push constant 100
+pop static 2
+push constant 0
 return
 function Game._player 0
-push argument 0
-pop pointer 0
-push this 0
+push static 0
 return
 function Game.clear_scrn 0
-push argument 0
-pop pointer 0
-push this 0
+push static 0
 call Player.clear_scrn 1
 pop temp 0
 call Blocks.clear_scrn 0
@@ -35,11 +30,9 @@ pop temp 0
 push constant 0
 return
 function Game.draw 0
-push argument 0
-pop pointer 0
 call Blocks.draw 0
 pop temp 0
-push this 0
+push static 0
 call Player.draw 1
 pop temp 0
 call Targets.draw 0
@@ -47,8 +40,6 @@ pop temp 0
 push constant 0
 return
 function Game.play 1
-push argument 0
-pop pointer 0
 call Map.draw 0
 pop temp 0
 label WHILE_EXP0
@@ -64,17 +55,15 @@ eq
 if-goto IF_TRUE0
 goto IF_FALSE0
 label IF_TRUE0
-push pointer 0
-call Game.clear_scrn 1
+call Game.clear_scrn 0
 pop temp 0
-push this 0
+push static 0
 push constant 0
 push constant 1
 neg
 call Player.move 3
 pop temp 0
-push pointer 0
-call Game.draw 1
+call Game.draw 0
 pop temp 0
 call Targets.remain 0
 push constant 0
@@ -103,7 +92,7 @@ call String.appendChar 2
 call Output.printString 1
 pop temp 0
 label IF_FALSE1
-push static 0
+push static 2
 call Sys.wait 1
 pop temp 0
 label IF_FALSE0
@@ -113,17 +102,15 @@ eq
 if-goto IF_TRUE2
 goto IF_FALSE2
 label IF_TRUE2
-push pointer 0
-call Game.clear_scrn 1
+call Game.clear_scrn 0
 pop temp 0
-push this 0
+push static 0
 push constant 1
 neg
 push constant 0
 call Player.move 3
 pop temp 0
-push pointer 0
-call Game.draw 1
+call Game.draw 0
 pop temp 0
 call Targets.remain 0
 push constant 0
@@ -152,7 +139,7 @@ call String.appendChar 2
 call Output.printString 1
 pop temp 0
 label IF_FALSE3
-push static 0
+push static 2
 call Sys.wait 1
 pop temp 0
 label IF_FALSE2
@@ -162,16 +149,14 @@ eq
 if-goto IF_TRUE4
 goto IF_FALSE4
 label IF_TRUE4
-push pointer 0
-call Game.clear_scrn 1
+call Game.clear_scrn 0
 pop temp 0
-push this 0
+push static 0
 push constant 0
 push constant 1
 call Player.move 3
 pop temp 0
-push pointer 0
-call Game.draw 1
+call Game.draw 0
 pop temp 0
 call Targets.remain 0
 push constant 0
@@ -200,7 +185,7 @@ call String.appendChar 2
 call Output.printString 1
 pop temp 0
 label IF_FALSE5
-push static 0
+push static 2
 call Sys.wait 1
 pop temp 0
 label IF_FALSE4
@@ -210,16 +195,14 @@ eq
 if-goto IF_TRUE6
 goto IF_FALSE6
 label IF_TRUE6
-push pointer 0
-call Game.clear_scrn 1
+call Game.clear_scrn 0
 pop temp 0
-push this 0
+push static 0
 push constant 1
 push constant 0
 call Player.move 3
 pop temp 0
-push pointer 0
-call Game.draw 1
+call Game.draw 0
 pop temp 0
 call Targets.remain 0
 push constant 0
@@ -248,7 +231,7 @@ call String.appendChar 2
 call Output.printString 1
 pop temp 0
 label IF_FALSE7
-push static 0
+push static 2
 call Sys.wait 1
 pop temp 0
 label IF_FALSE6

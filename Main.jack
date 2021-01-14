@@ -1,19 +1,13 @@
 class Main 
 {
 	static Player player;
-	static Game game;
 	static Stage stage;
 	static Array array;
 	function void main() 
 	{
-		//let stage=Stages.stage(2);
-		let game=Game.new(1);
-		do game.play();
+		do Game.init(1);
+		do Game.play();
 		return;
-	}
-	function Game _game()
-	{
-		return game;
 	}
 }
 /*

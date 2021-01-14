@@ -7,8 +7,8 @@ class Map
     {
         var int i,j;
         var Wall tmpwall;
-        let sizex=16;
-        let sizey=16;
+        let sizex=Stage._sizex();
+        let sizey=Stage._sizey();
         let img=Stage._map_img();
         let wall=Array.new(sizex);
         let i=0;
@@ -43,7 +43,7 @@ class Map
         var int j;
         var Array temp;
         var Wall tmpW;
-        let i =0;
+        let i=0;
         while(i<sizex)
         {
             let j=0;

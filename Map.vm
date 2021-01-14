@@ -1,7 +1,7 @@
 function Map.init 3
-push constant 16
+call Stage._sizex 0
 pop static 0
-push constant 16
+call Stage._sizey 0
 pop static 1
 call Stage._map_img 0
 pop static 2

@@ -1,12 +1,8 @@
 function Main.main 0
 push constant 1
-call Game.new 1
-pop static 1
-push static 1
-call Game.play 1
+call Game.init 1
+pop temp 0
+call Game.play 0
 pop temp 0
 push constant 0
-return
-function Main._game 0
-push static 1
 return

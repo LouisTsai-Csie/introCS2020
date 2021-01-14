@@ -87,11 +87,11 @@ class Player
     }
     method void move(int dx,int dy)
     {
-        var Player_log tmpPL;
         if(valid(px+dx,py+dy,dx,dy))
         {
             let px=px+dx;
             let py=py+dy;
+            do Player_log.add();
         }
         return;
     }

@@ -292,7 +292,7 @@ push argument 0
 pop pointer 0
 push this 1
 return
-function Player.move 1
+function Player.move 0
 push argument 0
 pop pointer 0
 push pointer 0
@@ -316,6 +316,8 @@ push this 1
 push argument 2
 add
 pop this 1
+call Player_log.add 0
+pop temp 0
 label IF_FALSE0
 push constant 0
 return

@@ -256,7 +256,16 @@ call Memory.poke 2
 pop temp 0
 push constant 0
 return
-function Block.valid 3
+function Block.init 0
+push argument 0
+pop pointer 0
+push argument 1
+pop this 0
+push argument 2
+pop this 1
+push constant 0
+return
+function Block.valid 0
 push argument 0
 pop pointer 0
 push argument 1

@@ -1,45 +1,65 @@
 class Player_log
 {
-    field int player_x,player_y;
-    field Array blocks;
-    static int block_num;
-    /*
+    static Array log;
+    static int log_num;
+    static int stored;
+    static Player_state tmpState,tmpState2;
+    function void init()
+    {
+        var int i;
         let log_num=10;
-        let player_log=Array.new(log_num);
+        let log=Array.new(log_num);
+        let stored=0;
         let i=0;
         while(i<log_num)
         {
-            let player_log[i]=Player_log.new();
+            let log[i]=Player_state.new();
             let i=i+1;
         }
-    */
-    constructor Player_log new()
-    {
-        let block_num=Stage._block_num();
-        let blocks=Array.new(block_num);
-        return this;
+        let tmpState=Player_state.new();
+        return;
     }
-    method void save_game()
+    function void add()
+    {
+        var int i;
+        if(stored<log_num)
+        {
+            let tmpState2=log[log_num-stored-1];
+            do tmpState2.save_game();
+            let stored=stored+1;  
+        }
+        else
+        {
+            let tmpState2=log[log_num-1];
+            do tmpState2.save_game();
+            let i=log_num-2;
+            while((i>0)|(i=0))
+            {
+                do tmpState.copy(log[i]);
+                let tmpState2=log[i];
+                do tmpState2.copy(log[i+1]);
+                let tmpState2=log[i+1];
+                do tmpState2.copy(tmpState);
+                let i=i-1;
+            }
+        }
+        do Player_log.output();
+        return;
+    }
+    function void output()
     {
         var int i;
         var Block tmpBlock;
-        var Array tmpArray;
-        var Game tmpG;
-        var Player tmpP;
-        //storing blocks
+        do Screen.clearScreen();
         let i=0;
-        while(i<block_num)
+        while(i<log_num)
         {
-            let tmpArray=Blocks._blocks();
-            let tmpBlock=tmpArray[i];
-            let blocks[i]=tmpBlock[i];
+            let tmpState2=log[i];
+            let tmpBlock=tmpState2._blocks();
+            let tmpBlock=tmpBlock[1];
+            do Output.printInt(tmpBlock._px());
             let i=i+1;
         }
-        //storing player
-        let tmpG=Main._game();
-        let tmpP=tmpG._player();
-        let player_x=tmpP._px();
-        let player_y=tmpP._py();
         return;
     }
 }

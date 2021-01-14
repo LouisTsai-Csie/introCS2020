@@ -1,40 +1,38 @@
 class Game
 {
-    field Player player;
-    field Array player_log;
+    static Player player;
+    static Array player_log;
     static int key_lag;
     static int log_num;
-    constructor Game new(int stage_num)
+    function void init(int stage_num)
     {
-        var int i;
-
         do Stage.init(stage_num);
         do Targets.init();
         do Blocks.init();
         do Map.init();
+        do Player_log.init();
         let player=Player.new(Stage._player_x(),Stage._player_y());
         let key_lag=100;
-        return this;    
+        return;
     }
-    method Player _player()
+    function Player _player()
     {
         return player;
     }
-    method void clear_scrn()
+    function void clear_scrn()
     {
         do player.clear_scrn();
         do Blocks.clear_scrn();
         return;
     }
-    method void draw()
+    function void draw()
     {
         do Blocks.draw();
         do player.draw();
         do Targets.draw();
-        
         return;
     }
-    method void play()
+    function void play()
     {
         var char inp;
         do Map.draw();
@@ -44,9 +42,9 @@ class Game
             //L,U,R,D = 130~133
             if(inp=130)
             {
-                do clear_scrn();
+                do Game.clear_scrn();
                 do player.move(0,-1);
-                do draw();
+                do Game.draw();
                 if(Targets.remain()=0)
                 {
                     do Screen.clearScreen();
@@ -57,9 +55,9 @@ class Game
             }
             if(inp=131)
             {
-                do clear_scrn();
+                do Game.clear_scrn();
                 do player.move(-1,0);
-                do draw();
+                do Game.draw();
                 if(Targets.remain()=0)
                 {
                     do Screen.clearScreen();
@@ -69,9 +67,9 @@ class Game
             }
             if(inp=132)
             {
-                do clear_scrn();
+                do Game.clear_scrn();
                 do player.move(0,1);
-                do draw(); 
+                do Game.draw(); 
                 if(Targets.remain()=0)
                 {
                     do Screen.clearScreen();
@@ -81,9 +79,9 @@ class Game
             }
             if(inp=133)
             {
-                do clear_scrn();
+                do Game.clear_scrn();
                 do player.move(1,0);
-                do draw();
+                do Game.draw();
                 if(Targets.remain()=0)
                 {
                     do Screen.clearScreen();

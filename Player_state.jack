@@ -1,0 +1,74 @@
+class Player_state
+{
+    field int player_x,player_y;
+    field Array blocks;
+    static int block_num;
+    constructor Player_state new()
+    {
+        var int i;
+        let block_num=Stage._block_num();
+        let blocks=Array.new(block_num);
+        let i=0;
+        while(i<block_num)
+        {
+            let blocks[i]=Block.new(0,0);
+            let i=i+1;
+        }
+        return this;
+    }
+    method void copy(Player_state r)   
+    {
+        var int i;
+        var Array tmpArray;
+        var Block tmpBlock;
+        var Block tmpBlock2;
+        let tmpArray=r._blocks();
+        let i=0;
+        while(i<block_num)
+        {
+            let tmpBlock=tmpArray[i];
+            let tmpBlock2=blocks[i];
+            do tmpBlock2.init(tmpBlock._px(),tmpBlock._py());
+
+            let player_x=r._player_x();
+            let player_y=r._player_y();
+            let i=i+1;
+        }
+        return;
+    }
+    method void save_game()
+    {
+        var int i;
+        var Block tmpBlock;
+        var Block tmpBlock2;
+        var Array tmpArray;
+        var Player tmpP;
+        //storing blocks
+        let i=0;
+        while(i<block_num)
+        {
+            let tmpArray=Blocks._blocks();
+            let tmpBlock=tmpArray[i];
+            let tmpBlock2=blocks[i];
+            do tmpBlock2.init(tmpBlock._px(),tmpBlock._py());
+            let i=i+1;
+        }
+        //storing player
+        let tmpP=Game._player();
+        let player_x=tmpP._px();
+        let player_y=tmpP._py();
+        return;
+    }
+    method Array _blocks()
+    {
+        return blocks;
+    }
+    method int _player_x()
+    {
+        return player_x;
+    }
+    method int _player_y()
+    {
+        return player_y;
+    }
+}
