@@ -32,6 +32,20 @@ class Game
         do Targets.draw();
         return;
     }
+    function boolean event(int dx,int dy)
+    {
+        do Game.clear_scrn();
+        do player.move(dx,dy);
+        do Game.draw();
+        if(Targets.remain()=0)
+        {
+            do Screen.clearScreen();
+            do Output.printString("you win");
+            return 1;
+        }
+        do Sys.wait(key_lag);
+        return 0;
+    }
     function void play()
     {
         var char inp;
@@ -42,52 +56,31 @@ class Game
             //L,U,R,D = 130~133
             if(inp=130)
             {
-                do Game.clear_scrn();
-                do player.move(0,-1);
-                do Game.draw();
-                if(Targets.remain()=0)
+                if(Game.event(0,-1))
                 {
-                    do Screen.clearScreen();
-                    do Output.printString("you win");
+                    return;
                 }
-                
-                do Sys.wait(key_lag);
             }
             if(inp=131)
             {
-                do Game.clear_scrn();
-                do player.move(-1,0);
-                do Game.draw();
-                if(Targets.remain()=0)
+                if(Game.event(-1,0))
                 {
-                    do Screen.clearScreen();
-                    do Output.printString("you win");
+                    return;
                 }
-                do Sys.wait(key_lag);
             }
             if(inp=132)
             {
-                do Game.clear_scrn();
-                do player.move(0,1);
-                do Game.draw(); 
-                if(Targets.remain()=0)
+                if(Game.event(0,1))
                 {
-                    do Screen.clearScreen();
-                    do Output.printString("you win");
+                    return;
                 }
-                do Sys.wait(key_lag);
             }
             if(inp=133)
             {
-                do Game.clear_scrn();
-                do player.move(1,0);
-                do Game.draw();
-                if(Targets.remain()=0)
+                if(Game.event(1,0))
                 {
-                    do Screen.clearScreen();
-                    do Output.printString("you win");
+                    return;
                 }
-                do Sys.wait(key_lag);   
             }
         }
         return ;

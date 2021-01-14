@@ -39,6 +39,50 @@ call Targets.draw 0
 pop temp 0
 push constant 0
 return
+function Game.event 0
+call Game.clear_scrn 0
+pop temp 0
+push static 0
+push argument 0
+push argument 1
+call Player.move 3
+pop temp 0
+call Game.draw 0
+pop temp 0
+call Targets.remain 0
+push constant 0
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+call Screen.clearScreen 0
+pop temp 0
+push constant 7
+call String.new 1
+push constant 121
+call String.appendChar 2
+push constant 111
+call String.appendChar 2
+push constant 117
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+push constant 119
+call String.appendChar 2
+push constant 105
+call String.appendChar 2
+push constant 110
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push constant 1
+return
+label IF_FALSE0
+push static 2
+call Sys.wait 1
+pop temp 0
+push constant 0
+return
 function Game.play 1
 call Map.draw 0
 pop temp 0
@@ -55,46 +99,16 @@ eq
 if-goto IF_TRUE0
 goto IF_FALSE0
 label IF_TRUE0
-call Game.clear_scrn 0
-pop temp 0
-push static 0
 push constant 0
 push constant 1
 neg
-call Player.move 3
-pop temp 0
-call Game.draw 0
-pop temp 0
-call Targets.remain 0
-push constant 0
-eq
+call Game.event 2
 if-goto IF_TRUE1
 goto IF_FALSE1
 label IF_TRUE1
-call Screen.clearScreen 0
-pop temp 0
-push constant 7
-call String.new 1
-push constant 121
-call String.appendChar 2
-push constant 111
-call String.appendChar 2
-push constant 117
-call String.appendChar 2
-push constant 32
-call String.appendChar 2
-push constant 119
-call String.appendChar 2
-push constant 105
-call String.appendChar 2
-push constant 110
-call String.appendChar 2
-call Output.printString 1
-pop temp 0
+push constant 0
+return
 label IF_FALSE1
-push static 2
-call Sys.wait 1
-pop temp 0
 label IF_FALSE0
 push local 0
 push constant 131
@@ -102,46 +116,16 @@ eq
 if-goto IF_TRUE2
 goto IF_FALSE2
 label IF_TRUE2
-call Game.clear_scrn 0
-pop temp 0
-push static 0
 push constant 1
 neg
 push constant 0
-call Player.move 3
-pop temp 0
-call Game.draw 0
-pop temp 0
-call Targets.remain 0
-push constant 0
-eq
+call Game.event 2
 if-goto IF_TRUE3
 goto IF_FALSE3
 label IF_TRUE3
-call Screen.clearScreen 0
-pop temp 0
-push constant 7
-call String.new 1
-push constant 121
-call String.appendChar 2
-push constant 111
-call String.appendChar 2
-push constant 117
-call String.appendChar 2
-push constant 32
-call String.appendChar 2
-push constant 119
-call String.appendChar 2
-push constant 105
-call String.appendChar 2
-push constant 110
-call String.appendChar 2
-call Output.printString 1
-pop temp 0
+push constant 0
+return
 label IF_FALSE3
-push static 2
-call Sys.wait 1
-pop temp 0
 label IF_FALSE2
 push local 0
 push constant 132
@@ -149,45 +133,15 @@ eq
 if-goto IF_TRUE4
 goto IF_FALSE4
 label IF_TRUE4
-call Game.clear_scrn 0
-pop temp 0
-push static 0
 push constant 0
 push constant 1
-call Player.move 3
-pop temp 0
-call Game.draw 0
-pop temp 0
-call Targets.remain 0
-push constant 0
-eq
+call Game.event 2
 if-goto IF_TRUE5
 goto IF_FALSE5
 label IF_TRUE5
-call Screen.clearScreen 0
-pop temp 0
-push constant 7
-call String.new 1
-push constant 121
-call String.appendChar 2
-push constant 111
-call String.appendChar 2
-push constant 117
-call String.appendChar 2
-push constant 32
-call String.appendChar 2
-push constant 119
-call String.appendChar 2
-push constant 105
-call String.appendChar 2
-push constant 110
-call String.appendChar 2
-call Output.printString 1
-pop temp 0
+push constant 0
+return
 label IF_FALSE5
-push static 2
-call Sys.wait 1
-pop temp 0
 label IF_FALSE4
 push local 0
 push constant 133
@@ -195,45 +149,15 @@ eq
 if-goto IF_TRUE6
 goto IF_FALSE6
 label IF_TRUE6
-call Game.clear_scrn 0
-pop temp 0
-push static 0
 push constant 1
 push constant 0
-call Player.move 3
-pop temp 0
-call Game.draw 0
-pop temp 0
-call Targets.remain 0
-push constant 0
-eq
+call Game.event 2
 if-goto IF_TRUE7
 goto IF_FALSE7
 label IF_TRUE7
-call Screen.clearScreen 0
-pop temp 0
-push constant 7
-call String.new 1
-push constant 121
-call String.appendChar 2
-push constant 111
-call String.appendChar 2
-push constant 117
-call String.appendChar 2
-push constant 32
-call String.appendChar 2
-push constant 119
-call String.appendChar 2
-push constant 105
-call String.appendChar 2
-push constant 110
-call String.appendChar 2
-call Output.printString 1
-pop temp 0
+push constant 0
+return
 label IF_FALSE7
-push static 2
-call Sys.wait 1
-pop temp 0
 label IF_FALSE6
 goto WHILE_EXP0
 label WHILE_END0

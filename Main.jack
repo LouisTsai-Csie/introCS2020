@@ -5,8 +5,11 @@ class Main
 	static Array array;
 	function void main() 
 	{
-		do Game.init(1);
-		do Game.play();
+        while(true)
+        {
+            do Game.init(1);
+		    do Game.play();    
+        }
 		return;
 	}
 }

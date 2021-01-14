@@ -43,7 +43,6 @@ class Player_log
                 let i=i-1;
             }
         }
-        do Player_log.output();
         return;
     }
     function void output()

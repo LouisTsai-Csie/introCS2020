@@ -126,8 +126,6 @@ pop local 0
 goto WHILE_EXP0
 label WHILE_END0
 label IF_END0
-call Player_log.output 0
-pop temp 0
 push constant 0
 return
 function Player_log.output 2
