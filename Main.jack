@@ -13,17 +13,3 @@ class Main
 		return;
 	}
 }
-/*
-        ps: 2d array template
-        
-        initialize:
-        let img=Array.new(size);
-        let i=0;
-        while(i<size)
-        {
-            let img[i]=Array.new(size);
-            let i=i+1;
-        }
-        access(i,j):
-        let tmp=img[i];let tmp[j]=1;
-*/
