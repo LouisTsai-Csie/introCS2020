@@ -37,6 +37,8 @@ call Player.draw 1
 pop temp 0
 call Targets.draw 0
 pop temp 0
+call Shade.draw 0
+pop temp 0
 push constant 0
 return
 function Game.event 0

@@ -30,6 +30,7 @@ class Game
         do Blocks.draw();
         do player.draw();
         do Targets.draw();
+        do Shade.draw();
         return;
     }
     function boolean event(int dx,int dy)

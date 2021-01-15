@@ -1,0 +1,87 @@
+class Shade
+{
+    function void draw_shade(int px,int py,int type)
+    {
+        var int memAddress;
+        let  memAddress = 16384+(px*16*32)+py;
+        if(type=1)
+        {
+            do Memory.poke(memAddress+0, 21845);
+            do Memory.poke(memAddress+32, 0);
+            do Memory.poke(memAddress+64, 21845);
+            do Memory.poke(memAddress+96, 0);
+            do Memory.poke(memAddress+128, 21845);
+            do Memory.poke(memAddress+160, 0);
+            do Memory.poke(memAddress+192, 21845);
+            do Memory.poke(memAddress+224, 0);
+            do Memory.poke(memAddress+256, 21845);
+            do Memory.poke(memAddress+288, 0);
+            do Memory.poke(memAddress+320, 21845);
+            do Memory.poke(memAddress+352, 0);
+            do Memory.poke(memAddress+384, 21845);
+            do Memory.poke(memAddress+416, 0);
+            do Memory.poke(memAddress+448, 21845);
+            do Memory.poke(memAddress+480, 0);
+        }
+        if(type=2)
+        {
+            do Memory.poke(memAddress+0, -28087);
+            do Memory.poke(memAddress+32, 0);
+            do Memory.poke(memAddress+64, 0);
+            do Memory.poke(memAddress+96, -28087);
+            do Memory.poke(memAddress+128, 0);
+            do Memory.poke(memAddress+160, 0);
+            do Memory.poke(memAddress+192, -28087);
+            do Memory.poke(memAddress+224, 0);
+            do Memory.poke(memAddress+256, 0);
+            do Memory.poke(memAddress+288, -28087);
+            do Memory.poke(memAddress+320, 0);
+            do Memory.poke(memAddress+352, 0);
+            do Memory.poke(memAddress+384, -28087);
+            do Memory.poke(memAddress+416, 0);
+            do Memory.poke(memAddress+448, 0);
+            do Memory.poke(memAddress+480, -28087);
+        }
+        return;
+    }
+    function int shade_type(int px,int py)
+    {
+        var Player tmpP;
+        var Array tmpArray;
+        var Block tmpBlock;
+        var int mi;
+        var int i;
+        let mi=2000;
+        let tmpP=Game._player();
+        let mi=Math.min(mi,Math.abs(tmpP._px()-px)+Math.abs(tmpP._py()-py));
+        let i=0;
+        while(i<Stage._block_num())
+        {
+            let tmpArray=Blocks._blocks();
+            let tmpBlock=tmpArray[i];
+            let mi=Math.min(mi,Math.abs(tmpBlock._px()-px)+Math.abs(tmpBlock._py()-py));
+            let i=i+1;
+        }
+        if(mi>2)
+        {
+            return 2;
+        }
+        return mi;
+    }
+    function void draw()
+    {
+        var int i,j;
+        let i=0;
+        while(i<Stage._sizex())
+        {
+            let j=0;
+            while(j<Stage._sizey())
+            {
+                do Shade.draw_shade(i,j,Shade.shade_type(i,j));   
+                let j=j+1;
+            }
+            let i=i+1;
+        }
+        return;
+    }
+}
