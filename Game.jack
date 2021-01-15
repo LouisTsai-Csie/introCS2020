@@ -12,7 +12,7 @@ class Game
         do Map.init();
         do Player_log.init();
         let player=Player.new(Stage._player_x(),Stage._player_y());
-        let key_lag=100;
+        let key_lag=1;
         return;
     }
     function Player _player()
@@ -22,18 +22,18 @@ class Game
     function void clear_scrn()
     {
         do player.clear_scrn();
-        do Blocks.clear_scrn();
+        //do Blocks.clear_scrn();
         return;
     }
     function void draw()
     {
-        do Blocks.draw();
+        //do Blocks.draw();
         do player.draw();
         do Targets.draw();
         do Shade.draw();
         return;
     }
-    function boolean event(int dx,int dy)
+    function boolean player_move(int dx,int dy)
     {
         do Game.clear_scrn();
         do player.move(dx,dy);
@@ -50,38 +50,42 @@ class Game
     function void play()
     {
         var char inp;
-        do Map.draw();
         while(true)
         {
             let inp=Keyboard.keyPressed();
             //L,U,R,D = 130~133
             if(inp=130)
             {
-                if(Game.event(0,-1))
+                if(Game.player_move(0,-1))
                 {
                     return;
                 }
             }
             if(inp=131)
             {
-                if(Game.event(-1,0))
+                if(Game.player_move(-1,0))
                 {
                     return;
                 }
             }
             if(inp=132)
             {
-                if(Game.event(0,1))
+                if(Game.player_move(0,1))
                 {
                     return;
                 }
             }
             if(inp=133)
             {
-                if(Game.event(1,0))
+                if(Game.player_move(1,0))
                 {
                     return;
                 }
+            }
+            if(inp=85)//u=undo
+            {
+                do Player_log.move_back();
+                do Sys.wait(100);
             }
         }
         return ;

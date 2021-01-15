@@ -3,7 +3,49 @@ class Shade
     function void draw_shade(int px,int py,int type)
     {
         var int memAddress;
+        var Wall tmpWall;
+        var Block tmpBlock;
+        var Player tmpP;
         let  memAddress = 16384+(px*16*32)+py;
+        let tmpP=Game._player();
+        if(type=0)
+        {
+            if(Memory.peek(memAddress+0)&Memory.peek(memAddress+32))
+            {
+                do Memory.poke(memAddress+0, 0);
+                do Memory.poke(memAddress+32, 0);
+                do Memory.poke(memAddress+64, 0);
+                do Memory.poke(memAddress+96, 0);
+                do Memory.poke(memAddress+128, 0);
+                do Memory.poke(memAddress+160, 0);
+                do Memory.poke(memAddress+192, 0);
+                do Memory.poke(memAddress+224, 0);
+                do Memory.poke(memAddress+256, 0);
+                do Memory.poke(memAddress+288, 0);
+                do Memory.poke(memAddress+320, 0);
+                do Memory.poke(memAddress+352, 0);
+                do Memory.poke(memAddress+384, 0);
+                do Memory.poke(memAddress+416, 0);
+                do Memory.poke(memAddress+448, 0);
+                do Memory.poke(memAddress+480, 0);
+            }
+            if(Map.get_map(px,py))
+            {
+                let tmpWall=Wall.new(px,py);
+                do tmpWall.draw();
+                do Memory.deAlloc(tmpWall);
+            }
+            if(~Blocks.find_block(px,py))
+            {
+                let tmpBlock=Block.new(px,py);
+                do tmpBlock.draw();
+                do Memory.deAlloc(tmpBlock);
+            }
+            if((tmpP._px()=px)&(tmpP._py()=py))
+            {
+                do tmpP.draw();
+            }   
+        }
         if(type=1)
         {
             do Memory.poke(memAddress+0, 21845);
@@ -25,22 +67,43 @@ class Shade
         }
         if(type=2)
         {
-            do Memory.poke(memAddress+0, -28087);
-            do Memory.poke(memAddress+32, 0);
-            do Memory.poke(memAddress+64, 0);
-            do Memory.poke(memAddress+96, -28087);
-            do Memory.poke(memAddress+128, 0);
-            do Memory.poke(memAddress+160, 0);
-            do Memory.poke(memAddress+192, -28087);
-            do Memory.poke(memAddress+224, 0);
-            do Memory.poke(memAddress+256, 0);
-            do Memory.poke(memAddress+288, -28087);
-            do Memory.poke(memAddress+320, 0);
-            do Memory.poke(memAddress+352, 0);
-            do Memory.poke(memAddress+384, -28087);
-            do Memory.poke(memAddress+416, 0);
-            do Memory.poke(memAddress+448, 0);
-            do Memory.poke(memAddress+480, -28087);
+            do Memory.poke(memAddress+32, 21845);
+            do Memory.poke(memAddress+64, -1);
+            do Memory.poke(memAddress+96, 21845);
+            do Memory.poke(memAddress+128, -1);
+            do Memory.poke(memAddress+160, 21845);
+            do Memory.poke(memAddress+192, -1);
+            do Memory.poke(memAddress+224, 21845);
+            do Memory.poke(memAddress+256, -1);
+            do Memory.poke(memAddress+288, 21845);
+            do Memory.poke(memAddress+320, -1);
+            do Memory.poke(memAddress+352, 21845);
+            do Memory.poke(memAddress+384, -1);
+            do Memory.poke(memAddress+416, 21845);
+            do Memory.poke(memAddress+448, -1);
+            do Memory.poke(memAddress+480, 21845);
+        }
+        if(type=3)
+        {
+            if((~(Memory.peek(memAddress+0)=-1))|(~(Memory.peek(memAddress+32)=-1)))
+            {
+                do Memory.poke(memAddress+0, -1);
+                do Memory.poke(memAddress+32, -1);
+                do Memory.poke(memAddress+64, -1);
+                do Memory.poke(memAddress+96, -1);
+                do Memory.poke(memAddress+128, -1);
+                do Memory.poke(memAddress+160, -1);
+                do Memory.poke(memAddress+192, -1);
+                do Memory.poke(memAddress+224, -1);
+                do Memory.poke(memAddress+256, -1);
+                do Memory.poke(memAddress+288, -1);
+                do Memory.poke(memAddress+320, -1);
+                do Memory.poke(memAddress+352, -1);
+                do Memory.poke(memAddress+384, -1);
+                do Memory.poke(memAddress+416, -1);
+                do Memory.poke(memAddress+448, -1);
+                do Memory.poke(memAddress+480, -1);
+            }
         }
         return;
     }
@@ -53,6 +116,16 @@ class Shade
         var int i;
         let mi=2000;
         let tmpP=Game._player();
+
+        if(Math.abs(tmpP._px()-px)+Math.abs(tmpP._py()-py)<3)
+        {
+            return 0;
+        }
+        else 
+        {
+            return 3;
+        }
+        /*
         let mi=Math.min(mi,Math.abs(tmpP._px()-px)+Math.abs(tmpP._py()-py));
         let i=0;
         while(i<Stage._block_num())
@@ -62,11 +135,12 @@ class Shade
             let mi=Math.min(mi,Math.abs(tmpBlock._px()-px)+Math.abs(tmpBlock._py()-py));
             let i=i+1;
         }
-        if(mi>2)
-        {
-            return 2;
-        }
-        return mi;
+        if(mi=0){return 0;}
+        if(mi=1){return 0;}
+        if(mi=2){return 0;}
+        if(mi=3){return 2;}
+        return 2;
+        */
     }
     function void draw()
     {

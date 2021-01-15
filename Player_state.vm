@@ -128,6 +128,53 @@ call Player._py 1
 pop this 1
 push constant 0
 return
+function Player_state.recover_game 5
+push argument 0
+pop pointer 0
+push constant 0
+pop local 0
+label WHILE_EXP0
+push local 0
+push static 0
+lt
+not
+if-goto WHILE_END0
+call Blocks._blocks 0
+pop local 3
+push local 0
+push local 3
+add
+pop pointer 1
+push that 0
+pop local 1
+push local 0
+push this 2
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 1
+push local 2
+call Block._px 1
+push local 2
+call Block._py 1
+call Block.init 3
+pop temp 0
+push local 0
+push constant 1
+add
+pop local 0
+goto WHILE_EXP0
+label WHILE_END0
+call Game._player 0
+pop local 4
+push local 4
+push this 0
+push this 1
+call Player.init 3
+pop temp 0
+push constant 0
+return
 function Player_state._blocks 0
 push argument 0
 pop pointer 0

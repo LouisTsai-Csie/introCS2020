@@ -45,6 +45,26 @@ class Player_log
         }
         return;
     }
+    function bool move_back()
+    {
+        var int i;
+        if((stored=0)|(stored=0)){return 0;}
+        let stored=stored-1;
+        let i=0;
+        while((i+1)<log_num)
+        {
+            do tmpState.copy(log[i]);
+            let tmpState2=log[i];
+            do tmpState2.copy(log[i+1]);
+            let tmpState2=log[i+1];
+            do tmpState2.copy(tmpState);
+            let i=i+1;
+        }
+        let tmpState2=log[0];
+        do tmpState2.recover_game();
+        do Game.draw();
+        return 1;
+    }
     function void output()
     {
         var int i;
@@ -54,9 +74,7 @@ class Player_log
         while(i<log_num)
         {
             let tmpState2=log[i];
-            let tmpBlock=tmpState2._blocks();
-            let tmpBlock=tmpBlock[1];
-            do Output.printInt(tmpBlock._px());
+            do Output.printInt(tmpState2._player_x());
             let i=i+1;
         }
         return;

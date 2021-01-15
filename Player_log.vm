@@ -128,6 +128,89 @@ label WHILE_END0
 label IF_END0
 push constant 0
 return
+function Player_log.move_back 1
+push static 2
+push constant 0
+eq
+push static 2
+push constant 0
+eq
+or
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+return
+label IF_FALSE0
+push static 2
+push constant 1
+sub
+pop static 2
+push constant 0
+pop local 0
+label WHILE_EXP0
+push local 0
+push constant 1
+add
+push static 1
+lt
+not
+if-goto WHILE_END0
+push static 3
+push local 0
+push static 0
+add
+pop pointer 1
+push that 0
+call Player_state.copy 2
+pop temp 0
+push local 0
+push static 0
+add
+pop pointer 1
+push that 0
+pop static 4
+push static 4
+push local 0
+push constant 1
+add
+push static 0
+add
+pop pointer 1
+push that 0
+call Player_state.copy 2
+pop temp 0
+push local 0
+push constant 1
+add
+push static 0
+add
+pop pointer 1
+push that 0
+pop static 4
+push static 4
+push static 3
+call Player_state.copy 2
+pop temp 0
+push local 0
+push constant 1
+add
+pop local 0
+goto WHILE_EXP0
+label WHILE_END0
+push constant 0
+push static 0
+add
+pop pointer 1
+push that 0
+pop static 4
+push static 4
+call Player_state.recover_game 1
+pop temp 0
+call Game.draw 0
+pop temp 0
+push constant 1
+return
 function Player_log.output 2
 call Screen.clearScreen 0
 pop temp 0
@@ -146,16 +229,7 @@ pop pointer 1
 push that 0
 pop static 4
 push static 4
-call Player_state._blocks 1
-pop local 1
-push constant 1
-push local 1
-add
-pop pointer 1
-push that 0
-pop local 1
-push local 1
-call Block._px 1
+call Player_state._player_x 1
 call Output.printInt 1
 pop temp 0
 push local 0

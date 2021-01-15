@@ -14,7 +14,7 @@ call Stage._player_x 0
 call Stage._player_y 0
 call Player.new 2
 pop static 0
-push constant 100
+push constant 1
 pop static 2
 push constant 0
 return
@@ -25,13 +25,9 @@ function Game.clear_scrn 0
 push static 0
 call Player.clear_scrn 1
 pop temp 0
-call Blocks.clear_scrn 0
-pop temp 0
 push constant 0
 return
 function Game.draw 0
-call Blocks.draw 0
-pop temp 0
 push static 0
 call Player.draw 1
 pop temp 0
@@ -41,7 +37,7 @@ call Shade.draw 0
 pop temp 0
 push constant 0
 return
-function Game.event 0
+function Game.player_move 0
 call Game.clear_scrn 0
 pop temp 0
 push static 0
@@ -86,8 +82,6 @@ pop temp 0
 push constant 0
 return
 function Game.play 1
-call Map.draw 0
-pop temp 0
 label WHILE_EXP0
 push constant 0
 not
@@ -104,7 +98,7 @@ label IF_TRUE0
 push constant 0
 push constant 1
 neg
-call Game.event 2
+call Game.player_move 2
 if-goto IF_TRUE1
 goto IF_FALSE1
 label IF_TRUE1
@@ -121,7 +115,7 @@ label IF_TRUE2
 push constant 1
 neg
 push constant 0
-call Game.event 2
+call Game.player_move 2
 if-goto IF_TRUE3
 goto IF_FALSE3
 label IF_TRUE3
@@ -137,7 +131,7 @@ goto IF_FALSE4
 label IF_TRUE4
 push constant 0
 push constant 1
-call Game.event 2
+call Game.player_move 2
 if-goto IF_TRUE5
 goto IF_FALSE5
 label IF_TRUE5
@@ -153,7 +147,7 @@ goto IF_FALSE6
 label IF_TRUE6
 push constant 1
 push constant 0
-call Game.event 2
+call Game.player_move 2
 if-goto IF_TRUE7
 goto IF_FALSE7
 label IF_TRUE7
@@ -161,6 +155,18 @@ push constant 0
 return
 label IF_FALSE7
 label IF_FALSE6
+push local 0
+push constant 85
+eq
+if-goto IF_TRUE8
+goto IF_FALSE8
+label IF_TRUE8
+call Player_log.move_back 0
+pop temp 0
+push constant 100
+call Sys.wait 1
+pop temp 0
+label IF_FALSE8
 goto WHILE_EXP0
 label WHILE_END0
 push constant 0

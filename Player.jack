@@ -51,6 +51,12 @@ class Player
         do Memory.poke(memAddress+480, 0);
         return ;
     }
+    method void init(int x,int y)
+    {
+        let px=x;
+        let py=y;
+        return;
+    }
     method boolean valid(int x,int y,int dx,int dy)
     {
         

@@ -59,6 +59,28 @@ class Player_state
         let player_y=tmpP._py();
         return;
     }
+    method void recover_game()
+    {
+        var int i;
+        var Block tmpBlock;
+        var Block tmpBlock2;
+        var Array tmpArray;
+        var Player tmpP;
+        //storing blocks
+        let i=0;
+        while(i<block_num)
+        {
+            let tmpArray=Blocks._blocks();
+            let tmpBlock=tmpArray[i];
+            let tmpBlock2=blocks[i];
+            do tmpBlock.init(tmpBlock2._px(),tmpBlock2._py());
+            let i=i+1;
+        }
+        //storing player
+        let tmpP=Game._player();
+        do tmpP.init(player_x,player_y);
+        return;
+    }
     method Array _blocks()
     {
         return blocks;
