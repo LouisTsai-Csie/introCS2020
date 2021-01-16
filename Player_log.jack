@@ -45,10 +45,10 @@ class Player_log
         }
         return;
     }
-    function bool move_back()
+    function boolean move_back()
     {
         var int i;
-        if((stored=0)|(stored=0)){return 0;}
+        if((stored=1)|(stored=0)){return 0;}
         let stored=stored-1;
         let i=0;
         while((i+1)<log_num)

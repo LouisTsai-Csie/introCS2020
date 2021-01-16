@@ -21,6 +21,23 @@ class Targets
         }
         return;
     }
+    function int find_target(int x,int y)
+    {
+        var int i,ans;
+        var Target tmpTarget;
+        let ans=target_num;
+        let i=0;
+        while(i<target_num)
+        {
+            let tmpTarget=targets[i];
+            if((tmpTarget._px()=x)&(tmpTarget._py()=y))
+            {
+                return i;   
+            }
+            let i=i+1;
+        }
+        return -1;
+    }
     function int remain() 
     {
         var int i,ans;
@@ -37,5 +54,9 @@ class Targets
             let i=i+1;
         }
         return ans;
+    }
+    function void delete_target()
+    {
+        return;
     }
 }

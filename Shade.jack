@@ -45,6 +45,7 @@ class Shade
             {
                 do tmpP.draw();
             }   
+            do Targets.draw();
         }
         if(type=1)
         {

@@ -177,6 +177,8 @@ push local 3
 call Player.draw 1
 pop temp 0
 label IF_FALSE4
+call Targets.draw 0
+pop temp 0
 label IF_FALSE0
 push argument 2
 push constant 1

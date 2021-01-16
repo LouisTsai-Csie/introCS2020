@@ -55,4 +55,8 @@ class Blocks
         }
         return -1;
     }
+    function void delete_block()
+    {
+        return;
+    }
 }

@@ -99,3 +99,6 @@ label WHILE_END0
 push constant 1
 neg
 return
+function Blocks.delete_block 0
+push constant 0
+return

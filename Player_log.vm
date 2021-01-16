@@ -130,7 +130,7 @@ push constant 0
 return
 function Player_log.move_back 1
 push static 2
-push constant 0
+push constant 1
 eq
 push static 2
 push constant 0

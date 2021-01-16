@@ -1,11 +1,10 @@
 class Target
 {
-    field int px,py,r;
+    field int px,py;
     constructor Target new(int _px,int _py)
     {
         let px=_px;
         let py=_py;
-        let r=5;
         return this;
     }
     method int _px()
@@ -18,7 +17,12 @@ class Target
     }
     method void draw()
     {
-        do Screen.drawRectangle(px*16+4,py*16+4,px*16+8,py*16+8);
+        do Screen.drawRectangle(px*16+4,py*16+4,px*16+11,py*16+11);
+        return;
+    }
+    method void dispose()
+    {
+        do Memory.deAlloc(this);
         return;
     }
 }
