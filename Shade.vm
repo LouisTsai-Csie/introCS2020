@@ -189,213 +189,6 @@ label IF_TRUE5
 push local 0
 push constant 0
 add
-push constant 21845
-call Memory.poke 2
-pop temp 0
-push local 0
-push constant 32
-add
-push constant 0
-call Memory.poke 2
-pop temp 0
-push local 0
-push constant 64
-add
-push constant 21845
-call Memory.poke 2
-pop temp 0
-push local 0
-push constant 96
-add
-push constant 0
-call Memory.poke 2
-pop temp 0
-push local 0
-push constant 128
-add
-push constant 21845
-call Memory.poke 2
-pop temp 0
-push local 0
-push constant 160
-add
-push constant 0
-call Memory.poke 2
-pop temp 0
-push local 0
-push constant 192
-add
-push constant 21845
-call Memory.poke 2
-pop temp 0
-push local 0
-push constant 224
-add
-push constant 0
-call Memory.poke 2
-pop temp 0
-push local 0
-push constant 256
-add
-push constant 21845
-call Memory.poke 2
-pop temp 0
-push local 0
-push constant 288
-add
-push constant 0
-call Memory.poke 2
-pop temp 0
-push local 0
-push constant 320
-add
-push constant 21845
-call Memory.poke 2
-pop temp 0
-push local 0
-push constant 352
-add
-push constant 0
-call Memory.poke 2
-pop temp 0
-push local 0
-push constant 384
-add
-push constant 21845
-call Memory.poke 2
-pop temp 0
-push local 0
-push constant 416
-add
-push constant 0
-call Memory.poke 2
-pop temp 0
-push local 0
-push constant 448
-add
-push constant 21845
-call Memory.poke 2
-pop temp 0
-push local 0
-push constant 480
-add
-push constant 0
-call Memory.poke 2
-pop temp 0
-label IF_FALSE5
-push argument 2
-push constant 2
-eq
-if-goto IF_TRUE6
-goto IF_FALSE6
-label IF_TRUE6
-push local 0
-push constant 32
-add
-push constant 21845
-call Memory.poke 2
-pop temp 0
-push local 0
-push constant 64
-add
-push constant 1
-neg
-call Memory.poke 2
-pop temp 0
-push local 0
-push constant 96
-add
-push constant 21845
-call Memory.poke 2
-pop temp 0
-push local 0
-push constant 128
-add
-push constant 1
-neg
-call Memory.poke 2
-pop temp 0
-push local 0
-push constant 160
-add
-push constant 21845
-call Memory.poke 2
-pop temp 0
-push local 0
-push constant 192
-add
-push constant 1
-neg
-call Memory.poke 2
-pop temp 0
-push local 0
-push constant 224
-add
-push constant 21845
-call Memory.poke 2
-pop temp 0
-push local 0
-push constant 256
-add
-push constant 1
-neg
-call Memory.poke 2
-pop temp 0
-push local 0
-push constant 288
-add
-push constant 21845
-call Memory.poke 2
-pop temp 0
-push local 0
-push constant 320
-add
-push constant 1
-neg
-call Memory.poke 2
-pop temp 0
-push local 0
-push constant 352
-add
-push constant 21845
-call Memory.poke 2
-pop temp 0
-push local 0
-push constant 384
-add
-push constant 1
-neg
-call Memory.poke 2
-pop temp 0
-push local 0
-push constant 416
-add
-push constant 21845
-call Memory.poke 2
-pop temp 0
-push local 0
-push constant 448
-add
-push constant 1
-neg
-call Memory.poke 2
-pop temp 0
-push local 0
-push constant 480
-add
-push constant 21845
-call Memory.poke 2
-pop temp 0
-label IF_FALSE6
-push argument 2
-push constant 3
-eq
-if-goto IF_TRUE7
-goto IF_FALSE7
-label IF_TRUE7
-push local 0
-push constant 0
-add
 call Memory.peek 1
 push constant 1
 neg
@@ -410,9 +203,9 @@ neg
 eq
 not
 or
-if-goto IF_TRUE8
-goto IF_FALSE8
-label IF_TRUE8
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
 push local 0
 push constant 0
 add
@@ -525,8 +318,8 @@ push constant 1
 neg
 call Memory.poke 2
 pop temp 0
-label IF_FALSE8
-label IF_FALSE7
+label IF_FALSE6
+label IF_FALSE5
 push constant 0
 return
 function Shade.shade_type 5
@@ -545,7 +338,7 @@ push argument 1
 sub
 call Math.abs 1
 add
-push constant 3
+call Game._sight 0
 lt
 if-goto IF_TRUE0
 goto IF_FALSE0
@@ -554,7 +347,7 @@ push constant 0
 return
 goto IF_END0
 label IF_FALSE0
-push constant 3
+push constant 1
 return
 label IF_END0
 function Shade.draw 2

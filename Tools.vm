@@ -1,0 +1,225 @@
+function Tools.init 0
+push constant 5
+pop static 0
+push constant 4
+pop static 1
+push constant 0
+pop static 2
+push constant 3
+pop static 3
+push constant 7
+pop static 4
+push constant 0
+pop static 5
+push constant 0
+return
+function Tools._torch_sight 0
+push static 1
+return
+function Tools.torch_on 0
+push static 2
+push constant 0
+eq
+not
+return
+function Tools.torch_update 0
+push argument 0
+push constant 0
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+push static 2
+push constant 1
+sub
+call Math.max 2
+pop static 2
+label IF_FALSE0
+push argument 0
+push constant 1
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push static 0
+push constant 0
+eq
+not
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push static 0
+push constant 1
+sub
+pop static 0
+push constant 10
+pop static 2
+label IF_FALSE2
+label IF_FALSE1
+push constant 0
+return
+function Tools._flash_sight 0
+push static 4
+return
+function Tools.flash_on 0
+push static 5
+push constant 0
+eq
+not
+return
+function Tools.flash_update 0
+push argument 0
+push constant 0
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+push static 5
+push constant 1
+sub
+call Math.max 2
+pop static 5
+label IF_FALSE0
+push argument 0
+push constant 1
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push static 3
+push constant 0
+eq
+not
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push static 3
+push constant 1
+sub
+pop static 3
+push constant 5
+pop static 5
+label IF_FALSE2
+label IF_FALSE1
+push constant 0
+return
+function Tools.update 0
+push argument 0
+push constant 0
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+call Tools.torch_update 1
+pop temp 0
+push constant 0
+call Tools.flash_update 1
+pop temp 0
+label IF_FALSE0
+push argument 0
+push constant 1
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 1
+call Tools.torch_update 1
+pop temp 0
+push constant 0
+call Tools.flash_update 1
+pop temp 0
+label IF_FALSE1
+push argument 0
+push constant 2
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push constant 0
+call Tools.torch_update 1
+pop temp 0
+push constant 1
+call Tools.flash_update 1
+pop temp 0
+label IF_FALSE2
+push constant 5
+push constant 27
+push constant 2
+call Math.multiply 2
+push constant 6
+add
+call Output.moveCursor 2
+pop temp 0
+push static 0
+call Output.printInt 1
+pop temp 0
+push constant 6
+push constant 27
+push constant 2
+call Math.multiply 2
+push constant 6
+add
+call Output.moveCursor 2
+pop temp 0
+push constant 2
+call String.new 1
+push constant 32
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push constant 6
+push constant 27
+push constant 2
+call Math.multiply 2
+push constant 6
+add
+call Output.moveCursor 2
+pop temp 0
+push static 2
+call Output.printInt 1
+pop temp 0
+push constant 8
+push constant 27
+push constant 2
+call Math.multiply 2
+push constant 6
+add
+call Output.moveCursor 2
+pop temp 0
+push static 3
+call Output.printInt 1
+pop temp 0
+push constant 9
+push constant 27
+push constant 2
+call Math.multiply 2
+push constant 6
+add
+call Output.moveCursor 2
+pop temp 0
+push constant 2
+call String.new 1
+push constant 32
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push constant 9
+push constant 27
+push constant 2
+call Math.multiply 2
+push constant 6
+add
+call Output.moveCursor 2
+pop temp 0
+push static 5
+call Output.printInt 1
+pop temp 0
+push constant 0
+return

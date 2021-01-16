@@ -17,7 +17,7 @@ class Target
     }
     method void draw()
     {
-        do Screen.drawRectangle(px*16+4,py*16+4,px*16+11,py*16+11);
+        do Screen.drawRectangle(py*16+4,px*16+4,py*16+11,px*16+11);
         return;
     }
     method void dispose()

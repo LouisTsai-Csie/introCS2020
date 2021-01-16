@@ -1,0 +1,108 @@
+class Tools
+{
+    static int torch_num;
+    static int torch_sight;
+    static int torch_time;
+
+    static int flash_num;
+    static int flash_sight;
+    static int flash_time;
+
+    function void init()
+    {
+        let torch_num=5;
+        let torch_sight=4;
+        let torch_time=0;
+
+        let flash_num=3;
+        let flash_sight=7;
+        let flash_time=0;
+
+        return;
+    }
+    function int _torch_sight()
+    {
+        return torch_sight;
+    }
+    function boolean torch_on()
+    {
+        return (~(torch_time=0));
+    }
+    function void torch_update(int x)//0->noting / 1->use torch
+    {
+        if(x=0)
+        {
+            let torch_time=Math.max(0,torch_time-1);
+        }
+        if(x=1)
+        {
+            if(~(torch_num=0))
+            {
+                let torch_num=torch_num-1;
+                let torch_time=10;
+            }
+        }
+        return;
+    }
+
+    function int _flash_sight()
+    {
+        return flash_sight;
+    }
+    function boolean flash_on()
+    {
+        return (~(flash_time=0));
+    }
+    function void flash_update(int x)//0->noting / 1->use torch
+    {
+        if(x=0)
+        {
+            let flash_time=Math.max(0,flash_time-1);
+        }
+        if(x=1)
+        {
+            if(~(flash_num=0))
+            {
+                let flash_num=flash_num-1;
+                let flash_time=5;
+            }
+        }
+        return;
+    }
+
+    function void update(int press)//0->noting 1->use torch 2->use flash...
+    {
+        if(press=0)
+        {
+            do Tools.torch_update(0);
+            do Tools.flash_update(0);
+        }
+        if(press=1)
+        {
+            do Tools.torch_update(1);
+            do Tools.flash_update(0);
+        }
+        if(press=2)
+        {
+            do Tools.torch_update(0);
+            do Tools.flash_update(1);
+        }
+        do Output.moveCursor(5,27*2+6);
+        do Output.printInt(torch_num);
+
+
+        do Output.moveCursor(6,27*2+6);
+        do Output.printString("  ");
+        do Output.moveCursor(6,27*2+6);
+        do Output.printInt(torch_time);
+        
+        do Output.moveCursor(8,27*2+6);
+        do Output.printInt(flash_num);
+        
+        do Output.moveCursor(9,27*2+6);
+        do Output.printString("  ");
+        do Output.moveCursor(9,27*2+6);
+        do Output.printInt(flash_time);
+        return;
+    }
+}

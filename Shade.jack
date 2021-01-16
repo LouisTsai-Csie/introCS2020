@@ -49,43 +49,6 @@ class Shade
         }
         if(type=1)
         {
-            do Memory.poke(memAddress+0, 21845);
-            do Memory.poke(memAddress+32, 0);
-            do Memory.poke(memAddress+64, 21845);
-            do Memory.poke(memAddress+96, 0);
-            do Memory.poke(memAddress+128, 21845);
-            do Memory.poke(memAddress+160, 0);
-            do Memory.poke(memAddress+192, 21845);
-            do Memory.poke(memAddress+224, 0);
-            do Memory.poke(memAddress+256, 21845);
-            do Memory.poke(memAddress+288, 0);
-            do Memory.poke(memAddress+320, 21845);
-            do Memory.poke(memAddress+352, 0);
-            do Memory.poke(memAddress+384, 21845);
-            do Memory.poke(memAddress+416, 0);
-            do Memory.poke(memAddress+448, 21845);
-            do Memory.poke(memAddress+480, 0);
-        }
-        if(type=2)
-        {
-            do Memory.poke(memAddress+32, 21845);
-            do Memory.poke(memAddress+64, -1);
-            do Memory.poke(memAddress+96, 21845);
-            do Memory.poke(memAddress+128, -1);
-            do Memory.poke(memAddress+160, 21845);
-            do Memory.poke(memAddress+192, -1);
-            do Memory.poke(memAddress+224, 21845);
-            do Memory.poke(memAddress+256, -1);
-            do Memory.poke(memAddress+288, 21845);
-            do Memory.poke(memAddress+320, -1);
-            do Memory.poke(memAddress+352, 21845);
-            do Memory.poke(memAddress+384, -1);
-            do Memory.poke(memAddress+416, 21845);
-            do Memory.poke(memAddress+448, -1);
-            do Memory.poke(memAddress+480, 21845);
-        }
-        if(type=3)
-        {
             if((~(Memory.peek(memAddress+0)=-1))|(~(Memory.peek(memAddress+32)=-1)))
             {
                 do Memory.poke(memAddress+0, -1);
@@ -118,13 +81,13 @@ class Shade
         let mi=2000;
         let tmpP=Game._player();
 
-        if(Math.abs(tmpP._px()-px)+Math.abs(tmpP._py()-py)<3)
+        if(Math.abs(tmpP._px()-px)+Math.abs(tmpP._py()-py)<Game._sight())
         {
             return 0;
         }
         else 
         {
-            return 3;
+            return 1;
         }
         /*
         let mi=Math.min(mi,Math.abs(tmpP._px()-px)+Math.abs(tmpP._py()-py));

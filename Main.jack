@@ -1,16 +1,35 @@
 class Main 
 {
 	static Stage stage;
+	static int progress;
 	function void main() 
 	{
+		var boolean win_flag;
+		do Tools.init();
 		while(true)
 		{
-			do Game.init(1);
-			do Game.play();   
+			do Game.init(3);
+			let win_flag=Game.play();
 			do Player_log.delete_log();
 			do Stage.delete_stage();
 			do Map.delete_wall();
 		}
+		
+		let progress=1;
+		do Tools.init();
+		while(progress<4)
+		{
+			do Game.init(progress);
+			let win_flag=Game.play();
+			do Player_log.delete_log();
+			do Stage.delete_stage();
+			do Map.delete_wall();
+			if(win_flag){let progress=progress+1;}
+		}
+		do Screen.clearScreen();
+		do Output.moveCursor(10,20);
+		do Output.printString("you win");
+		do Sys.halt();
 		return;
 	}
 }

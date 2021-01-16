@@ -3,20 +3,46 @@ class Game
     static Player player;
     static int key_lag;
     static int log_num;
+    static int steps;
+    static int sight;
     function void init(int stage_num)
     {
+        var String str;
         do Stage.init(stage_num);
         do Targets.init();
         do Blocks.init();
         do Map.init();
         do Player_log.init();
         let player=Player.new(Stage._player_x(),Stage._player_y());
+        let sight=3;
         let key_lag=1;
+        let steps=0;
+        do Output.moveCursor(5,27*2);
+        do Output.printString("Torch:");
+        do Output.moveCursor(6,27*2);
+        do Output.printString("Left :");
+
+        do Output.moveCursor(8,27*2);
+        do Output.printString("Flash:");
+        do Output.moveCursor(9,27*2);
+        do Output.printString("Left :");
         return;
     }
     function Player _player()
     {
         return player;
+    }
+    function int _sight()
+    {
+        if(Tools.flash_on())
+        {
+            return Tools._flash_sight();
+        }
+        if(Tools.torch_on())
+        {
+            return Tools._torch_sight();
+        }
+        return sight;
     }
     function void clear_scrn()
     {
@@ -30,23 +56,28 @@ class Game
         do player.draw();
         do Targets.draw();
         do Shade.draw();
+        do Game.print_step();
         return;
     }
     function boolean player_move(int dx,int dy)
     {
+        var int temp;
         do Game.clear_scrn();
-        do player.move(dx,dy);
-        do Game.draw();
-        if(Targets.remain()=0)
+        if(player.move(dx,dy))
         {
-            do Screen.clearScreen();
-            //do Output.printString("you win");
-            return 1;
+            do Player_log.add();
+            do Game.move_step(0);
+            do Game.draw();
+            do Tools.update(0);
+            if(Targets.remain()=0)
+            {
+                return 1;
+            }
+            do Sys.wait(key_lag);
         }
-        do Sys.wait(key_lag);
         return 0;
     }
-    function void play()
+    function boolean play()
     {
         var char inp;
         while(true)
@@ -57,36 +88,73 @@ class Game
             {
                 if(Game.player_move(0,-1))
                 {
-                    return;
+                    return 1;
                 }
             }
             if(inp=131)
             {
                 if(Game.player_move(-1,0))
                 {
-                    return;
+                    return 1;
                 }
             }
             if(inp=132)
             {
                 if(Game.player_move(0,1))
                 {
-                    return;
+                    return 1;
                 }
             }
             if(inp=133)
             {
                 if(Game.player_move(1,0))
                 {
-                    return;
+                    return 1;
                 }
+            }
+            if(inp=81)//q=torch
+            {
+                do Tools.update(1);
+                do Sys.wait(100);
+            }
+            if(inp=87)//w=flash
+            {
+                do Tools.update(2);
+                do Sys.wait(100);
+            }
+            if(inp=82)//r=restart
+            {
+                return 0;
             }
             if(inp=85)//u=undo
             {
-                do Player_log.move_back();
+                if(Player_log.move_back())
+                {
+                    do Game.move_step(1);
+                    do Game.draw();
+                }
                 do Sys.wait(100);
             }
         }
-        return ;
+        return 1;
+    }
+    function void move_step(int state)
+    {
+        //state:0->走一步，state:1->切關，state:1->undo
+        if(state=0)
+        {
+            let steps=steps+1;
+        }
+        if(state=1)
+        {
+            let steps=steps-1;
+        }
+        return;
+    }
+    function void print_step()
+    {
+        do Output.moveCursor(16,56);
+        do Output.printInt(steps);
+        return;
     }
 }

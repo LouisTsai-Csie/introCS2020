@@ -91,15 +91,15 @@ class Player
     {
         return py;
     }
-    method void move(int dx,int dy)
+    method boolean move(int dx,int dy)
     {
         if(valid(px+dx,py+dy,dx,dy))
         {
             let px=px+dx;
             let py=py+dy;
-            do Player_log.add();
+            return 1;
         }
-        return;
+        return 0;
     }
     method void dispose()
     {
