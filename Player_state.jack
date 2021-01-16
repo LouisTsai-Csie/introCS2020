@@ -93,4 +93,19 @@ class Player_state
     {
         return player_y;
     }
+    method void dispose()
+    {
+        var int i;
+        var Block tmpBlock;
+        let i=0;
+        while(i<block_num)
+        {
+            let tmpBlock=blocks[i];
+            do tmpBlock.dispose();
+            let i=i+1;
+        }
+        do blocks.dispose();
+        do Memory.deAlloc(this);
+        return;
+    }
 }

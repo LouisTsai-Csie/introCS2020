@@ -125,4 +125,37 @@ class Stage
     {
         return map_img;
     }
+    function void delete_stage()
+    {
+        var int i;
+        var Array tmpArray,img;
+        var Target tmpTarget;
+        var Block tmpBlock;
+        let i=0;
+        while(i<block_num)
+        {
+            let tmpBlock=blocks[i];
+            do tmpBlock.dispose();
+            let i=i+1;
+        }
+        do blocks.dispose();
+        let i=0;
+        while(i<target_num)
+        {
+            let tmpTarget=targets[i];
+            do tmpTarget.dispose();
+            let i=i+1;
+        }
+        do targets.dispose();
+
+        let i=0;
+        while(i<sizex)
+        {
+            let tmpArray=map_img[i];
+            do tmpArray.dispose();
+            let i=i+1;
+        }
+        do map_img.dispose();
+        return;
+    }
 }

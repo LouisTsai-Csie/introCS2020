@@ -4,5 +4,9 @@ call Game.init 1
 pop temp 0
 call Game.play 0
 pop temp 0
+call Player_log.delete_log 0
+pop temp 0
+call Stage.delete_stage 0
+pop temp 0
 push constant 0
 return

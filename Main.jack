@@ -1,12 +1,12 @@
 class Main 
 {
-	static Player player;
 	static Stage stage;
-	static Array array;
 	function void main() 
 	{
-        do Game.init(1);
+		do Game.init(1);
 		do Game.play();   
+		do Player_log.delete_log();
+		do Stage.delete_stage();
 		return;
 	}
 }

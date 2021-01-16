@@ -79,4 +79,17 @@ class Player_log
         }
         return;
     }
+    function void delete_log()
+    {
+        var int i;
+        let i=0;
+        while(i<log_num)
+        {
+            let tmpState2=log[i];
+            do tmpState2.dispose();
+            let i=i+1;
+        }
+        do tmpState.dispose();
+        return;
+    }
 }

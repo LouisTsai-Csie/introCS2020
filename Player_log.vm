@@ -240,3 +240,32 @@ goto WHILE_EXP0
 label WHILE_END0
 push constant 0
 return
+function Player_log.delete_log 1
+push constant 0
+pop local 0
+label WHILE_EXP0
+push local 0
+push static 1
+lt
+not
+if-goto WHILE_END0
+push local 0
+push static 0
+add
+pop pointer 1
+push that 0
+pop static 4
+push static 4
+call Player_state.dispose 1
+pop temp 0
+push local 0
+push constant 1
+add
+pop local 0
+goto WHILE_EXP0
+label WHILE_END0
+push static 3
+call Player_state.dispose 1
+pop temp 0
+push constant 0
+return
