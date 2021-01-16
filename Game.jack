@@ -1,7 +1,6 @@
 class Game
 {
     static Player player;
-    static Array player_log;
     static int key_lag;
     static int log_num;
     function void init(int stage_num)
@@ -41,7 +40,7 @@ class Game
         if(Targets.remain()=0)
         {
             do Screen.clearScreen();
-            do Output.printString("you win");
+            //do Output.printString("you win");
             return 1;
         }
         do Sys.wait(key_lag);

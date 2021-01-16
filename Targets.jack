@@ -55,8 +55,4 @@ class Targets
         }
         return ans;
     }
-    function void delete_target()
-    {
-        return;
-    }
 }

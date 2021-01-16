@@ -29,4 +29,9 @@ class Wall
         do Memory.poke(memAddress+480, -1);
         return;
     }
+    method void dispose()
+    {
+        do Memory.deAlloc(this);
+        return;
+    }
 }

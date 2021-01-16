@@ -3,10 +3,14 @@ class Main
 	static Stage stage;
 	function void main() 
 	{
-		do Game.init(1);
-		do Game.play();   
-		do Player_log.delete_log();
-		do Stage.delete_stage();
+		while(true)
+		{
+			do Game.init(1);
+			do Game.play();   
+			do Player_log.delete_log();
+			do Stage.delete_stage();
+			do Map.delete_wall();
+		}
 		return;
 	}
 }

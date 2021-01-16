@@ -7,7 +7,7 @@ class Player_log
     function void init()
     {
         var int i;
-        let log_num=10;
+        let log_num=50;
         let log=Array.new(log_num);
         let stored=0;
         let i=0;
@@ -50,7 +50,8 @@ class Player_log
         var int i;
         if((stored=1)|(stored=0)){return 0;}
         let stored=stored-1;
-        let i=0;
+        /*
+        let i=log_num-stored;
         while((i+1)<log_num)
         {
             do tmpState.copy(log[i]);
@@ -60,7 +61,8 @@ class Player_log
             do tmpState2.copy(tmpState);
             let i=i+1;
         }
-        let tmpState2=log[0];
+        */
+        let tmpState2=log[log_num-stored];
         do tmpState2.recover_game();
         do Game.draw();
         return 1;

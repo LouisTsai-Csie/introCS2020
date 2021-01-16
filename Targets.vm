@@ -111,6 +111,3 @@ goto WHILE_EXP0
 label WHILE_END0
 push local 1
 return
-function Targets.delete_target 0
-push constant 0
-return

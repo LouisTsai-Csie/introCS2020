@@ -1,4 +1,9 @@
 function Main.main 0
+label WHILE_EXP0
+push constant 0
+not
+not
+if-goto WHILE_END0
 push constant 1
 call Game.init 1
 pop temp 0
@@ -8,5 +13,9 @@ call Player_log.delete_log 0
 pop temp 0
 call Stage.delete_stage 0
 pop temp 0
+call Map.delete_wall 0
+pop temp 0
+goto WHILE_EXP0
+label WHILE_END0
 push constant 0
 return

@@ -61,4 +61,26 @@ class Map
         }
         return;
     }
+    function void delete_wall()
+    {
+        var int i,j;
+        var Wall tmpWall;
+        var Array tmpArray;
+        let i=0;
+        while(i<sizex)
+        {
+            let tmpArray=wall[i];
+            let j=0;
+            while(j<sizey)
+            {
+                let tmpWall=tmpArray[j];
+                do tmpWall.dispose();
+                let j=j+1;
+            }
+            do tmpArray.dispose();
+            let i=i+1;
+        }
+        do wall.dispose();
+        return;
+    }
 }

@@ -1,5 +1,5 @@
 function Player_log.init 1
-push constant 10
+push constant 50
 pop static 1
 push static 1
 call Array.new 1
@@ -146,59 +146,9 @@ push static 2
 push constant 1
 sub
 pop static 2
-push constant 0
-pop local 0
-label WHILE_EXP0
-push local 0
-push constant 1
-add
 push static 1
-lt
-not
-if-goto WHILE_END0
-push static 3
-push local 0
-push static 0
-add
-pop pointer 1
-push that 0
-call Player_state.copy 2
-pop temp 0
-push local 0
-push static 0
-add
-pop pointer 1
-push that 0
-pop static 4
-push static 4
-push local 0
-push constant 1
-add
-push static 0
-add
-pop pointer 1
-push that 0
-call Player_state.copy 2
-pop temp 0
-push local 0
-push constant 1
-add
-push static 0
-add
-pop pointer 1
-push that 0
-pop static 4
-push static 4
-push static 3
-call Player_state.copy 2
-pop temp 0
-push local 0
-push constant 1
-add
-pop local 0
-goto WHILE_EXP0
-label WHILE_END0
-push constant 0
+push static 2
+sub
 push static 0
 add
 pop pointer 1
