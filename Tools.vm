@@ -241,7 +241,14 @@ push constant 29
 push constant 1
 call Picture.draw 3
 pop temp 0
+goto IF_END4
 label IF_FALSE4
+push constant 0
+push constant 29
+push constant 0
+call Picture.draw 3
+pop temp 0
+label IF_END4
 label IF_END3
 push constant 0
 return

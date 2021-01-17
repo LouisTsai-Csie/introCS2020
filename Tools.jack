@@ -110,6 +110,10 @@ class Tools
         else {if(Tools.torch_on())
         {
             do Picture.draw(0,29,1);
+        }
+        else
+        {
+            do Picture.draw(0,29,0);
         }}
         return;
     }

@@ -1,10 +1,2048 @@
 function Picture.draw 0
 push argument 2
-push constant 1
+push constant 0
 eq
 if-goto IF_TRUE0
 goto IF_FALSE0
 label IF_TRUE0
+push constant 16384
+push argument 0
+push constant 0
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 0
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 0
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 1
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 1
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 1
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 2
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 2
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 2
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 3
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 3
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 3
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 4
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 4
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 4092
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 4
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 5
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 5
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 8124
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 5
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 6
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 6
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 14350
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 6
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 7
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 7
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 28678
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 7
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 8
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 8
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 8186
+neg
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 8
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 9
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 9
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 16378
+neg
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 9
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 10
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 1
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 10
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 32754
+neg
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 10
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 11
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 11
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 16356
+neg
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 11
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 12
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 1
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 12
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 16328
+neg
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 12
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 13
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 13
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 16272
+neg
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 13
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 14
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 14
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 7200
+neg
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 14
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 15
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 15
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 32640
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 15
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 2048
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 16
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 16
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 7680
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 16
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 15360
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 17
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 17
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 3072
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 17
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 30720
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 18
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 18
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 3584
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 18
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 24576
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 19
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 19
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 1024
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 19
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 24576
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 20
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 20
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 1024
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 20
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 16384
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 21
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 21
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 3584
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 21
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 8192
+neg
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 22
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 22
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 1536
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 22
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 16384
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 23
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 23
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 1024
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 23
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 8192
+neg
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 24
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 3
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 24
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 7
+neg
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 24
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 8192
+neg
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 25
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 3
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 25
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 32767
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 25
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 16384
+neg
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 26
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 3
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 26
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 3078
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 26
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 27
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 7
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 27
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 3072
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 27
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 28
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 6
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 28
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 3072
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 28
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 29
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 6
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 29
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 7168
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 29
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 30
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 118
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 30
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 6144
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 30
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 31
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 60
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 31
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 6144
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 31
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 32
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 28
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 32
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 6144
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 32
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 33
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 33
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 6144
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 33
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 34
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 34
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 2048
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 34
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 35
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 35
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 6144
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 35
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 36
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 36
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 6144
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 36
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 37
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 37
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 15360
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 37
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 38
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 38
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 256
+neg
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 38
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 39
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 1
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 39
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 6272
+neg
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 39
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 40
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 3
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 40
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 32288
+neg
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 40
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 41
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 7
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 41
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 240
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 41
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 42
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 14
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 42
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 48
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 42
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 43
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 43
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 16
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 43
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 44
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 44
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 44
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 45
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 45
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 45
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 46
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 46
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 46
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 47
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 2
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 47
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 1
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+push constant 16384
+push argument 0
+push constant 47
+add
+push constant 32
+call Math.multiply 2
+add
+push argument 1
+push constant 0
+add
+add
+push constant 0
+call Memory.poke 2
+pop temp 0
+label IF_FALSE0
+push argument 2
+push constant 1
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
 push constant 16384
 push argument 0
 push constant 0
@@ -2027,13 +4065,13 @@ add
 push constant 0
 call Memory.poke 2
 pop temp 0
-label IF_FALSE0
+label IF_FALSE1
 push argument 2
 push constant 2
 eq
-if-goto IF_TRUE1
-goto IF_FALSE1
-label IF_TRUE1
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
 push constant 16384
 push argument 0
 push constant 0
@@ -4076,6 +6114,6 @@ add
 push constant 0
 call Memory.poke 2
 pop temp 0
-label IF_FALSE1
+label IF_FALSE2
 push constant 0
 return
