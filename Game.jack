@@ -26,6 +26,8 @@ class Game
         do Output.printString("Flash:");
         do Output.moveCursor(9,28*2);
         do Output.printString("Left :");
+        do Output.moveCursor(11,28*2);
+        do Output.printString("step:");
         return;
     }
     function Player _player()
@@ -153,7 +155,9 @@ class Game
     }
     function void print_step()
     {
-        do Output.moveCursor(16,56);
+        do Output.moveCursor(11,28*2+5);
+        do Output.printString("   ");
+        do Output.moveCursor(11,28*2+5);
         do Output.printInt(steps);
         return;
     }
