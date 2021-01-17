@@ -87,22 +87,30 @@ class Tools
             do Tools.torch_update(0);
             do Tools.flash_update(1);
         }
-        do Output.moveCursor(5,27*2+6);
+        do Output.moveCursor(5,28*2+6);
         do Output.printInt(torch_num);
 
-
-        do Output.moveCursor(6,27*2+6);
+        do Output.moveCursor(6,28*2+6);
         do Output.printString("  ");
-        do Output.moveCursor(6,27*2+6);
+        do Output.moveCursor(6,28*2+6);
         do Output.printInt(torch_time);
         
-        do Output.moveCursor(8,27*2+6);
+        do Output.moveCursor(8,28*2+6);
         do Output.printInt(flash_num);
         
-        do Output.moveCursor(9,27*2+6);
+        do Output.moveCursor(9,28*2+6);
         do Output.printString("  ");
-        do Output.moveCursor(9,27*2+6);
+        do Output.moveCursor(9,28*2+6);
         do Output.printInt(flash_time);
+        
+        if(Tools.flash_on())
+        {
+            do Picture.draw(0,29,2);
+        }
+        else {if(Tools.torch_on())
+        {
+            do Picture.draw(0,29,1);
+        }}
         return;
     }
 }

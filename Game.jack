@@ -17,14 +17,14 @@ class Game
         let sight=3;
         let key_lag=1;
         let steps=0;
-        do Output.moveCursor(5,27*2);
+        do Output.moveCursor(5,28*2);
         do Output.printString("Torch:");
-        do Output.moveCursor(6,27*2);
+        do Output.moveCursor(6,28*2);
         do Output.printString("Left :");
 
-        do Output.moveCursor(8,27*2);
+        do Output.moveCursor(8,28*2);
         do Output.printString("Flash:");
-        do Output.moveCursor(9,27*2);
+        do Output.moveCursor(9,28*2);
         do Output.printString("Left :");
         return;
     }

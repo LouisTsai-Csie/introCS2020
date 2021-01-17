@@ -1,0 +1,109 @@
+class Picture
+{
+    function void draw(int x,int y,int type)
+    {
+        if(type=1)//torch
+        {
+            do Memory.poke(16384+((x+0)*32)+(y+0), 0);do Memory.poke(16384+((x+0)*32)+(y+1), 0);do Memory.poke(16384+((x+0)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+1)*32)+(y+0), 0);do Memory.poke(16384+((x+1)*32)+(y+1), 0);do Memory.poke(16384+((x+1)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+2)*32)+(y+0), 0);do Memory.poke(16384+((x+2)*32)+(y+1), 2048);do Memory.poke(16384+((x+2)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+3)*32)+(y+0), 0);do Memory.poke(16384+((x+3)*32)+(y+1), 6144);do Memory.poke(16384+((x+3)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+4)*32)+(y+0), 0);do Memory.poke(16384+((x+4)*32)+(y+1), 0);do Memory.poke(16384+((x+4)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+5)*32)+(y+0), 0);do Memory.poke(16384+((x+5)*32)+(y+1), 512);do Memory.poke(16384+((x+5)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+6)*32)+(y+0), 0);do Memory.poke(16384+((x+6)*32)+(y+1), 768);do Memory.poke(16384+((x+6)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+7)*32)+(y+0), 0);do Memory.poke(16384+((x+7)*32)+(y+1), 896);do Memory.poke(16384+((x+7)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+8)*32)+(y+0), 0);do Memory.poke(16384+((x+8)*32)+(y+1), 448);do Memory.poke(16384+((x+8)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+9)*32)+(y+0), 0);do Memory.poke(16384+((x+9)*32)+(y+1), 224);do Memory.poke(16384+((x+9)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+10)*32)+(y+0), 0);do Memory.poke(16384+((x+10)*32)+(y+1), 240);do Memory.poke(16384+((x+10)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+11)*32)+(y+0), 0);do Memory.poke(16384+((x+11)*32)+(y+1), 216);do Memory.poke(16384+((x+11)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+12)*32)+(y+0), 0);do Memory.poke(16384+((x+12)*32)+(y+1), 472);do Memory.poke(16384+((x+12)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+13)*32)+(y+0), 0);do Memory.poke(16384+((x+13)*32)+(y+1), 3977);do Memory.poke(16384+((x+13)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+14)*32)+(y+0), 0);do Memory.poke(16384+((x+14)*32)+(y+1), 32268);do Memory.poke(16384+((x+14)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+15)*32)+(y+0), 0);do Memory.poke(16384+((x+15)*32)+(y+1), 24588);do Memory.poke(16384+((x+15)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+16)*32)+(y+0), 2);do Memory.poke(16384+((x+16)*32)+(y+1), -16380);do Memory.poke(16384+((x+16)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+17)*32)+(y+0), 5);do Memory.poke(16384+((x+17)*32)+(y+1), -32762);do Memory.poke(16384+((x+17)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+18)*32)+(y+0), 0);do Memory.poke(16384+((x+18)*32)+(y+1), -32761);do Memory.poke(16384+((x+18)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+19)*32)+(y+0), 1);do Memory.poke(16384+((x+19)*32)+(y+1), -32766);do Memory.poke(16384+((x+19)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+20)*32)+(y+0), 0);do Memory.poke(16384+((x+20)*32)+(y+1), -16381);do Memory.poke(16384+((x+20)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+21)*32)+(y+0), 0);do Memory.poke(16384+((x+21)*32)+(y+1), -16378);do Memory.poke(16384+((x+21)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+22)*32)+(y+0), 0);do Memory.poke(16384+((x+22)*32)+(y+1), 28687);do Memory.poke(16384+((x+22)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+23)*32)+(y+0), 0);do Memory.poke(16384+((x+23)*32)+(y+1), 15514);do Memory.poke(16384+((x+23)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+24)*32)+(y+0), 0);do Memory.poke(16384+((x+24)*32)+(y+1), 4080);do Memory.poke(16384+((x+24)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+25)*32)+(y+0), 0);do Memory.poke(16384+((x+25)*32)+(y+1), 3952);do Memory.poke(16384+((x+25)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+26)*32)+(y+0), 0);do Memory.poke(16384+((x+26)*32)+(y+1), 4080);do Memory.poke(16384+((x+26)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+27)*32)+(y+0), 0);do Memory.poke(16384+((x+27)*32)+(y+1), 1056);do Memory.poke(16384+((x+27)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+28)*32)+(y+0), 0);do Memory.poke(16384+((x+28)*32)+(y+1), 2016);do Memory.poke(16384+((x+28)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+29)*32)+(y+0), 0);do Memory.poke(16384+((x+29)*32)+(y+1), 1632);do Memory.poke(16384+((x+29)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+30)*32)+(y+0), 0);do Memory.poke(16384+((x+30)*32)+(y+1), 1632);do Memory.poke(16384+((x+30)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+31)*32)+(y+0), 0);do Memory.poke(16384+((x+31)*32)+(y+1), 576);do Memory.poke(16384+((x+31)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+32)*32)+(y+0), 0);do Memory.poke(16384+((x+32)*32)+(y+1), 576);do Memory.poke(16384+((x+32)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+33)*32)+(y+0), 0);do Memory.poke(16384+((x+33)*32)+(y+1), 1600);do Memory.poke(16384+((x+33)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+34)*32)+(y+0), 0);do Memory.poke(16384+((x+34)*32)+(y+1), 1632);do Memory.poke(16384+((x+34)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+35)*32)+(y+0), 0);do Memory.poke(16384+((x+35)*32)+(y+1), 576);do Memory.poke(16384+((x+35)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+36)*32)+(y+0), 0);do Memory.poke(16384+((x+36)*32)+(y+1), 1600);do Memory.poke(16384+((x+36)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+37)*32)+(y+0), 0);do Memory.poke(16384+((x+37)*32)+(y+1), 576);do Memory.poke(16384+((x+37)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+38)*32)+(y+0), 0);do Memory.poke(16384+((x+38)*32)+(y+1), 576);do Memory.poke(16384+((x+38)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+39)*32)+(y+0), 0);do Memory.poke(16384+((x+39)*32)+(y+1), 1632);do Memory.poke(16384+((x+39)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+40)*32)+(y+0), 0);do Memory.poke(16384+((x+40)*32)+(y+1), 608);do Memory.poke(16384+((x+40)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+41)*32)+(y+0), 0);do Memory.poke(16384+((x+41)*32)+(y+1), 1600);do Memory.poke(16384+((x+41)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+42)*32)+(y+0), 0);do Memory.poke(16384+((x+42)*32)+(y+1), 1600);do Memory.poke(16384+((x+42)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+43)*32)+(y+0), 0);do Memory.poke(16384+((x+43)*32)+(y+1), 960);do Memory.poke(16384+((x+43)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+44)*32)+(y+0), 0);do Memory.poke(16384+((x+44)*32)+(y+1), 0);do Memory.poke(16384+((x+44)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+45)*32)+(y+0), 0);do Memory.poke(16384+((x+45)*32)+(y+1), 0);do Memory.poke(16384+((x+45)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+46)*32)+(y+0), 0);do Memory.poke(16384+((x+46)*32)+(y+1), 0);do Memory.poke(16384+((x+46)*32)+(y+2), 0);
+            do Memory.poke(16384+((x+47)*32)+(y+0), 0);do Memory.poke(16384+((x+47)*32)+(y+1), 0);do Memory.poke(16384+((x+47)*32)+(y+2), 0);
+        }
+        if(type=2)
+        {
+            do Memory.poke(16384+((x+0)*32)+(y+2), 0);do Memory.poke(16384+((x+0)*32)+(y+1), 0);do Memory.poke(16384+((x+0)*32)+(y+0), 0);
+            do Memory.poke(16384+((x+1)*32)+(y+2), 0);do Memory.poke(16384+((x+1)*32)+(y+1), 0);do Memory.poke(16384+((x+1)*32)+(y+0), 0);
+            do Memory.poke(16384+((x+2)*32)+(y+2), 0);do Memory.poke(16384+((x+2)*32)+(y+1), 0);do Memory.poke(16384+((x+2)*32)+(y+0), 0);
+            do Memory.poke(16384+((x+3)*32)+(y+2), 0);do Memory.poke(16384+((x+3)*32)+(y+1), 1024);do Memory.poke(16384+((x+3)*32)+(y+0), 0);
+            do Memory.poke(16384+((x+4)*32)+(y+2), 0);do Memory.poke(16384+((x+4)*32)+(y+1), 1024);do Memory.poke(16384+((x+4)*32)+(y+0), 0);
+            do Memory.poke(16384+((x+5)*32)+(y+2), 128);do Memory.poke(16384+((x+5)*32)+(y+1), 768);do Memory.poke(16384+((x+5)*32)+(y+0), 0);
+            do Memory.poke(16384+((x+6)*32)+(y+2), 192);do Memory.poke(16384+((x+6)*32)+(y+1), 768);do Memory.poke(16384+((x+6)*32)+(y+0), 0);
+            do Memory.poke(16384+((x+7)*32)+(y+2), 64);do Memory.poke(16384+((x+7)*32)+(y+1), 1985);do Memory.poke(16384+((x+7)*32)+(y+0), 0);
+            do Memory.poke(16384+((x+8)*32)+(y+2), 1);do Memory.poke(16384+((x+8)*32)+(y+1), 1120);do Memory.poke(16384+((x+8)*32)+(y+0), 0);
+            do Memory.poke(16384+((x+9)*32)+(y+2), 1);do Memory.poke(16384+((x+9)*32)+(y+1), 3104);do Memory.poke(16384+((x+9)*32)+(y+0), 0);
+            do Memory.poke(16384+((x+10)*32)+(y+2), 0);do Memory.poke(16384+((x+10)*32)+(y+1), 2104);do Memory.poke(16384+((x+10)*32)+(y+0), 0);
+            do Memory.poke(16384+((x+11)*32)+(y+2), 0);do Memory.poke(16384+((x+11)*32)+(y+1), 2316);do Memory.poke(16384+((x+11)*32)+(y+0), 0);
+            do Memory.poke(16384+((x+12)*32)+(y+2), 0);do Memory.poke(16384+((x+12)*32)+(y+1), 7047);do Memory.poke(16384+((x+12)*32)+(y+0), 0);
+            do Memory.poke(16384+((x+13)*32)+(y+2), 0);do Memory.poke(16384+((x+13)*32)+(y+1), 29569);do Memory.poke(16384+((x+13)*32)+(y+0), 0);
+            do Memory.poke(16384+((x+14)*32)+(y+2), 3);do Memory.poke(16384+((x+14)*32)+(y+1), -8191);do Memory.poke(16384+((x+14)*32)+(y+0), 0);
+            do Memory.poke(16384+((x+15)*32)+(y+2), 2055);do Memory.poke(16384+((x+15)*32)+(y+1), 1);do Memory.poke(16384+((x+15)*32)+(y+0), -30720);
+            do Memory.poke(16384+((x+16)*32)+(y+2), 1148);do Memory.poke(16384+((x+16)*32)+(y+1), 3968);do Memory.poke(16384+((x+16)*32)+(y+0), -32767-1);
+            do Memory.poke(16384+((x+17)*32)+(y+2), 64);do Memory.poke(16384+((x+17)*32)+(y+1), 1792);do Memory.poke(16384+((x+17)*32)+(y+0), -32767-1);
+            do Memory.poke(16384+((x+18)*32)+(y+2), 192);do Memory.poke(16384+((x+18)*32)+(y+1), 1568);do Memory.poke(16384+((x+18)*32)+(y+0), 16384);
+            do Memory.poke(16384+((x+19)*32)+(y+2), 899);do Memory.poke(16384+((x+19)*32)+(y+1), 3120);do Memory.poke(16384+((x+19)*32)+(y+0), 24576);
+            do Memory.poke(16384+((x+20)*32)+(y+2), 898);do Memory.poke(16384+((x+20)*32)+(y+1), 7296);do Memory.poke(16384+((x+20)*32)+(y+0), 8960);
+            do Memory.poke(16384+((x+21)*32)+(y+2), 1920);do Memory.poke(16384+((x+21)*32)+(y+1), 30336);do Memory.poke(16384+((x+21)*32)+(y+0), 26392);
+            do Memory.poke(16384+((x+22)*32)+(y+2), 3588);do Memory.poke(16384+((x+22)*32)+(y+1), 26432);do Memory.poke(16384+((x+22)*32)+(y+0), -15104);
+            do Memory.poke(16384+((x+23)*32)+(y+2), 3100);do Memory.poke(16384+((x+23)*32)+(y+1), 20288);do Memory.poke(16384+((x+23)*32)+(y+0), 7552);
+            do Memory.poke(16384+((x+24)*32)+(y+2), 2078);do Memory.poke(16384+((x+24)*32)+(y+1), -14393);do Memory.poke(16384+((x+24)*32)+(y+0), 14720);
+            do Memory.poke(16384+((x+25)*32)+(y+2), 2083);do Memory.poke(16384+((x+25)*32)+(y+1), -31546);do Memory.poke(16384+((x+25)*32)+(y+0), 9856);
+            do Memory.poke(16384+((x+26)*32)+(y+2), 2115);do Memory.poke(16384+((x+26)*32)+(y+1), 388);do Memory.poke(16384+((x+26)*32)+(y+0), 11904);
+            do Memory.poke(16384+((x+27)*32)+(y+2), 1095);do Memory.poke(16384+((x+27)*32)+(y+1), 396);do Memory.poke(16384+((x+27)*32)+(y+0), -16160);
+            do Memory.poke(16384+((x+28)*32)+(y+2), 1638);do Memory.poke(16384+((x+28)*32)+(y+1), 543);do Memory.poke(16384+((x+28)*32)+(y+0), -32672);
+            do Memory.poke(16384+((x+29)*32)+(y+2), 1568);do Memory.poke(16384+((x+29)*32)+(y+1), 29);do Memory.poke(16384+((x+29)*32)+(y+0), 6176);
+            do Memory.poke(16384+((x+30)*32)+(y+2), 1552);do Memory.poke(16384+((x+30)*32)+(y+1), 1272);do Memory.poke(16384+((x+30)*32)+(y+0), 5680);
+            do Memory.poke(16384+((x+31)*32)+(y+2), 528);do Memory.poke(16384+((x+31)*32)+(y+1), 3552);do Memory.poke(16384+((x+31)*32)+(y+0), 30480);
+            do Memory.poke(16384+((x+32)*32)+(y+2), 6424);do Memory.poke(16384+((x+32)*32)+(y+1), 7600);do Memory.poke(16384+((x+32)*32)+(y+0), -7376);
+            do Memory.poke(16384+((x+33)*32)+(y+2), 3464);do Memory.poke(16384+((x+33)*32)+(y+1), 4912);do Memory.poke(16384+((x+33)*32)+(y+0), -32112);
+            do Memory.poke(16384+((x+34)*32)+(y+2), 3524);do Memory.poke(16384+((x+34)*32)+(y+1), 7907);do Memory.poke(16384+((x+34)*32)+(y+0), 8176);
+            do Memory.poke(16384+((x+35)*32)+(y+2), 3686);do Memory.poke(16384+((x+35)*32)+(y+1), 6854);do Memory.poke(16384+((x+35)*32)+(y+0), 14432);
+            do Memory.poke(16384+((x+36)*32)+(y+2), 4081);do Memory.poke(16384+((x+36)*32)+(y+1), -32628);do Memory.poke(16384+((x+36)*32)+(y+0), -15168);
+            do Memory.poke(16384+((x+37)*32)+(y+2), 1533);do Memory.poke(16384+((x+37)*32)+(y+1), -32520);do Memory.poke(16384+((x+37)*32)+(y+0), -29056);
+            do Memory.poke(16384+((x+38)*32)+(y+2), 1565);do Memory.poke(16384+((x+38)*32)+(y+1), -32735);do Memory.poke(16384+((x+38)*32)+(y+0), -29568);
+            do Memory.poke(16384+((x+39)*32)+(y+2), 1683);do Memory.poke(16384+((x+39)*32)+(y+1), 1);do Memory.poke(16384+((x+39)*32)+(y+0), 128);
+            do Memory.poke(16384+((x+40)*32)+(y+2), 831);do Memory.poke(16384+((x+40)*32)+(y+1), 3);do Memory.poke(16384+((x+40)*32)+(y+0), 3968);
+            do Memory.poke(16384+((x+41)*32)+(y+2), 434);do Memory.poke(16384+((x+41)*32)+(y+1), 4);do Memory.poke(16384+((x+41)*32)+(y+0), 6144);
+            do Memory.poke(16384+((x+42)*32)+(y+2), 391);do Memory.poke(16384+((x+42)*32)+(y+1), -16372);do Memory.poke(16384+((x+42)*32)+(y+0), -2048);
+            do Memory.poke(16384+((x+43)*32)+(y+2), 198);do Memory.poke(16384+((x+43)*32)+(y+1), -5);do Memory.poke(16384+((x+43)*32)+(y+0), -16384);
+            do Memory.poke(16384+((x+44)*32)+(y+2), 250);do Memory.poke(16384+((x+44)*32)+(y+1), 8851);do Memory.poke(16384+((x+44)*32)+(y+0), 0);
+            do Memory.poke(16384+((x+45)*32)+(y+2), 31);do Memory.poke(16384+((x+45)*32)+(y+1), -2);do Memory.poke(16384+((x+45)*32)+(y+0), 0);
+            do Memory.poke(16384+((x+46)*32)+(y+2), 0);do Memory.poke(16384+((x+46)*32)+(y+1), 0);do Memory.poke(16384+((x+46)*32)+(y+0), 0);
+            do Memory.poke(16384+((x+47)*32)+(y+2), 0);do Memory.poke(16384+((x+47)*32)+(y+1), 0);do Memory.poke(16384+((x+47)*32)+(y+0), 0);
+        }
+        return;
+    }
+}

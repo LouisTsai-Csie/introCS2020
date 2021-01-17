@@ -14,7 +14,6 @@ class Main
 			do Stage.delete_stage();
 			do Map.delete_wall();
 		}
-		
 		let progress=1;
 		do Tools.init();
 		while(progress<4)
